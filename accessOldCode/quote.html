@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <title>Quote page</title>
+</head>
+<body>
+ <!---------------- header---------------->
+  
+  <header class="header">
+    
+   <nav class="navbar navbar-expand-md navbar-d py-3 top">
+     
+       <div class="container-fluid">
+         
+    <a class="navbar-brand" href="/Access365/index.html" name="top" id="navbar-brand"><img src="./images/png_20220702_161352_0000.png" alt="" class="logo"></a>
+    
+    <!-------toggle-icon---->
+    <button 
+    class="navbar-toggler"
+    type="button" data-bs-toggle="collapse"
+    data-bs-target="#navmenu">
+      <div class="hamburger">
+        <div class="bars"></div>
+        <div class="bars"></div>
+        <div class="bars"></div>
+      </div>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navmenu">
+      
+      <ul class="navbar-nav  ms-auto">
+        
+           <li class="nav-item">
+             <a class="nav-link" href="#" id="navlink">Home &#9662;</a>
+         <ul class="dropdown">
+            <div class="dropdown-content">
+              <div class="dropdown-industries">
+                <li><a href="/Access365/index.html" style="color:#68b038; font-weight:bold;">Home</a></li>
+                <li><a href="/Access365/Home Classic.html">Access Classic</a></li>
+                <li><a href="/Access365/Home Product.html">Access Premium</a></li>
+              </div>
+            </div>
+            </ul>
+        </li>
+        
+        <li class="nav-item">
+           <a href="#" class="nav-link" id="navlink">Company  &#9662;</a>
+      <ul class="dropdown">
+         <div class="dropdown-content">
+             <div class="dropdown-industries">
+           <li><a href="/Access365/about.html">About Us</a></li>
+           <li><a href="/Access365/how it works.html">How It Works</a></li>
+              <li><a href="/Access365/leadership team.html">Leadership Team</a></li>
+           <li><a href="/Access365/Awards & Recognition.html">Awards & Recognition</a></li>
+           <li><a href="/Access365/review.html">Customers' Review</a></li>
+           <li><a href="/Access365/packages.html">Packages & Pricing</a></li>
+          <li><a href="/Access365/help & FAQs.html">Help FAQs</a></li>
+          <li><a href="/Access365/gallery.html">Our Gallery</a></li>
+          <li><a href="/Access365/contact.html">Contact Us</a></li>
+              </div>
+            </div>
+            </ul>
+        </li>
+      
+         <li class="nav-item">
+          <a class="nav-link" href="#" id="navlink1">Services & Industires &#9662;</a>
+                      <ul class="dropdown">
+              
+            <div class="dropdown-content">
+              <div class="dropdown-services">
+              <li><a href="/Access365/services.html" style="color:#68b038; font-weight:bold;">Services</a></li>
+                <li><a href="/Access365/Smarter business security.html">Business Security</a></li>
+                <li><a href="/Access365/Smarter business security.html">Fire Detection</a></li>
+                <li><a href="/Access365/Smarter business security.html">Access Control</a></li>
+                   <li><a href="/Access365/Smarter business security.html">Alarm Systems</a></li>
+                <li><a href="/Access365/Smarter business security.html">CCTV & Video</a></li>
+                <li><a href="/Access365/Smarter business security.html">Smart Home</a></li>
+              </div>
+              
+              <div class="dropdown-industries">
+               <li><a href="/Access365/industries.html" style="color:#f88000; font-weight:bold;">Industries</a></li>
+                <li><a href="/Access365/categories-industries.html">Pharmaceutic & Biotech</a></li>
+                <li><a href="/Access365/categories-industries.html">Manufacturing & Logistics</a></li>
+                <li><a href="/Access365/categories-industries.html">Healthcare Buildings</a></li>
+                   <li><a href="/Access365/categories-industries.html">Commercial Buildings</a></li>
+                <li><a href="/Access365/categories-industries.html">Finance & Banking</a></li>
+                <li><a href="/Access365/categories-industries.html">Office Buildings</a></li>
+              </div>
+            </div>
+            </ul>
+        </li>
+        
+          <li class="nav-item">
+          <a class="nav-link" href="#" id="navlink1">News & Media  &#9662;</a>
+                 <ul class="dropdown">
+              
+            <div class="dropdown-content">
+              <div class="dropdown-industries">
+                <li><a href="/Access365/blog grid.html">Blog Grid</a></li>
+                <li><a href="/Access365/single blog post.html">Single Blog Post</a></li>
+                <li><a href="/Access365/case study grid.html">Case Studies Modern</a></li>
+              </div>
+              </div>
+            </ul>
+        </li>
+       
+ <li class="nav-item" id="quote-btn1">
+   <a href="/Access365/quote.html" class="nav-link">Get a quote</a>
+   </li>
+ 
+    <li class="nav-item">
+      <div class="phone">
+          <a class="nav-link" id="quote-btn" href="tel:+23407032226012"><i class="bi bi-telephone text-dark h5"></i></a>
+          </div>
+        </li>
+   
+     <li class="nav-item">
+              <a id="quote-btn2" class="nav-link" href="tel:+23407032226012">+23407032226012</a>
+       
+       <a href="mailto:benedict.access365@gmail.com" id="quotebtn1" class="nav-link"> benedict.access365@gmail.com</a>
+       </li>
+      </ul>
+    </div>
+    </div>
+</nav>
+
+<div class="container-fluild">
+  <!-- Background overlay -->
+<div class="bg-overlay p-5"
+id="overlay-bg1">
+  <h1 class="text-center">Get A Quote</h1>
+</div>
+</div>
+  </header>
+  
+       <!--------sectiion7------> 
+ 
+  <div class="container-fluild container9 p-5">
+   
+    <div class="row quote-content">
+      <div class="col-md mb-3">
+        <div class="bg-overlay p-5"
+id="overlay-bg2">
+  <h1 class="text-center">Tailored Solutions For Your Security Priorities</h1>
+  <p>We will design, install and upgrade solutions to meet your business specific needs and budgets from large</p>
+  <a href="tel:+23407032226012" style="color:black;"><i class="bi bi-telephone"></i> +234(07)032226012</a>
+<a href="/Access365/quote.html" id="overlay-btn1">Get Started Now &rarr; </a>
+</div>
+</div>
+
+      <div class="col-md"
+      id="quote-content1">
+        <h2 class="text-center">Download Brochure</h2>
+        <a href="#" id="overlay-btn">Company Report 2022</a>
+                <a href="#" id="overlay-btn2">Company Brochure</a>
+      </div>
+    </div>
+    
+      <div class="form">
+    <h1>Request A Quote</h1>
+    <p>Please complete the form below, to request a quote, and we'll be in touch. Or you can call us 07032226012 and our specialists will provide the necessary help!</p>
+<form  action="https://formsubmit.co/benedict.access365@gmail.com" method="POST" id="my-form">
+  <div class="msg"></div>
+  
+  <div class="box">
+  <label for="home" id="home">Home or Business?</label>
+  <select name="Home or Business?:">
+    <option>For Home</option>
+        <option>For Busines</option>
+  </select>
+  </div>
+  
+  <div class="box">
+    <label for="home" id="home">Industry:</label>
+  <select name="Industry:">
+    <option>Commercial Buildings</option>
+        <option>Office Buildings</option>
+  </select>
+  </div>
+  
+  <div class="box">
+<label for="home" id="home">Own Or Rent:</label>
+  <select name="Own Or Rent:">
+    <option>I'm representing occupant</option>
+        <option>other</option>
+  </select>
+  </div>
+  
+   <div class="box">
+<label for="home" id="home">Size of Apartment:</label>
+  <select name="Size Of Apartment" required>
+    <option>storey Apartment</option>
+    <option>Mini Flat</option>
+     <option>Duplex</option>
+     <option>Bungalow</option>
+  </select>
+  </div>
+ 
+        <div class="box">
+     <label for="home" id="home">System Of Interest:</label>
+    <select multiple size="14" name="System of Interest:"> 
+   <option value="Intrusion Detection">Intrusion Detection System</option> 
+   <option value="Video Surveillance">Video Surveillance System</option> 
+   <option value="System Integratiom">Network System Integration</option> 
+   <option value="Monitoring">Computer Management System</option> 
+   <option>Fire Alarm System</option> 
+   <option value="Access Control">Access Control System</option> 
+   <option value="Access Control">PABX System-Intercom</option>
+   <option value="Access Control">Hotel Lock Management System</option>
+   <option value="Access Control">Eco-friendly Power Solution</option>
+   <option value="Access Control">Smart Home Device Management</option>
+   <option value="Access Control">Cable Management</option>
+   <option value="Access Control">Maintenance Of Services</option>
+   <option value="Other">Other Services</option>
+   </select>
+</div>
+
+ <div class="box">
+<label for="home" id="home">Quantity Of Items:</label>
+ <input id="name" type="number" placeholder="Number" class="name" name="Quantity Of Items" required>
+  </div>
+ 
+ 
+    <label for="home" id="home">Kindly provide your personal informations below:</label>
+  <input id="name" type="text" placeholder="First Name" class="name mt-3" name="First Name">
+  
+    <input id="name" type="text" placeholder="Last Name" class="name" name="Last Name">
+    
+      <input id="email" type="email" placeholder="Email Address" class="name" name="Email:">
+      
+        <input id="name" type="number" placeholder="Phone Number" class="name" name="Phone Number">
+        
+       <input id="name" type="text" placeholder="Company Name" class="name" name="Company Name">
+                
+  <input id="name" type="text" placeholder="Country" class="name" name="Country:">
+ 
+ <input id="name" type="text" placeholder="City" class="name" name="City:">
+             
+   <input id="name" type="text" placeholder="Address" class="name" name="Address:">
+   
+    <input id="name" type="text" placeholder="Zipcode" class="name" name="Zipcode:">
+        
+    <input id="name" type="date" placeholder="Best Installation Times" class="name" name="Best Time of Installation">
+        
+        <input id="textbox" placeholder="How can we Help?!!" name="How can we Help?:">
+        
+           <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck">
+      <label class="form-check-label" for="invalidCheck">
+        Agree to terms and conditions
+      </label>
+      <div class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+  </div> 
+      <input type="submit" id="submit" value="Submit Request">
+</form>
+ </div>
+</div>
+  
+  
+    <!-- footer -->
+  
+  <div class="container-fluid footer">
+    <div class="row row-footer">
+      
+      <div class="col col-footer">
+     <h1>Quick Contacts</h1>
+     <p>If you have any questions or need help, feel free to contact with our team</p>
+       <h4><i class="bi bi-envelope-fill"></i> benedict.access365@gmail.com</h4>
+       <h4><i class="bi bi-telephone"></i> +234(07)032226012</h4>
+ <p>Somoye Osundairo Strt, Computer Villlage, Ikeja Lagos, Nigeria.</p>
+ 
+    <h5<i class="bi bi-geo-alt"></i>Get Directions</h5>
+    </div>
+    
+     <div class="col col-footer">
+       <h1>Company</h1>
+       <ul>
+         <li><a href="/Access365/index.html">About Us</a></li>
+            <li><a href="/Access365/leadership team.html">Leadership Team</a></li>
+             <li><a href="/Access365/blog grid.html">News & Media</a></li>
+             <li><a href="/Access365/Smarter business security.html">Our Products</a></li>
+             <li><a href="/Access365/review.html">Review</a></li>
+       </ul>
+     </div>
+     
+     <div class="col col-footer">
+       <h1>Services</h1>
+       <ul>
+       <li><a href="/Access365/Smarter business security.html">Business Security</a></li>
+       <li><a href="/Access365/Smarter business security.html">Fire Detection</a></li>
+       <li><a href="/Access365/Smarter business security.html">Access Control</a></li>
+        <li><a href="/Access365/Smarter business security.html">Alarm Systems</a></li>
+       <li><a href="/Access365/Smarter business security.html">CCTV & Video</a></li>
+       <li><a href="/Access365/Smarter business security.html">Smart Home</a></li>
+       </ul>
+     </div>
+     
+        <div class="col col-footer">
+       <h1>Help</h1>
+       <ul>
+       <li><a href="/Access365/help & FAQs.html">knowledge base</a></li>
+       <li><a href="/Access365/help & FAQs.html">Security resources</a></li>
+       <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Shipping Policy</a></li>
+       <li><a href="/Access365/contact.html">Contact Us</a></li>
+       </ul>
+     </div>
+     
+             <div class="col col-footer">
+       <h1>Have A Project?</h1>
+     <a href="/Access365/quote.html" id="btn">Get A Free Quote</a>
+     <div class="icons mb-3">
+   <i class="bi bi-facebook h1"></i>
+   <i class="bi bi-whatsapp h1"></i>
+   <i class="bi bi-twitter h1"></i>
+   <i class="bi bi-instagram h1"></i>
+   </div>
+   </div>
+</div>
+ 
+   <div class="container-fluid text-center footer1">
+    <i class="bi bi-arrow-up-circle-fill text-light h5"></i>
+    <a href="#top">TOP OF PAGE</a>
+    </div>
+ 
+ <div class="footer-bottom">      
+     <h2 class="text-center">&copy; 2022, Access365.com,Inc. or its affiliates</h2>
+     <div class="row">
+       <div class="col">
+         <p>Terms & Conditions</p>
+       </div>
+          <div class="col">
+         <p>Privacy Policy</p>
+       </div>
+       
+          <div class="col">
+         <p>Cookies</p>
+       </div>
+     </div>
+     </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
