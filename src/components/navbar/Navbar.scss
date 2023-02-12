@@ -1,48 +1,64 @@
 
 .navbar{
- padding: 32px 64px;
+ padding: 16px 64px;
   bottom: 0;
   position: fixed;
   z-index: 999;  
   width: 100vw;
   top: 0px;
-  height: 90px;
-//background: rgba(33,37,41, 1);
-  background-color: #ccc;
+  height: 120px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
    @media only screen and (min-width: 320px) and (max-width: 768px){
-  padding: 45px 24px;
-  height: 0px;
+  padding: 10px 15px;
+  height: 120px;
 } 
 
-.navbar-brand{
-font-family: var(--font);
-font-style: normal;
-font-weight: 600;
-font-size: 28px;
-line-height: 45px;
-color: var(--green);
-text-decoration: none;
- flex-grow: 1;
+ .navbar-toggler{
+  @media only screen and (min-width: 320px) and (max-width: 768px){
+    margin-top: -20px;
     cursor: pointer;
-    text-decoration: none;
-    @media only screen and (min-width: 320px) and (max-width: 480px){
-      font-size: 15px;
-       line-height: 20px;
-       margin-top: -30px;
-  }
-   @media only screen and (min-width: 480px) and (max-width: 768px){
-      font-size: 18px;
-       line-height: 20px;
-      margin-top: -30px;
-  }
-      @media only screen and (min-width: 768px) and (max-width: 1200px){
-      font-size: 30px;
-       line-height: 20px;
+  font-size: 1.1rem;
+    padding: .5rem .8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: transparent;
+    box-shadow: inset 3px 3px 3px var(--neu-dark),
+                inset -3px -3px 3px var(--neu-light);
+  width: 3rem;
+  transition: all .5s ease;
+  color: #303030;
+}
+
+    @media only screen and (min-width: 768px) and (max-width: 1200px){
       margin-top: -10px;
+        cursor: pointer;
+  font-size: 1.2rem;
+    padding: .5rem .8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 5px;
+    background: transparent;
+    box-shadow: inset 3px 3px 3px var(--neu-dark),
+                inset -3px -3px 3px var(--neu-light);
+  width: 3rem;
+  transition: all .5s ease;
+  color: #303030;
   }
+  &:hover{
+      transform: rotate(45deg);
   }
-  
-  .resumebtn{
+}
+
+  .quotebtn{
 border: var(--border);
  border-radius: 5px;
 font-family: var(--font);
@@ -55,76 +71,16 @@ letter-spacing: 0.1px;
 color: var(--green);
 padding: 10px 24px;
 background: transparent;
-width: 9.5rem;
+width: 8rem;
 text-decoration: none;
   }
   
-  .resumebtn:hover{
+  .quotebtn:hover{
   border: 2px solid var(--purple);
   cursor: pointer;
   color: white;
   background: var(--green);
 }  
-
- .navbar-toggler{
-  @media only screen and (min-width: 320px) and (max-width: 768px){
-    margin-top: -20px;
-    cursor: pointer;
-  border: 1px solid var(--green);
-  font-size: 1rem;
-    padding: .5rem .8rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    border-radius: 10px;
-    background: transparent;
-    box-shadow: inset 3px 3px 3px var(--neu-dark),
-                inset -3px -3px 3px var(--neu-light);
-  width: 3rem;
-  transition: all .5s ease;
-}
-
-    @media only screen and (min-width: 768px) and (max-width: 1200px){
-      margin-top: -10px;
-        cursor: pointer;
-  border: 1px solid var(--green);
-  font-size: 1rem;
-    padding: .5rem .8rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    border-radius: 10px;
-    background: transparent;
-    box-shadow: inset 3px 3px 3px var(--neu-dark),
-                inset -3px -3px 3px var(--neu-light);
-  width: 3rem;
-  transition: all .5s ease;
-  }
-  &:hover{
-      transform: rotate(45deg);
-  }
-}
-
-.iconBoxazs{
-  display: flex;
-  flex-direction: row;
-}
-
-.icon{
-  font-family: var(--font);
-color: #fff;
-  text-decoration: none;
-  font-size: 16px;
-   @media only screen and (min-width: 320px) and (max-width: 768px){
-        margin-right: 0rem;
-          margin-left: 0rem;
-  }
-  &:hover{
-    color: var(--green);
-  }
-}
 
 .sticky-nav {
 position: fixed;
@@ -136,38 +92,122 @@ box-shadow: 5px 5px 15px -5px rgba(80,200,120, 0.5 );
 }
 }
 
+ .navbar-brand{
+   width: 110px;
+   height: 110px;
+   object-fit: cover;
+}
 
- .icon{
-    position: relative;
-    font-size: 16px;
-    color: var(--black);
-    .badge__content{
-      position: absolute;
-      top: -10px;
-      right: -20px;
-      font-size: 14px;
-    }
+.nav-link{
+  margin: 0px;
+}
+
+#navbarScrollingDropdown{
+  font-size: 18px;
+  &:hover{
+   color: var(--green);
   }
+  &:active{
+    color: #303030;
+  }
+}
 
 
+.service-box{
+  display: flex;
+  padding: 10px 15px;
+  align-items: center;
+  justify-content: space-between;
+  
+ .services_title {
+   font-size: 19px;
+   font-weight: bold;
+ }
+}
 
-   .nav-link{
-font-family: var(--font);
-  color: var(--black);
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: bold;
-   @media only screen and (min-width: 320px) and (max-width: 768px){
-        margin-right: 0rem;
-          margin-left: 0rem;
+ .phone{
+   width: 50px;
+   height: 50px;
+   background: #68b038;
+   display: grid;
+   place-items: center;
+   border: 1px solid #68b038;
+   margin-left: 12px;
+   border-radius: 50%;
+   position: relative;
+   top: 0;
+   left: 0;
+}
+
+ .phone::before{
+   content: "";
+   position: absolute;
+   height: calc(100% + 20px);
+   width: calc(100% + 20px);
+   border: 2px solid #68b038;
+   border-radius: 50%;
+   animation: pulse 1.5s linear infinite;
+}
+
+ .phone::after{
+   content: "";
+   position: absolute;
+   height: calc(100% + 20px);
+   width: calc(100% + 20px);
+   border: 2px solid #68b038;
+   border-radius: 50%;
+   animation: pulse 1.5s linear infinite;
+   animation-delay: 0.5s;
+}
+
+@keyframes pulse{
+  0%{
+    transform: scale(0.5);
+    opacity: 0;
   }
   
+  50%{
+    transform: scale(1.0);
+    opacity: 1;
+  }
+  
+  100%{
+    transform: scale(0.8);
+    opacity: 0;
+  }
+ 
 }
-   .nav-link:hover{
-        color: var(--green);
-        cursor: pointer;
-   }
-   
-   .nav-link:active{
-       color: var(--green);
-   }
+
+.bi-telephone{
+   font-size: 18px;
+   color: white;
+   font-weight: bolder;
+   animation: pulser 0.5s linear infinite;
+}
+
+@keyframes pulser{
+  0%{
+    transform: scale(0.2);
+  }
+  
+  50%{
+    transform: scale(2);
+  }
+  
+ 100%{
+   transform: scale(0.8);
+ }
+}
+
+#icons{
+  font-size: 18px;
+  &:hover{
+    color: var(--green);
+  }
+}
+
+
+
+
+
+

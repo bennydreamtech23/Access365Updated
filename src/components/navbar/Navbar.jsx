@@ -1,25 +1,18 @@
-import {Container, Nav, Badge} from 'react-bootstrap';
+import {Container, Nav, Badge, NavDropdown} from 'react-bootstrap';
+
+//icons
 import {FaBars} from "react-icons/fa";
+import { BiPhoneCall } from "react-icons/bi";
+import logo from "../../assets/logo.png"
+
+//react
 import {Link, useNavigate} from "react-router-dom";
-import {BsCart4, BsPerson} from "react-icons/bs";
 import { useEffect, useState} from "react";
 import "./Navbar.scss";
-import { useSelector } from "react-redux"
+
 
 function NavbarTool() {
 const navigate = useNavigate()
-const totalQuantity = useSelector(state => state.cart.totalQuantity)
- 
-const handleSignup = (e) =>{
-  e.preventDefault()
-  navigate('/signup')
-}
-
-const handleLogin = (e) =>{
-  e.preventDefault()
-  navigate('/login')
- 
-}
 
  const [stickyClass, setStickyClass] = useState('');
   
@@ -44,8 +37,9 @@ const handleLogin = (e) =>{
    
   <Container fluid>
   
-    <Link to="/" className="navbar-brand">
-    Access365.
+    <Link to="/">
+   <img src={logo} className="navbar-brand" 
+   alt="logo"/>
     </Link>
     
     <button className="navbar-toggler"
@@ -60,59 +54,174 @@ const handleLogin = (e) =>{
     
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
     
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul className="navbar-nav">
       
-        <li className="nav-item">
-        
-          <Link to="/about" 
-          className="nav-link">
-          About
-          </Link>
-          
-        </li>
+     <NavDropdown as={Link} to="/" title="Home" id="navbarScrollingDropdown" className="nav-link">
      
-     <li className="nav-item">
-           <Link  to="/services" 
-          className="nav-link">
-    Services
-          </Link>
-        </li>
+              <NavDropdown.Item 
+              as={Link} to="/access_classic">
+              Access Classic
+              </NavDropdown.Item>
+              
+              <NavDropdown.Item 
+              as={Link} to="/premium">
+              Access Premium
+              </NavDropdown.Item>
+      </NavDropdown>
+            
+ <NavDropdown as={Link} to="/company" title="Company" id="navbarScrollingDropdown" className="nav-link">
      
-  
-          <li className="nav-item">
-           <Link to="/menu" 
-          className="nav-link">
-          Contact
-          </Link>
-        </li>
+              <NavDropdown.Item 
+              as={Link} to="/about">
+              About Us
+              </NavDropdown.Item>
+              
+              <NavDropdown.Item 
+              as={Link} to="/howitworks">
+              How It Works
+              </NavDropdown.Item>
+              
+              <NavDropdown.Item 
+              as={Link} to="/team">
+              Leadership Team
+              </NavDropdown.Item>
+              
+              <NavDropdown.Item 
+              as={Link} to="/award">
+             Award & Recognition
+              </NavDropdown.Item>
 
-      <li className="nav-item">
-           <Link  to="/menu" 
-          className="nav-link">
-          Menu
-          </Link>
-        </li>
-        
+              <NavDropdown.Item 
+              as={Link} to="/customersreview">
+              Customer's Review
+              </NavDropdown.Item>
+             
+              <NavDropdown.Item 
+              as={Link} to="/pricing">
+               Packaging & Pricing
+              </NavDropdown.Item>
+ 
+              <NavDropdown.Item 
+              as={Link} to="/faq">
+              Help FAQs
+              </NavDropdown.Item>
+
+ 
+              <NavDropdown.Item 
+              as={Link} to="/gallery">
+              Our Gallery
+              </NavDropdown.Item>
+
+              <NavDropdown.Item 
+              as={Link} to="/contact">
+               Contact Us
+              </NavDropdown.Item>
+      </NavDropdown>
+    
+     <NavDropdown  title="Services & Industries" id="navbarScrollingDropdown" className="nav-link">
+     
+     <div className="service-box">
+     <div>
+              <NavDropdown.Item as={Link} to="/services" className="services_title">
+              Services
+              </NavDropdown.Item>
+              
+              <NavDropdown.Item>
+              Business Security
+              </NavDropdown.Item>
+              
+               <NavDropdown.Item>
+            Fire Detection
+              </NavDropdown.Item>
+             
+              <NavDropdown.Item>
+              Access Control
+              </NavDropdown.Item>
+             
+              <NavDropdown.Item>
+              Alarm Systems
+              </NavDropdown.Item>
+             
+         <NavDropdown.Item>
+          CCtv & Video
+              </NavDropdown.Item>
+           
+            <NavDropdown.Item>
+            Smart Home
+              </NavDropdown.Item>
+     </div>
+     
+   <div>
+            <NavDropdown.Item as={Link} to="/Industries" className="services_title">
+              Industries
+              </NavDropdown.Item>
+      
+              <NavDropdown.Item>
+              Pharmaceutic & Biotech
+              </NavDropdown.Item>
+             
+             <NavDropdown.Item>
+              Manufacturing & Logistics
+              </NavDropdown.Item>
+              
+               <NavDropdown.Item>
+              Healthcare Buildings
+              </NavDropdown.Item>
+
+              <NavDropdown.Item>
+          Commercial Buildings
+              </NavDropdown.Item>
+
+              <NavDropdown.Item>
+              Finance & Banking
+              </NavDropdown.Item>
+              
+                <NavDropdown.Item>
+              Office Buildings
+              </NavDropdown.Item>
+              </div>
+          </div>
+        </NavDropdown>
+
+
+<NavDropdown title="News & Media" id="navbarScrollingDropdown" className="nav-link">
+     
+              <NavDropdown.Item as={Link} to="/blog">
+             Blog 
+              </NavDropdown.Item>
+              
+                <NavDropdown.Item as={Link} to="/casestudies">
+               Case studies
+              </NavDropdown.Item>
+        </NavDropdown>
     </ul>
     
-     <form className="d-flex me-5">
-        <Link className="icon" to="/cart">
-        <BsCart4 className="h3"/>
-        <Badge bg="secondary" className="badge__content">{totalQuantity}</Badge>
-        </Link>
-      </form>
-      
-      <form className="d-flex gap-4">
-      
-        <button className="resumebtn" onClick={handleSignup}>
-        Register
-        </button>
-        
-         <button className="resumebtn" 
-         onClick={handleLogin}>
-   Login
+      <form className="d-flex">
+         <button className="quotebtn">
+            Get a quote
         </button>
       </form>
+
+  <form className="d-flex mt-4">
+<div class="phone">
+  <a class="nav-link" href="tel:+23407032226012">
+ <BiPhoneCall className="bi-telephone"/>
+  </a>
+          </div>
+    
+    <div className="d-flex flex-column justify-content-between align-items-start"> 
+    
+    <div>
+  <a id="icons" class="nav-link" href="tel:+23407032226012">+23407032226012</a>
+       </div>
+       
+       <div>
+       <a href="mailto:benedict.access365@gmail.com" id="icons" class="nav-link"> benedict.access365@gmail.com</a>
+         </div>
+</div>
+      </form>
+      
+
 
     </div>
   </Container>
@@ -128,63 +237,156 @@ aria-labelledby="offcanvasExampleLabel">
 
   <div className="offcanvas-header">
     <h5 className="offcanvas-title" id="offcanvasExampleLabel">
-    Bennyfoodie.</h5>
+    <Link to="/">
+   <img src={logo} className="navbar-brand" 
+   alt="logo"/>
+    </Link>
+    </h5>
     
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   
   <div className="offcanvas-body">
-    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+    <ul className="navbar-nav m-auto mb-2 mb-lg-0">
       
-        <li className="nav-item">
-        
-          <Link to="/about" 
-          className="nav-link">
-          About
-          </Link>
-          
-        </li>
-        
-        <li className="nav-item">
-           <Link to="/menu" 
-          className="nav-link">
-          Menu
-          </Link>
-        </li>
-        
-          <li className="nav-item">
-           <Link to="/services" 
-          className="nav-link">
-    Services
-          </Link>
-        </li>
-        
-          <li className="nav-item">
-           <Link to="/menu" 
-          className="nav-link">
-          Contact
-          </Link>
-        </li>
+     <NavDropdown as={Link} to="/" title="Home" id="navbarScrollingDropdown" className="nav-link">
      
-  <form className="d-flex me-5 mt-3">
-        <Link className="icon" to="/cart">
-        <BsCart4 className="h3"/>
-        <Badge bg="secondary" className="badge__content">{totalQuantity}</Badge>
-        </Link>
-      </form>
+              <NavDropdown.Item 
+              as={Link} to="/access_classic">
+              Access Classic
+              </NavDropdown.Item>
+              
+              <NavDropdown.Item 
+              as={Link} to="/premium">
+              Access Premium
+              </NavDropdown.Item>
+      </NavDropdown>
+            
+ <NavDropdown as={Link} to="/company" title="Company" id="navbarScrollingDropdown" className="nav-link">
      
-      <form className="d-flex flex-column gap-4 mt-3">
+              <NavDropdown.Item 
+              as={Link} to="/about">
+              About Us
+              </NavDropdown.Item>
+              
+              <NavDropdown.Item 
+              as={Link} to="/howitworks">
+              How It Works
+              </NavDropdown.Item>
+              
+              <NavDropdown.Item 
+              as={Link} to="/team">
+              Leadership Team
+              </NavDropdown.Item>
+              
+              <NavDropdown.Item 
+              as={Link} to="/award">
+             Award & Recognition
+              </NavDropdown.Item>
+
+              <NavDropdown.Item 
+              as={Link} to="/customersreview">
+              Customer's Review
+              </NavDropdown.Item>
+             
+              <NavDropdown.Item 
+              as={Link} to="/pricing">
+               Packaging & Pricing
+              </NavDropdown.Item>
+ 
+              <NavDropdown.Item 
+              as={Link} to="/faq">
+              Help FAQs
+              </NavDropdown.Item>
+
+ 
+              <NavDropdown.Item 
+              as={Link} to="/gallery">
+              Our Gallery
+              </NavDropdown.Item>
+
+              <NavDropdown.Item 
+              as={Link} to="/contact">
+               Contact Us
+              </NavDropdown.Item>
+      </NavDropdown>
+    
+     <NavDropdown  title="Services & Industries" id="navbarScrollingDropdown" className="nav-link">
+     
+     <div className="service-box">
+     <div>
+              <NavDropdown.Item as={Link} to="/services" className="services_title">
+              Services
+              </NavDropdown.Item>
+              
+              <NavDropdown.Item>
+              Business Security
+              </NavDropdown.Item>
+              
+               <NavDropdown.Item>
+            Fire Detection
+              </NavDropdown.Item>
+             
+              <NavDropdown.Item>
+              Access Control
+              </NavDropdown.Item>
+             
+              <NavDropdown.Item>
+              Alarm Systems
+              </NavDropdown.Item>
+             
+         <NavDropdown.Item>
+          CCtv & Video
+              </NavDropdown.Item>
+           
+            <NavDropdown.Item>
+            Smart Home
+              </NavDropdown.Item>
+     </div>
+     
+   <div>
+            <NavDropdown.Item as={Link} to="/Industries" className="services_title">
+              Industries
+              </NavDropdown.Item>
       
-        <button className="resumebtn"
-        onClick={handleSignup}>
-        Register
-        </button>
-        
-         <button className="resumebtn"
-         onClick={handleLogin}>
-   Login
-        </button>
-      </form>
+              <NavDropdown.Item>
+              Pharmaceutic & Biotech
+              </NavDropdown.Item>
+             
+             <NavDropdown.Item>
+              Manufacturing & Logistics
+              </NavDropdown.Item>
+              
+               <NavDropdown.Item>
+              Healthcare Buildings
+              </NavDropdown.Item>
+
+              <NavDropdown.Item>
+          Commercial Buildings
+              </NavDropdown.Item>
+
+              <NavDropdown.Item>
+              Finance & Banking
+              </NavDropdown.Item>
+              
+                <NavDropdown.Item>
+              Office Buildings
+              </NavDropdown.Item>
+              </div>
+          </div>
+        </NavDropdown>
+
+
+<NavDropdown title="News & Media" id="navbarScrollingDropdown" className="nav-link">
+     
+              <NavDropdown.Item as={Link} to="/blog">
+             Blog 
+              </NavDropdown.Item>
+              
+                <NavDropdown.Item as={Link} to="/casestudies">
+               Case studies
+              </NavDropdown.Item>
+        </NavDropdown>
       </ul>
     
   </div>
