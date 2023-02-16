@@ -7,8 +7,7 @@ import Footer from "./components/footer/Footer";
 
 //pages
 import LandingPage from "./pages/landing-page/Landingpage";
- import LoginPage from "./pages/core/login/Login"
- import SignupPage from "./pages/core/signup/Signup"
+ 
 
 
 function App() {
@@ -19,10 +18,6 @@ function App() {
       <Routes>
         {/* pages */}
         <Route path="/" element={<LandingPage />} />
-            
-            {/*core*/}
-     <Route path="/signup" element={<SignupPage />} />
- <Route path="/login" element={<LoginPage />} />
 </Routes>
     <Footer/>
     </div>

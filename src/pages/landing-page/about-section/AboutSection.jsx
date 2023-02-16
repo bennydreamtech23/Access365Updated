@@ -1,71 +1,63 @@
-import {Container, Row, Col, Card} from 'react-bootstrap';
+import {Container, Row, Col} from 'react-bootstrap';
 import AboutStyles from "./About.module.scss";
 import { Link } from "react-router-dom";
-import {BsFillSuitHeartFill} from "react-icons/bs";
-import favouritefood from "../../../components/foodMenu/favouritefood.js"
 
-import FavouriteFoodCard from "../../../components/favouriteFoodCard/FavouriteFoodCard"
 
 const AboutSection = () =>{
   
-  const chef = "https://res.cloudinary.com/dlst0ec4h/image/upload/v1673718971/pngwing.com_zlmc2w.webp";
+  const security = "https://res.cloudinary.com/dlst0ec4h/image/upload/v1676457567/bernard-hermant-Hd0m_5-OyCw-unsplash_q6vk87.webp";
 
 
   return(
-    
-   <Container
-   fluid className={AboutStyles.Container}>
+   <Container fluid className={AboutStyles.Container}>
    
-    <h1
-    className={AboutStyles.aboutTitle}>
-    Our Favourite Customers Special Dishes
-    </h1>
-    
- <Row className={AboutStyles.row}>
-  {
-      favouritefood.map(item =>(
-      <Col key={item.id}>
-      <FavouriteFoodCard item={item}/>
-      </Col>
-      ))
-    }
-
-</Row>
-
-   <Row 
-   className={AboutStyles.row1}>
-   
-    <Col 
-    className={AboutStyles.heroText}>
-    
-  <h1 
-  className={AboutStyles.title}>
-  Stay Healthy Live Long
+  <Row class="row">
+  
+<div class="col-md">
+  <h1 className={AboutStyles.title}>
+  Protecting Against Intruders, Fires, Water & More For Every Window, Room and Door.
   </h1>
   
-<p
-className={AboutStyles.paraText}>
-Food is for the body as relaxing is for the mind, when you are healthy you are happy. We want to keep you happy always with our meals.
-</p>
-
-<div 
-className={AboutStyles.btnBox}>
-
-<button 
-className="btn btn-white btn-animated">
-Explore More
-</button>
+  <p className = {AboutStyles.text}> Helping families live intelligently means we're always working to bring our customers the latest technology. As one of the premier providers smart home technology, we are recongnized throughout the industry for our products, innovation & customer satisfaction.</p>
+  
+  <p>Don't worry about anything, our security experts will install your new system, activate it and show you how to use it</p>
+  
+  <h2 className={AboutStyles.subTitle}>More protection with Monitoring</h2>
+  
+  <ul className={AboutStyles.ruler}>
+    <li><div></div>Smart Home Security</li>
+    <li><div></div>Professional installation</li>
+   <li><div></div>In Home Consultation</li>
+   <li><div></div>Doorell Video Cameras</li>
+    <li><div></div>Burglary Sensor Detection</li>
+    <li><div></div>24/7 Alarm Monitoring</li>
+  </ul>
+  
+  <div className={AboutStyles.groupBtn}>
+  <Link to="/services" 
+  className = {AboutStyles.overlay_btn}>
+  Products And Solution &rarr;
+  </Link>
+  
+  <Link to="/contact"
+  className={AboutStyles.overlay_btn2}>
+  Contact Us
+    </Link>
+  </div>
 </div>
-</Col>
 
-  <Col 
-   className={AboutStyles.col}>
-   
-      <img src={chef} 
-      className={AboutStyles.img} 
-      loading="lazy"/>
-      </Col>
-</Row>
+<div class="col-md pt-5">
+  <img src={security}
+  alt=""
+  className={AboutStyles.img}/>
+</div>
+  </Row>
+ 
+ {/*section 3*/}
+  
+  
+  
+  
     </Container>
     
     )

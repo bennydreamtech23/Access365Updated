@@ -8,8 +8,9 @@ import {TbTruckDelivery, TbHandClick,TbAward} from "react-icons/tb";
 import {BsArrowDownRight} from "react-icons/bs"; 
 
 const HeroSection = () =>{
-//const img = "https://res.cloudinary.com/dlst0ec4h/image/upload/v1673632501/Pngtree_healthy_food_3776802_nqbeku.webp";
-  
+
+ const door = "https://res.cloudinary.com/dlst0ec4h/image/upload/v1676478401/close-up-fingerprint-reader_edwvqm.webp"   
+    
   return(
     <>
     <div
@@ -29,30 +30,38 @@ const HeroSection = () =>{
       We provide security requirements of residential, commercial and other clients, with the largest assortment of security cameras and alarm systems installation
       </p>
       
-      <Link className={HeroStyles.overlay_btn} to="/services">Explore Our services &rarr;</Link>
-      
-      <Link  className={HeroStyles.overlay_btn1} to="/about">More about Us &rarr;</Link>
+      <div className={HeroStyles.groupBtn}>
+<Link className={HeroStyles.overlay_btn} 
+to="/services">
+Explore Our services &rarr;
+</Link>
+      <Link  
+      className={HeroStyles.overlay_btn1}
+      to="/about">
+      More about Us &rarr;
+      </Link>
+      </div>
     </div>
     
     <div className="col-md">
       <div className={HeroStyles.hidden}>
-        <h1>Custom Alerts for friends and Family</h1>
-       
+        <h1>
+        Custom Alerts for friends and Family
+        </h1>
+      <img src={door} alt="door"/>
         <p>Door, Window and Glass Break, designed to monitor and protect home and family</p>
         </div>
         
         <div className={HeroStyles.hidden2}>
-        <button className={HeroStyles.overlay_btn}>&rarr;</button>
-        <span>protect Our Home</span>
+        <button className={HeroStyles.overlay_btn}>&rarr; 
+        </button> 
+        <p>
+        protect Our Home
+        </p>
         </div>
       </div>
   </div>
 </div>
-
-
-
-
-
     </div>
     </>
     )

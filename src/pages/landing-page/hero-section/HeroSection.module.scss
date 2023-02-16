@@ -5,9 +5,8 @@ font-family: var(--font);
   padding: 80px 0px;
 } 
 
-
    .bg_overlay{
-     background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9)), url("https://w7.pngwing.com/pngs/600/192/png-transparent-camera-webcam-cctv-thumbnail.png");
+     background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9)), url("https://res.cloudinary.com/dlst0ec4h/image/upload/v1676458727/inaki-del-olmo-Trn2-DwoEr0-unsplash_a0ctva.webp");
      background-size: cover;
      background-repeat: no-repeat;
      background-position: center center;
@@ -19,14 +18,12 @@ font-family: var(--font);
       color: white;
       font-size: 17px;
       font-weight: normal;
-      font-family: 'Noto Sans';
       opacity: 0.7;
     }
     
     .bg_overlay h1{
       color: white;
       font-size: 35px;
-      font-family: 'Noto Sans';
       font-weight: bolder;
     }
     
@@ -34,9 +31,17 @@ font-family: var(--font);
       color: white;
       font-size: 15px;
       opacity: 0.9;
-      font-family: 'Noto Sans';
     }
     
+    .groupBtn{
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+               @media only screen and (min-width: 320px) and (max-width: 768px){
+           flex-direction: column;
+           margin-bottom: 2rem;
+    }
+    }
     .overlay_btn{
       border:none;
       background: #f88000;
@@ -45,7 +50,7 @@ font-family: var(--font);
       color: white;
       font-weight: bold;
       transition: 0.5s;
-      margin-bottom: 10px;
+      height: 3rem;
       text-decoration: none;
     }
     
@@ -69,6 +74,7 @@ font-family: var(--font);
       font-weight: bold;
       transition: 0.5s;
       text-decoration: none;
+      height: 3rem;
     }
     
     .bg_overlay .hidden{
@@ -78,14 +84,19 @@ font-family: var(--font);
       padding: 10px 15px;
       box-shadow: 6px 7px 10px rgba(0,0,0,0.5);
       margin-top: 10px;
-      margin-left: 150px;
+      margin-left: auto;
+         @media only screen and (min-width: 320px) and (max-width: 768px){
+           margin: auto;
+    }
     }
     
     .hidden img{
       width: 100px;
       margin: 0 auto;
-      border: 2px solid #808888;
+      border: 1px solid #808888;
       display: flex;
+      border-radius: 1rem;
+      object-fit: cover;
     } 
     
     .hidden h1{
@@ -106,7 +117,17 @@ font-family: var(--font);
     
     .hidden2{
       margin-top: 10px;
-      margin-left: 150px;
+      display: flex;
+    align-items: flex-end;
+     float: right;
+     flex-direction: row;
+     justify-content: center;
+     gap: 0.5rem;
+  @media only screen and (min-width: 320px) and (max-width: 768px){
+      align-items: center;
+      float: none;
+      justify-content: center;
+    }
     }
     
     .hidden2 span{
