@@ -1,30 +1,30 @@
-
 import ProductCardStyle from "./ProductCad.module.scss"
 
-const ProductCard = (props) =>{
-  const {id, number, title} = props.data
-  
-return(
-          <div
-          className={ProductCardStyle.product_container}>
-                
-            <div 
-         className={ProductCardStyle.product_inn}>
-      
-        <div className={ProductCardStyle.boxText}>
-        <h2 className="text-center h5">
+const ProductCard = (props) => {
+  const {
+    id,
+    number,
+    title
+  } = props.data
+
+  return(
+    <div
+      className={ProductCardStyle.product_container}>
+            <div
+        className={ProductCardStyle.product_inn}>
+        <h1 className={ProductCardStyle.number}>
         {number}
-        </h2>
+        </h1>
         
-        <p className="text-center lead text-dark">
-            {title}
-        </p>
-        </div>
-              </div>
-                </div>
+        <h3 className={ProductCardStyle.title}>
+            {title} 
+        </h3>
+        
+      </div>
+    </div>
 
 
-    )
+  )
 }
 
 export default ProductCard

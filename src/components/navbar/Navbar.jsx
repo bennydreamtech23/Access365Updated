@@ -56,18 +56,9 @@ const navigate = useNavigate()
     
       <ul className="navbar-nav">
       
-     <NavDropdown as={Link} to="/" title="Home" id="navbarScrollingDropdown" className="nav-link">
-     
-              <NavDropdown.Item 
-              as={Link} to="/access_classic">
-              Access Classic
-              </NavDropdown.Item>
-              
-              <NavDropdown.Item 
-              as={Link} to="/premium">
-              Access Premium
-              </NavDropdown.Item>
-      </NavDropdown>
+     <Link to="/" className="nav-link">
+     Home
+     </Link>
             
  <NavDropdown as={Link} to="/company" title="Company" id="navbarScrollingDropdown" className="nav-link">
      
@@ -248,20 +239,11 @@ aria-labelledby="offcanvasExampleLabel">
   
   <div className="offcanvas-body">
     <ul className="navbar-nav m-auto mb-2 mb-lg-0">
-      
-     <NavDropdown as={Link} to="/" title="Home" id="navbarScrollingDropdown" className="nav-link">
      
-              <NavDropdown.Item 
-              as={Link} to="/access_classic">
-              Access Classic
-              </NavDropdown.Item>
-              
-              <NavDropdown.Item 
-              as={Link} to="/premium">
-              Access Premium
-              </NavDropdown.Item>
-      </NavDropdown>
-            
+     <Link to="/" className="nav-link">
+     Home
+     </Link>
+    
  <NavDropdown as={Link} to="/company" title="Company" id="navbarScrollingDropdown" className="nav-link">
      
               <NavDropdown.Item 

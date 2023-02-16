@@ -37,7 +37,7 @@ const IndustriesSection = () =>{
      const settings = {
        autoplay: true,
       dots: true,
-      navs: true,
+      //navs: true,
       infinite: false,
       speed: 1000,
       slidesToShow: 3,
@@ -57,6 +57,7 @@ const IndustriesSection = () =>{
             slidesToScroll: 3,
             infinite: true,
             dots: true,
+            
           },
         },
         {
@@ -72,6 +73,7 @@ const IndustriesSection = () =>{
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
+            dots: true,
           },
         },
       ],

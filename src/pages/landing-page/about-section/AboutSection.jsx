@@ -18,7 +18,7 @@ const AboutSection = () =>{
   Protecting Against Intruders, Fires, Water & More For Every Window, Room and Door.
   </h1>
   
-  <p className = {AboutStyles.text}> Helping families live intelligently means we're always working to bring our customers the latest technology. As one of the premier providers smart home technology, we are recongnized throughout the industry for our products, innovation & customer satisfaction.</p>
+  <p className = {AboutStyles.text}> Helping families live intelligently means we're always working to bring our customers the latest technology. As one of the new frontiers in tech management for living space, with over a decade experience in quality service delivery.</p>
   
   <p>Don't worry about anything, our security experts will install your new system, activate it and show you how to use it</p>
   
@@ -26,11 +26,15 @@ const AboutSection = () =>{
   
   <ul className={AboutStyles.ruler}>
     <li><div></div>Smart Home Security</li>
-    <li><div></div>Professional installation</li>
+    <li><div></div>Surveillance System Management</li>
    <li><div></div>In Home Consultation</li>
-   <li><div></div>Doorell Video Cameras</li>
+   <li><div></div>Doorbell Video Cameras</li>
     <li><div></div>Burglary Sensor Detection</li>
     <li><div></div>24/7 Alarm Monitoring</li>
+     <li><div></div>
+     Fire Alarm System</li>
+     <li><div></div>
+     Access Control management</li>
   </ul>
   
   <div className={AboutStyles.groupBtn}>
@@ -52,12 +56,6 @@ const AboutSection = () =>{
   className={AboutStyles.img}/>
 </div>
   </Row>
- 
- {/*section 3*/}
-  
-  
-  
-  
     </Container>
     
     )
