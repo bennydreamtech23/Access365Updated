@@ -55,11 +55,13 @@ const navigate = useNavigate()
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
     
       <ul className="navbar-nav">
-      
-     <Link to="/" className="nav-link">
+   
+       <li className="nav-item"> 
+     <Link to="/" className="nav-link mt-2">
      Home
      </Link>
-            
+  </li>
+  
  <NavDropdown as={Link} to="/company" title="Company" id="navbarScrollingDropdown" className="nav-link">
      
               <NavDropdown.Item 

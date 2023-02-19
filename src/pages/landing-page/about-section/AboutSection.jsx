@@ -15,8 +15,8 @@ const AboutSection = () =>{
   
 <div class="col-md">
   <h1 className={AboutStyles.title}>
-  Protecting Against Intruders, Fires, Water & More For Every Window, Room and Door.
-  </h1>
+  Protecting Against Intruders, Fires, Water and more for  every living space.
+  </h1> 
   
   <p className = {AboutStyles.text}> Helping families live intelligently means we're always working to bring our customers the latest technology. As one of the new frontiers in tech management for living space, with over a decade experience in quality service delivery.</p>
   
@@ -50,7 +50,7 @@ const AboutSection = () =>{
   </div>
 </div>
 
-<div class="col-md pt-5">
+<div class="col-md">
   <img src={security}
   alt=""
   className={AboutStyles.img}/>

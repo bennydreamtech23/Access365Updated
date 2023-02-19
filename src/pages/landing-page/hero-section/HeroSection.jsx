@@ -53,7 +53,7 @@ Explore Our services &rarr;
         </div>
         
         <div className={HeroStyles.hidden2}>
-        <button className={HeroStyles.overlay_btn}>&rarr; 
+        <button className={HeroStyles.overlay_btn3}>&rarr; 
         </button> 
         <p>
         protect Our Home

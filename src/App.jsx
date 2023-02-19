@@ -7,13 +7,10 @@ import Footer from "./components/footer/Footer";
 
 //pages
 import LandingPage from "./pages/landing-page/Landingpage";
- 
-
 
 function App() {
   return (
     <div className="app">
-    
    <Navbar />
       <Routes>
         {/* pages */}

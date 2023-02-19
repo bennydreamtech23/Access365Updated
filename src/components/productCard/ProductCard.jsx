@@ -17,7 +17,7 @@ const ProductCard = (props) => {
         </h1>
         
         <h3 className={ProductCardStyle.title}>
-            {title} 
+        {title} 
         </h3>
         
       </div>
