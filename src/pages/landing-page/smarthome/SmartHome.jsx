@@ -25,7 +25,7 @@ const SmartHome = () =>{
     </h1>
     
   <p className={Styles.subtext}>
-  Because a commercial security camera system has to produce results, we offer what most secure camera companies can't. For CCTV installation companies, It's Important to treat cctv camera installation with modern approach. Our Securitycamera system installation department is just passionate about security installation.
+  Because a commercial security camera system has to produce results, we offer what most surveillance security tech companies can't. For CCTV installation companies, It's Important to treat cctv camera installation with modern approach using AI technology.
   </p>
   
   <div className={Styles.groupBtn}>

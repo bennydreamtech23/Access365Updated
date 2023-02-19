@@ -38,7 +38,8 @@ const navigate = useNavigate()
   <Container fluid>
   
     <Link to="/">
-   <img src={logo} className="navbar-brand" 
+   <img src={logo} 
+   className="navbar-brand" 
    alt="logo"/>
     </Link>
     

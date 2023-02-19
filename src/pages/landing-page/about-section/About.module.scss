@@ -29,7 +29,6 @@
    float: none;
    margin: auto;
 } 
-
 }
 
 .text{
@@ -80,7 +79,8 @@ li{
       display: flex;
       flex-direction: row;
       gap: 1rem;
-               @media only screen and (min-width: 320px) and (max-width: 768px){
+      margin-bottom: 2rem;
+               @media only screen and (min-width: 320px) and (max-width: 600px){
            flex-direction: column;
            margin-bottom: 2rem;
     }

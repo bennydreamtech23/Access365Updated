@@ -43,7 +43,7 @@ Explore Our services &rarr;
       </div>
     </div>
     
-    <div className="col-md">
+    <div className="col-md mt-5">
       <div className={HeroStyles.hidden}>
         <h1>
         Custom Alerts for friends and Family
