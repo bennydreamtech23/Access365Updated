@@ -2,7 +2,7 @@ import Styles from "./IntegratedServices.module.scss";
 import {Row, Col} from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import { BsFillCheckCircleFill, BsFillStarFill } from "react-icons/bs";
-
+import CaseStudies from "../../../components/case_studies/CaseStudies"
 
 const IntegratedSecurity = () =>{
   const DoorSecurity = "https://res.cloudinary.com/dlst0ec4h/image/upload/v1676821694/IMG-20230216-WA0019_jlld8b.webp"
@@ -214,9 +214,9 @@ const IntegratedSecurity = () =>{
   className={Styles.img}/>
  </div>
 </Row>
-
  </div>
-  
+
+<CaseStudies/>
   </>
   )
 }
