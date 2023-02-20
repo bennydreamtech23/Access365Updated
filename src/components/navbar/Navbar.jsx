@@ -184,7 +184,9 @@ const navigate = useNavigate()
              Blog 
               </NavDropdown.Item>
               
-                <NavDropdown.Item as={Link} to="/casestudies">
+                <NavDropdown.Item 
+                as={Link} 
+                to="/casestudies">
                Case studies
               </NavDropdown.Item>
         </NavDropdown>

@@ -1,6 +1,6 @@
 
 .Container{
-  padding: 32px 64px;
+  padding: 80px 64px;
   margin-top: 1rem;
    font-family: var(--font);
      @media only screen and (min-width: 320px) and (max-width: 768px){
@@ -35,10 +35,18 @@ margin-top: 3rem;
  /* Screen larger than 600px? 2 column */ @media (min-width: 768px) {  
    grid-template-columns: repeat(2, 1fr);
    } 
-   /* Screen larger than 900px? 4 columns */ @media (min-width: 900px) {
+   /* Screen larger than 900px? 4 columns */ @media (min-width: 1200px) {
      grid-template-columns: repeat(3, 1fr);
 }
     }
+
+.casestudiesBox{
+  width: 22rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
 
 
 .bg_1{
@@ -60,16 +68,17 @@ margin-top: 3rem;
    color: white;
    transition: all 0.5s;
    border-radius: 5px;
+   font-weight: bold;
    &:hover{
-     background: var(--orange);
-     color: white;
+     background: #fff;
+     color: black;
      transform: translateX(10px);
 border: none;
    }
 }
 
 .small{
-   padding: 10px 15px;
+   padding: 10px;
    background: #e8e8e8;
    padding-bottom: 20px;
 border-bottom-left-radius: 5px;
@@ -86,61 +95,77 @@ border-bottom-right-radius: 5px;
    text-align: center;
 }
 
+.overlay_btn{
+      border: none;
+      background: #fff;
+      padding: 10px 15px;
+      border-radius: 5px;
+      color: #181818;
+      font-weight: bold;
+      transition: 0.5s;
+      height: 3rem;
+      text-decoration: none;
+      width: 230px;
+    }
+    
+   .overlay_btn:hover{
+      background: #68b038;
+      transform: translateX(3px);
+      color: white;
+    }
+ 
+.bg_2{
+   background-image: url("https://res.cloudinary.com/dlst0ec4h/image/upload/v1676478401/close-up-fingerprint-reader_edwvqm.webp");
+   background-size: cover;
+   background-position: cover cover;
+   padding: 10px 20px;
+   margin-top: 10px;
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+}
 
+.bg_3{
+   background-image: url("https://res.cloudinary.com/dlst0ec4h/image/upload/v1676837161/cctv-security-technology-with-lock-icon-digital-remix_m6lzag.webp");
+   background-size: cover;
+   background-position: cover cover;
+   padding: 10px 20px;
+   margin-top: 10px;
+  border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+}
 
+ .bg_4{
+   background-image: url("https://res.cloudinary.com/dlst0ec4h/image/upload/v1676912596/close-up-woman-checking-security-camera_ok8dkl.webp");
+   background-size: cover;
+   background-position: cover cover;
+   padding: 10px 20px;
+   margin-top: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
 
-.bg-2{
-   background-image: url("./images/close-up-fingerprint-reader.jpg");
+ .bg_5{
+   background-image: url("https://res.cloudinary.com/dlst0ec4h/image/upload/v1676821693/IMG-20230216-WA0017_gjx1ot.webp");
    background-size: cover;
    background-position: cover cover;
    padding: 10px 20px;
    margin-top: 10px;
 }
 
-.container8 .bg-3{
-   background-image: url("./images/cctv-security-technology-with-lock-icon-digital-remix.jpg");
-   background-size: cover;
-   background-position: cover cover;
-   padding: 10px 20px;
-   margin-top: 10px;
-}
-
-.container8 .bg-4{
-   background-image: url("./images/close-up-woman-checking-security-camera.jpg");
-   background-size: cover;
-   background-position: cover cover;
-   padding: 10px 20px;
-   margin-top: 10px;
-}
-
-.container8 .bg-5{
-   background-image: url("./images/scanning-finger-coronavirus-contaminated-fingerprint-access-control.jpg");
-   background-size: cover;
-   background-position: cover cover;
-   padding: 10px 20px;
-   margin-top: 10px;
-}
-
-.container8 h3{
-   margin-top: 10px;
+.Container h3{
    font-size: 18px;
    font-weight: 500;
-   font-family:'Noto Sans';
-   padding-top:5px;
    color: black;
    text-align: left;
 }
 
-.container8 a{
-   color: #f88000;
-   text-decoration: underline;
-   font-weight: bold;
-   font-size: 17px;
-   font-family: 'Noto Sans';
+/*scrolling-section*/
+.companyLogo{
+ width: 25%;
+  object-fit: cover;
 }
 
 
-/*scrolling-section*/
 .scrolling-col-techbrand{
    display: inline;
    margin-right: 10px;
@@ -201,7 +226,7 @@ border-bottom-right-radius: 5px;
  font-size: small;
  overflow-x: scroll;
  float: right;
- color: white;
+ color: black;
 }
 
 #col{

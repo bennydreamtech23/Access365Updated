@@ -149,7 +149,7 @@ const IntegratedSecurity = () =>{
   </Col>
    </Row>
    
-    <Row className="mt-5">
+    <Row className={Styles.rowEnd}>
       <Col className="col-md">
  <div class="small-3">
  
