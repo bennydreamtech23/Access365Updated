@@ -208,7 +208,7 @@ const IntegratedSecurity = () =>{
   </div>
   </Col>
   
-  <div class="col-md">
+  <div className="col-md">
   <img src={DoorSecurity} 
   alt="door" 
   className={Styles.img}/>

@@ -1,56 +1,82 @@
-/*-----section7-----*/
-#gallery-work .col-md{
-   margin-bottom: 20px;
-   padding-bottom: 10px;
+
+.Container{
+  padding: 32px 64px;
+  margin-top: 1rem;
+   font-family: var(--font);
+     @media only screen and (min-width: 320px) and (max-width: 768px){
+  padding: 64px 32px;
 }
 
-.container8 h1{
-   margin-top: 10px;
+
+.Title{
    font-size: 27px;
    font-weight: bolder;
-   font-family:'Noto Sans';
-   padding-top:5px;
    color: black;
+   line-height: 1.5rem;
+      @media only screen and (min-width: 320px) and (max-width: 768px){
+   font-size: 20px;
+  line-height: 2rem;
+} 
 }
 
-.small p{
-   margin-bottom: 20px;
-}
 
-.container8 p{
+.subtext{
    line-height: 30px;
-   padding-top: 5px;
-   font-family: 'Noto Sans';
-   font-size: 15px;
-   font-weight: 500;
+   font-size: 17px;
+   font-weight: 400;
    color: black;
-   opacity: 0.7;
-   margin-bottom: 20px;
 }
 
-.bg-1{
-   background-image: url("./images/man-is-reaching-his-hand-push-fire-alarm-hand-station.jpg");
+.casestudiesContainer{
+margin-top: 3rem; 
+   max-width: 1200px;
+ display: grid; 
+ grid-gap: 1rem; 
+ /* Screen larger than 600px? 2 column */ @media (min-width: 768px) {  
+   grid-template-columns: repeat(2, 1fr);
+   } 
+   /* Screen larger than 900px? 4 columns */ @media (min-width: 900px) {
+     grid-template-columns: repeat(3, 1fr);
+}
+    }
+
+
+.bg_1{
+   background-image: url("https://res.cloudinary.com/dlst0ec4h/image/upload/v1676908535/man-is-reaching-his-hand-push-fire-alarm-hand-station_idvmko.webp");
    background-size: cover;
    background-position: cover cover;
    padding: 10px 20px;
    margin-top: 10px;
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
 }
 
-#bg-1-button{
+
+.bg_1_button{
    margin-top: 150px;
-   padding:10px 15px;
+   padding: 10px 15px;
    background:#68b038;
    border: none;
    color: white;
+   transition: all 0.5s;
+   border-radius: 5px;
+   &:hover{
+     background: var(--orange);
+     color: white;
+     transform: translateX(10px);
+border: none;
+   }
 }
 
-.container8 .small{
+.small{
    padding: 10px 15px;
    background: #e8e8e8;
    padding-bottom: 20px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
 }
 
-.container8 h2{
+.small h2{
    margin-top: 10px;
    font-size: 22px;
    font-weight: bold;
@@ -60,11 +86,8 @@
    text-align: center;
 }
 
-.container8 a{
-   text-decoration: none;
-   color: #f88000;
-   text-decoration: underline;
-}
+
+
 
 .bg-2{
    background-image: url("./images/close-up-fingerprint-reader.jpg");
@@ -200,4 +223,4 @@
   }
 }
 
-/* End of scrolling section*/
+}
