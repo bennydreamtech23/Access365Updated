@@ -19,7 +19,6 @@
 } 
 }
 
-
 .subtext{
    line-height: 30px;
    font-size: 17px;
@@ -159,79 +158,131 @@ border-bottom-right-radius: 5px;
    text-align: left;
 }
 
+.rollerBox{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 2rem;
+  justify-content: space-between;
+     @media only screen and (min-width: 320px) and (max-width: 768px){
+  flex-direction: column;
+}
+}
 /*scrolling-section*/
 .companyLogo{
- width: 25%;
+ width: 40%;
   object-fit: cover;
 }
 
 
-.scrolling-col-techbrand{
+.scrolling_col_cplus{
    display: inline;
    margin-right: 10px;
+img{
+  display: inline;
+}
 }
 
-.scrolling-col-Sauter{
+.scrolling_col_hikivision{
    display: inline;
    margin-right: 10px;
+img{
+  display: inline;
+}
 }
 
-.scrolling-col-evolved{
+.scrolling_col_dahua{
    display: inline;
    margin-right: 10px;
+   img{
+  display: inline;
+}
 }
 
-.scrolling-col-sMatrics{
+.scrolling_col_anviz{
    display: inline;
    margin-right: 10px;
-}
-
-
-/*---scrolling-section text---*/
-
-.scrolling-col-techbrand p{
+      img{
   display: inline;
-  font-weight: bold;
-  font-family:'Noto Sans';
-  text-transform: uppercase;
-  font-size: 21px;
+}
 }
 
-.scrolling-col-sMatrics p{
+.scrolling_col_zkteco{
+   display: inline;
+   margin-right: 10px;
+      img{
   display: inline;
-  font-weight: bold;
-  font-family:'Noto Sans';
-  text-transform: uppercase;
-  font-size: 21px;
+}
 }
 
-.scrolling-col-Sauter p{
+.scrolling_col_honeywell{
+   display: inline;
+   margin-right: 10px;
+      img{
   display: inline;
-  font-weight: bold;
-  font-family:'Noto Sans';
-  text-transform: uppercase;
-  font-size: 21px;
+}
 }
 
-.scrolling-col-evolved p{
+.scrolling_col_microsoft{
+   display: inline;
+   margin-right: 10px;
+      img{
   display: inline;
-  font-weight: bold;
-  font-family:'Noto Sans';
-  font-size: 21px;
-  text-transform: uppercase;
+}
 }
 
-.scrolling{
- width: 100%;
- font-size: small;
- overflow-x: scroll;
- float: right;
- color: black;
+.scrolling_col_tuya{
+   display: inline;
+   margin-right: 10px;
+      img{
+  display: inline;
 }
+}
+
+.scrolling_col_panasonic{
+   display: inline;
+   margin-right: 10px;
+      img{
+  display: inline;
+}
+}
+
+.scrolling_col_ubiquiti{
+   display: inline;
+   margin-right: 10px;
+      img{
+  display: inline;
+}
+}
+
+.scrolling_col_tplink{
+   display: inline;
+   margin-right: 10px;
+      img{
+  display: inline;
+}
+}
+
+.scrolling_col_dlink{
+   display: inline;
+   margin-right: 10px;
+      img{
+  display: inline;
+}
+}
+
+.scrolling_col_cisco{
+   display: inline;
+   margin-right: 10px;
+      img{
+  display: inline;
+}
+}
+
 
 #col{
   padding: 0;
-  margin: 30px;
+  margin: 0 30px;
   transform: translateX(100%);
   animation-name:scrolling;
   animation-duration:20s;

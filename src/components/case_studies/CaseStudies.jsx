@@ -176,7 +176,7 @@ const CaseStudies = () =>{
 
 
 
-<Row className="d-flex align-items-center justify-content-between mt-5">
+<Row className={CaseStudiesStyles.rollerBox}>
   <Col className="col-md">
   
     <h3 
@@ -191,112 +191,100 @@ const CaseStudies = () =>{
     Id={CaseStudiesStyles.col}
     style={{whiteSpace: "nowrap"}}>
     
-      <div class="scrolling-col-cplus">
+      <div className={CaseStudiesStyles.scrolling_col_cplus}>
         <img 
        src={cplus}
        alt='cplus'
        className={CaseStudiesStyles.companyLogo}/>
-       <p>CP PLUS</p>
       </div>
       
-      <div class="scrolling-col-hikivision">
+      <div className={CaseStudiesStyles.scrolling_col_hikivision}>
        <img 
        src={hikivison}
        alt='hikvision'
        className={CaseStudiesStyles.companyLogo}/>
-       <p>HIKVISION</p>
       </div>
       
-      <div class="scrolling-col-dahua">
+      <div className={CaseStudiesStyles.scrolling_col_dahua}>
         <img 
        src={dahua}
        alt='dahua'
        className={CaseStudiesStyles.companyLogo}/>
-       <p>DAHUA</p>
       </div>
 
-      
-      <div class="scrolling-col-anviz">
+      <div className={
+     CaseStudiesStyles.scrolling_col_anviz}>
         <img 
        src={anviz}
        alt='anviz'
        className={CaseStudiesStyles.companyLogo}/>
-       <p>ANVIZ</p>
       </div>
       
-      <div class="scrolling-col-zkteco">
+      <div 
+      className={CaseStudiesStyles.scrolling_col_zkteco}>
           <img 
        src={zkteco}
        alt='zkteco'
        className={CaseStudiesStyles.companyLogo}/>
-       <p>ZKTECO</p>
       </div>
       
-      <div class="scrolling-col-honeywell">
+      <div className={CaseStudiesStyles.scrolling_col_honeywell}>
         <img 
        src={honeywell}
        alt='honeywell'
        className={CaseStudiesStyles.companyLogo}/>
-       <p>HONEYWELL</p>
       </div>
       
-      <div class="scrolling-col-microsoft">
+      <div 
+      className={CaseStudiesStyles.scrolling_col_microsoft}>
        <img 
        src={microsoft}
        alt='microsoft'
        className={CaseStudiesStyles.companyLogo}/>
-       <p>MICROSOFT</p>
       </div>
       
-      <div class="scrolling-col-tuya">
+      <div className={CaseStudiesStyles.scrolling_col_tuya}>
     <img 
        src={tuya}
        alt='tuya'
        className={CaseStudiesStyles.companyLogo}/>
-       <p>TUYA</p>
       </div>
       
-      <div class="scrolling-col-panasonic">
+      <div className={CaseStudiesStyles.scrolling_col_panasonic}>
     <img 
        src={panasonic}
        alt='Panasonic'
        className={CaseStudiesStyles.companyLogo}/>
-       <p>PANASONIC PABX</p>
       </div>
       
-      <div class="scrolling-col-ubiquiti">
+      <div className={CaseStudiesStyles.scrolling_col_ubiquiti}>
     <img 
        src={ubiquiti}
        alt='ubiquiti'
        className={CaseStudiesStyles.companyLogo}/>
-       <p>UBIQUITI</p>
       </div>
     
-  <div class="scrolling-col-ubiquiti">
+  <div className={CaseStudiesStyles.scrolling_col_tplink}>
     <img 
        src={tplink}
        alt='tplink'
        className={CaseStudiesStyles.companyLogo}/>
-       <p>TPLINK</p>
       </div>
      
-      <div class="scrolling-col-ubiquiti">
+      <div className={CaseStudiesStyles.scrolling_col_dlink}>
     <img 
        src={dlink}
        alt='dlink'
        className={CaseStudiesStyles.companyLogo}/>
-       <p>DLINK</p>
       </div>
    
-     <div class="scrolling-col-ubiquiti">
+     <div className={CaseStudiesStyles.scrolling_col_cisco}>
     <img 
        src={cisco}
        alt='cisco'
        className={CaseStudiesStyles.companyLogo}/>
-       <p>CISCO</p>
       </div>
-      
-      </div>
+ </div>
     </div>
   </Col>
 </Row>
