@@ -1,28 +1,28 @@
 
 .aboutTitle{
-     font-size: 20px;
-    line-height: 44px;
+     font-size: 24px;
+    line-height: 25px;
 font-family: var(--font);
    font-weight: 600;
    font-style: normal;
    letter-spacing: 0.5px;
-   color: var(--black);
+   color: var(--green);
+   margin-bottom: 1rem;
 @media only screen and (min-width: 320px) and (max-width: 768px){
-    font-size: 17px;
+    font-size: 20px;
     line-height: 1.5rem;
 } 
    }  
 
 
 .subtext{
-  padding-top: 1rem;
 font-family: var(--font);
 font-style: normal;
 font-weight: 400;
 font-size: 1.2rem;
 line-height: 30px;
 text-align: left;
-color: #777;
+color: #fff;
 width: 450px;
 @media only screen and (min-width: 320px) and (max-width: 480px){
 width: 100%;
@@ -31,15 +31,27 @@ font-size: 16px;
 }
 
 .img{
-  border-radius: 50%;
+  width: 50px;
+  height: 50%;
+  object-fit: cover;
 }
 
-.icon{
-  display: inline-block;
-  font-size: 1rem;
-color: var(--green);
-    transition: all .2s;
-    &:hover{
-transform: scaleX(1.2) scaleY(1.4);
-}
-}
+ .overlay_btn{
+      border:none;
+      background: #fff;
+      padding: 10px 15px;
+      border-radius: 5px;
+      color: black;
+      font-weight: bold;
+      transition: 0.5s;
+      height: 3rem;
+      text-decoration: none;
+      width: 200px;
+      text-align: center;
+    }
+    
+   .overlay_btn:hover{
+      background: #68b038;
+      transform: translateX(3px);
+    }
+   

@@ -1,0 +1,46 @@
+.Container{
+   background: #181818;
+  padding: 80px 64px;
+   font-family: var(--font);
+     @media only screen and (min-width: 320px) and (max-width: 768px){
+  padding: 64px 32px;
+}
+
+.Title{
+   font-size: 27px;
+   font-weight: bolder;
+   color: var(--orange);
+   line-height: 1.5rem;
+      @media only screen and (min-width: 320px) and (max-width: 768px){
+   font-size: 24px;
+  line-height: 2rem;
+} 
+}
+
+.subtext{
+   line-height: 30px;
+   font-size: 17px;
+   font-weight: 400;
+   color: #fff;
+   width: 75%;
+   @media only screen and (min-width: 320px) and (max-width: 768px){
+width: 100%;
+}
+}
+
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ @media only screen and (min-width: 320px) and (max-width: 768px){
+flex-direction: column;
+}
+
+.col{
+  width: 50%;
+  @media only screen and (min-width: 320px) and (max-width: 768px){
+width: 100%;
+}
+}
+}
+}

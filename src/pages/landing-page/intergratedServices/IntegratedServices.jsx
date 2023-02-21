@@ -215,7 +215,6 @@ const IntegratedSecurity = () =>{
  </div>
 </Row>
  </div>
-
 <CaseStudies/>
   </>
   )

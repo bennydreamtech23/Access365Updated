@@ -1,0 +1,45 @@
+ <form onSubmit={handlesubmit}>
+    <label for="home" id="home">name:</label>
+  <input id="name" type="text" placeholder="First Name" onChange={e => setName(e.target.value)}/>
+
+     <div class="box">
+     <label for="home" id="home">System Of Interest:</label>
+    <select multiple size="14" onChange={handleCategoryChange}> 
+   <option value="Intrusion Detection">Intrusion Detection System</option> 
+   <option value="Video Surveillance">Video Surveillance System</option> 
+   <option value="System Integratiom">Network System Integration</option> 
+   <option value="Monitoring">Computer Management System</option> 
+   <option value='fire alarm system'>Fire Alarm System</option> 
+   <option value="Access Control">Access Control System</option> 
+   <option value="Access Control">PABX System-Intercom</option>
+   <option value="Access Control">Hotel Lock Management System</option>
+   <option value="Access Control">Eco-friendly Power Solution</option>
+   <option value="Access Control">Smart Home Device Management</option>
+   <option value="Access Control">Cable Management</option>
+   <option value="Access Control">Maintenance Of Services</option>
+   <option value="Other">Other Services</option>
+   </select>
+</div>
+
+<div>
+<select onChange={e => setGender(e.target.value)}>
+<option value="male">male</option>
+<option value="female">female</option>
+</select>
+</div>
+  <button type="submit">submit</button>
+</form>
+
+
+
+ <Form.Group className={styles.box}>
+      <Form.Label className={styles.labelfield}>
+        Home or Business? 
+      </Form.Label>
+      
+  <select name="home_business"
+  onChange={e => setHome_business(e.target.value)}>
+    <option value='home'>For Home</option>
+        <option value='business'>For Busines</option>
+  </select>
+  </Form.Group>

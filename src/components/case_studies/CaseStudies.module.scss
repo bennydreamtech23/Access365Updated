@@ -58,7 +58,6 @@ margin-top: 3rem;
    border-top-right-radius: 5px;
 }
 
-
 .bg_1_button{
    margin-top: 150px;
    padding: 10px 15px;
@@ -151,11 +150,13 @@ border-bottom-right-radius: 5px;
    margin-top: 10px;
 }
 
-.Container h3{
-   font-size: 18px;
-   font-weight: 500;
-   color: black;
-   text-align: left;
+.mediumtext{
+  font-size: 18px;
+  line-height: 1.7rem;
+  width: 400px;
+   @media only screen and (min-width: 320px) and (max-width: 768px){
+width: 100%;
+}
 }
 
 .rollerBox{
@@ -170,7 +171,7 @@ border-bottom-right-radius: 5px;
 }
 /*scrolling-section*/
 .companyLogo{
- width: 40%;
+ width: 30%;
   object-fit: cover;
 }
 

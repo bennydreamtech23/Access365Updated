@@ -180,8 +180,8 @@ const CaseStudies = () =>{
   <Col className="col-md">
   
     <h3 
-    className='lh-base'>
-    Provide better security and control for residential and business customers.
+    className={CaseStudiesStyles.mediumtext}>
+    Provide better security and control for residential and business customers using product from these company
     </h3>
   </Col>
   
