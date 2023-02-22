@@ -32,14 +32,4 @@
 
 
 
- <Form.Group className={styles.box}>
-      <Form.Label className={styles.labelfield}>
-        Home or Business? 
-      </Form.Label>
-      
-  <select name="home_business"
-  onChange={e => setHome_business(e.target.value)}>
-    <option value='home'>For Home</option>
-        <option value='business'>For Busines</option>
-  </select>
-  </Form.Group>
+ 

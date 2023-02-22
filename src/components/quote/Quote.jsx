@@ -13,31 +13,34 @@ import {
   MdOutlinePhoneLocked, 
   MdErrorOutline, 
   MdPersonOutline} from "react-icons/md";
-import { Formik } from 'formik';
- import * as Yup from 'yup';
+
 
 
 const Quote = () => {
-const [email, setEmail] =useState("")
-  const [home_business, setHome_business] =useState("")
-  //const [categories, setCategories] = useState([]); 
-
-  
+const [home_business, setHome_business] =useState("")
+const [industry, setIndustry] =useState("")
+const [ownership, setOwnership] =useState("")
+const [sizeOfApartment, setSizeOfApartment] = useState("")
+const[first_name, setFirst_name] = useState("")
+const[last_name, setLast_name] = useState("")
+const[email, setEmail] = useState("")
+const[phone_number, setPhone_number] = useState("")
+const [categories, setCategories] = useState([]);
+const[quantity, setQuantity] = useState("")
   //toast usestate component
-  const [showToast, setShowToast]  = useState(false)
+const [showToast, setShowToast]  = useState(false)
 const [errorType, setErrorType]  = useState('')
  const [messageType, setMessageType] = useState('')
  
  const handleCategoryChange = (event) => {
-    const selectedCategories = Array.from(event.target.options)
+const selectedCategories = Array.from(event.target.options)
       .filter((option) => option.selected)
       .map((option) => option.value);
-
     setCategories(selectedCategories);
   };
   
-  const handlesubmit = () =>{
-   // e.preventDefault()
+  const handlesubmit = (e) => {
+  e.preventDefault()
 fetch("https://formsubmit.co/ajax/uwabunkeonyeijeoma@gmail.com", {
     method: "POST",
     headers: { 
@@ -45,8 +48,17 @@ fetch("https://formsubmit.co/ajax/uwabunkeonyeijeoma@gmail.com", {
         'Accept': 'application/json'
     },
     body: JSON.stringify({
-    email: email
-    // home_business: home_business
+    home_business: home_business,
+    industry: industry,
+    ownership: ownership,
+    Size_Of_Apartment: sizeOfApartment,
+    last_name: last_name,
+    first_name: first_name,
+    email: email,
+    phone_number: phone_number,
+    quantity: quantity,
+    categories: categories,
+_subject: "New Order Form Submmited"
     })
 })
     .then(response => response.json())
@@ -70,75 +82,222 @@ fetch("https://formsubmit.co/ajax/uwabunkeonyeijeoma@gmail.com", {
   
   return(
     <section>
-    <Formik
-       initialValues={{ 
-       email: '',
-       home_business: ''
-       }}
-  
-       validationSchema={Yup.object({
-       
-         email: Yup.string().email('Invalid email address').required('Required'),
-       })}
-       onSubmit={(handlesubmit)}
-     >
-       {formik => (
-         <Form  noValidate
-         autoComplete='off'
-         onSubmit={formik.handleSubmit}>
-    
-    <Form.Group className={styles.box}>
-      <Form.Label className={styles.labelfield}>
-        Home or Business? 
-      </Form.Label>
-      
-  <select name="home_business">
+    <Form onSubmit={handlesubmit}>
+   
+ <Form.Group className={styles.box}>
+  <Form.Label 
+  className={styles.labelfield}>
+  Home or Business?
+  </Form.Label>
+  <select name="Home or Business?" 
+  onChange={e => setHome_business(e.target.value)}>
+  <option>default</option>
     <option value='home'>For Home</option>
-        <option value='business'>For Busines</option>
+    <option value='business'>For Busines</option>
   </select>
   </Form.Group>
+  
+  <Form.Group className={styles.box}>
+  <Form.Label 
+  className={styles.labelfield}>
+ Industry:
+  </Form.Label>
+  <select name="industry" 
+  onChange={e => setIndustry(e.target.value)}>
+    <option>default</option>
+    <option value='commercial Building'>Commercial Buildings</option>
+    <option value='office Building'>Office Buildings</option>
+  </select>
+  </Form.Group>
+  
+   <Form.Group className={styles.box}>
+  <Form.Label 
+  className={styles.labelfield}>
+Own Or Rent:
+  </Form.Label>
+  <select name="ownership" 
+  onChange={e => setOwnership(e.target.value)}>
+    <option>default</option>
+    <option value='commercial Building'>
+    Commercial Buildings
+    </option>
+    <option value='office Building'>
+    Office Buildings
+    </option>
+  </select>
+  </Form.Group>
+
+ <Form.Group className={styles.box}>
+  <Form.Label 
+  className={styles.labelfield}>
+Size Of Apartment:
+  </Form.Label>
+  <select name="ownership" 
+  onChange={e => setSizeOfApartment(e.target.value)}>
+    <option>default</option>
+    <option value='storey Apartment'>
+   Storey Apartment
+    </option>
+    <option value='mini flat'>
+    Mini Flat
+    </option>
+       <option value='Duplex'>
+    Duplex
+    </option>
+  <option value='Bungalow'>
+   Bungalow
+    </option>
+  </select>
+  </Form.Group>
+  
+  <Form.Group className={styles.box}>
+  <Form.Label 
+  className={styles.labelfield}>
+Personal Details
+  </Form.Label>
+  
+  <InputGroup 
+  className='mb-4'>
+<Form.Control 
+ name="first_name" 
+ type='text'
+ value={first_name}
+ placeholder= "Please Enter your First Name"
+  onChange={e => setFirst_name(e.target.value)}/>
+</InputGroup>
+
+<InputGroup 
+className='mb-4'>
+<Form.Control 
+ name="last_name" 
+ type='text'
+ value={last_name}
+ placeholder= "Please Enter your Last Name"
+  onChange={e => setLast_name(e.target.value)}/>
+</InputGroup>
+
+<InputGroup 
+className='mb-4'>
+<Form.Control 
+ name="email" 
+ type='email'
+ value={email}
+ placeholder= "Please Enter your Email Address"
+  onChange={e => setEmail(e.target.value)}/>
+</InputGroup>
+
+<InputGroup 
+className='mb-4'>
+<Form.Control 
+ name="phone_number" 
+ type='number'
+ value={phone_number}
+ placeholder= "Please Enter your Phone Number"
+  onChange={e => setPhone_number(e.target.value)}/>
+</InputGroup>
+  </Form.Group>
+
+ <Form.Group className={styles.box}>
+  <Form.Label 
+  className={styles.labelfield}>
+System Of Interest:
+  </Form.Label>
+  
+  <select name="ownership" 
+   multiple size="14" 
+   onChange={handleCategoryChange}>
+    <option 
+    value="Intrusion Detection">
+    Intrusion Detection System
+    </option> 
+   <option 
+   value="Video Surveillance">
+   Video Surveillance System
+   </option> 
+   <option 
+   value="Network System Integratiom">
+   Network System Integration
+   </option> 
    
-         
-          <Form.Group className={styles.group}>
-         <div className={styles.subgroup}> 
-    
-      <Form.Label className={styles.labelfield}>
-         Email
-      </Form.Label>
-      
-          <InputGroup className={styles.inputField}>
-          
-         <InputGroup.Text id="inputGroupPrepend">
-        <MdEmail/></InputGroup.Text>
-                 
-              <Form.Control
-              value={email}
-              onChange={(e) =>  setEmail(e.target.value)}
-                 size="md" 
-            type="email"
-          name="email"
-     placeholder="Enter your Email Address"
-            id="email"
-      className={styles.inputbox} 
-             {...formik.getFieldProps('email')}
-           />
-               </InputGroup>
-    {formik.touched.email && formik.errors.email ? (
-             <div className={styles.errorMsg}> <MdErrorOutline className="h6 mt-1"/> {formik.errors.email}</div>
-           ) : null}      
-        
-</div>
-     </Form.Group>
+   <option value="Computer Managment System">
+   Computer Management System
+   </option> 
+   
+   <option 
+   value='fire alarm system'>
+   Fire Alarm System
+   </option> 
+   
+   <option 
+   value="Access Control System">
+   Access Control System
+   </option> 
+   
+   <option 
+   value="PABX System-Intercom">
+   PABX System-Intercom
+   </option>
+   
+   <option 
+   value="Hotel Lock Management System">
+   Hotel Lock Management System
+   </option>
+   
+   <option 
+   value="Eco-friendly Power Solution">
+   Eco-friendly Power Solution
+   </option>
+   
+   <option 
+   value="Smart Home Device Management">
+   Smart Home Device Management
+   </option>
+   
+   <option 
+   value="Cable Management">
+   Cable Management
+   </option>
+   
+   <option 
+   value="Maintenance Of Services">
+   Maintenance Of Services
+   </option>
+   <option 
+   value="Other services">
+   Other Services
+   </option>
+  </select>
+  </Form.Group>
+  
+  <Form.Group className={styles.box}>
+  <Form.Label 
+  className={styles.labelfield}>
+Quantity
+  </Form.Label>
+  
+  <InputGroup 
+  className='mb-4'>
+<Form.Control 
+ name="quantity" 
+ type='number'
+ value={quantity}
+ placeholder= "Please Enter the Number of Quantity"
+  onChange={e => setQuantity(e.target.value)}/>
+</InputGroup>
+</Form.Group>
+  
+  <input type="hidden" name="_captcha" value="true"/>
+  <input type="hidden"
+  name="_subject" value="New Order Form!"/>
+  <input type="hidden" 
+  name="_blacklist" value="spammy pattern, banned term, phrase"/>
+  <input type="hidden" 
+  name="_autoresponse" value="Thank you for placing an order, we would get back to you, as soon as possible"/>
+  <input type="hidden" 
+  name="_template" value="box"/>
+<button type='submit' className='btn'> Submit</button>
+</Form>
 
-           <button className='btn mt-3' 
-           type="submit">
-           Submit
-           </button>
-         </Form>
-       )}
-     </Formik>
-
-    
   <Toast  bg={errorType} show={showToast}  onClose={()=>{setShowToast(!showToast)}}>
     <Toast.Header>
       <img
