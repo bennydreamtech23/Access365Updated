@@ -57,8 +57,12 @@ fetch("https://formsubmit.co/ajax/uwabunkeonyeijeoma@gmail.com", {
     email: email,
     phone_number: phone_number,
     quantity: quantity,
-    categories: categories,
-_subject: "New Order Form Submmited"
+   System_Of_Interest: categories,
+_subject: `New Order Submmitted By ${first_name} ${last_name}`,
+_captcha: true,
+_blacklist: "spammy pattern, banned term, phrase",
+_autoresponse:"Thank you for requiring the services of Access365, we would keep you updated based on your order",
+_template: "box"
     })
 })
     .then(response => response.json())
@@ -158,6 +162,8 @@ Personal Details
   
   <InputGroup 
   className='mb-4'>
+           <InputGroup.Text id="inputGroupPrepend">
+        <MdPersonOutline/></InputGroup.Text>
 <Form.Control 
  name="first_name" 
  type='text'
@@ -168,6 +174,9 @@ Personal Details
 
 <InputGroup 
 className='mb-4'>
+    <InputGroup.Text id="inputGroupPrepend">
+        <MdPersonOutline/>
+        </InputGroup.Text>
 <Form.Control 
  name="last_name" 
  type='text'
@@ -178,6 +187,9 @@ className='mb-4'>
 
 <InputGroup 
 className='mb-4'>
+<InputGroup.Text id="inputGroupPrepend">
+        <MdEmail/>
+        </InputGroup.Text>
 <Form.Control 
  name="email" 
  type='email'
@@ -188,6 +200,8 @@ className='mb-4'>
 
 <InputGroup 
 className='mb-4'>
+ <InputGroup.Text id="inputGroupPrepend">
+  <MdOutlinePhoneLocked/></InputGroup.Text>
 <Form.Control 
  name="phone_number" 
  type='number'
@@ -286,15 +300,11 @@ Quantity
 </InputGroup>
 </Form.Group>
   
-  <input type="hidden" name="_captcha" value="true"/>
-  <input type="hidden"
-  name="_subject" value="New Order Form!"/>
-  <input type="hidden" 
-  name="_blacklist" value="spammy pattern, banned term, phrase"/>
-  <input type="hidden" 
-  name="_autoresponse" value="Thank you for placing an order, we would get back to you, as soon as possible"/>
-  <input type="hidden" 
-  name="_template" value="box"/>
+  <input type="hidden"/>
+  <input type="hidden"/>
+  <input type="hidden"/>
+  <input type="hidden" />
+  <input type="hidden"/>
 <button type='submit' className='btn'> Submit</button>
 </Form>
 
