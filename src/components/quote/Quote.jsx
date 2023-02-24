@@ -75,65 +75,56 @@ const selectedCategories = Array.from(event.target.options)
   return errors
   }
   
-  useEffect(() =>{
+ useEffect(() =>{
+   validate(formValues)
     //console.log(formError)
-    if(Object.keys(formError).length === 0){
-      console.log(formValues)
-    }
-  }, [formError])
+    //if(Object.keys(formError).length === 0){
+     // console.log(formValues)
+   // }
+  }, [formValues])
   
   const handlesubmit = (e) => {
   e.preventDefault()
   setFormError(validate(formValues))
-  //(true)
-fetch("https://formsubmit.co/ajax/uwabunkeonyeijeoma@gmail.com", {
-    method: "POST",
-    headers: { 
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-    },
-    body: JSON.stringify({
-    home_business: home_business,
-    industry: industry,
-    ownership: ownership,
-    Size_Of_Apartment: sizeOfApartment,
-    last_name: formValues.last_name,
-    first_name: formValues.first_name,
-    email: formValues.email,
-    phone_number: formValues.phone_number,
-    quantity: quantity,
-   System_Of_Interest: categories,
-_subject: `New Order Submmitted By ${first_name} ${last_name}`,
-_captcha: true,
-_blacklist: "spammy pattern, banned term, phrase",
-_template: "box"
-    })
-})
-    .then(response => response.json())
-    .then(data => {
-      if(data.success === "true"){
-       // setIsSubmit(true)
-        alert('success')
-      setErrorType("success")
-      setMessageType("Mail sent success")
-        setShowToast(true)
-      }else{
-      //alert('failure')
-      // setIsSubmit(true)
-       setErrorType("danger")
-      setMessageType(data.message)
-       setShowToast(true)
-      }
+if(Object.keys(formError).length === 0){
+      alert(formValues)
     }
-    )
-    .catch(error => console.log(error));
-  }
+    
+  //(true)
+//fetch("https://formsubmit.co/ajax/uwabunkeonyeijeoma@gmail.com", {
+  //  method: "POST",
+   // headers: { 
+    //    'Content-Type': 'application/json',
+     //   'Accept': 'application/json'
+   // },
+   // body: JSON.stringify({
+  //  home_business: home_business,
+  //  industry: industry,
+//ownership: ownership,
+  //  Size_Of_Apartment: sizeOfApartment,
+   // last_name: formValues.last_name,
+//first_name: formValues.first_name,
+    //email: formValues.email,
+   // phone_number: formValues.phone_number,
+//quantity: quantity,
+  // System_Of_Interest: categories,
+//_subject: `New Order Submmitted By ${first_name} ${last_name}`,
+//_captcha: true,
+//_blacklist: "spammy pattern, banned term, phrase",
+//_template: "box"
+  //  })
+//})
+ //   .then(response => response.json())
+  //  .then(data => {
+    //  if(data.success === "true"){
+       // setIsSubmit(true)
+}
   
   
   return(
     <>
     <section>
-    {Object.keys(formError).length === 0  ? (<div className='text-success'>Form Submitted suessfully </div> ) : ''}
+    {Object.keys(formError).length === 0  ? '' : (<div className='text-success'>Form Submitted suessfully </div> )}
     <Form onSubmit={handlesubmit}>
  <Form.Group className={styles.box}>
   <Form.Label 

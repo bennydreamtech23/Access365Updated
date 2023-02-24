@@ -3,10 +3,6 @@ import {Container, Row, Col, Card} from 'react-bootstrap';
 import HeroStyles from "./HeroSection.module.scss";
 import { Link } from "react-router-dom";
 
-import {TbTruckDelivery, TbHandClick,TbAward} from "react-icons/tb";
-
-import {BsArrowDownRight} from "react-icons/bs"; 
-
 const HeroSection = () =>{
 
  const door = "https://res.cloudinary.com/dlst0ec4h/image/upload/v1676478401/close-up-fingerprint-reader_edwvqm.webp"   

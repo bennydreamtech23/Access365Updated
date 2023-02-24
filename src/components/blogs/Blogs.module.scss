@@ -26,9 +26,14 @@ h2{
 
 .BlogCard{
  //margin-bottom: 10px;
- width: 20rem;
+ width: 19rem;
+ height: 36rem;
  display: flex;
  flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ margin: 0 auto;
+ margin-bottom: 1.5rem;
  
 img{
  border-top-left-radius: 5px;
@@ -40,7 +45,7 @@ object-fit: cover;
  .content{
   background: black;
   padding: 16px;
-  //height: 400px;
+//height: 430px;
   color: white;
 border-bottom-left-radius: 5px;
 border-bottom-right-radius: 5px;
@@ -60,48 +65,31 @@ h3{
   font-weight: 400;
   margin-bottom: 20px;
 }
-}
 
-
- 
-
-
-
-
- 
-  
-
-
-.container10 img{
- 
-}
-
- 
-
-#overlay-btn5{
+.overlay_btn5{
   border:2px solid #808888;
-  color: black;
+  color: white;
   border-radius: 5px;
   padding: 10px 15px;
   margin-top: 15px;
   font-weight: bold;
-  text-decoration:none;
-}
-
-#overlay-btn5:hover{
+  text-decoration: none;
+  .overlay_btn5:hover{
  background: black;
   background: transparent;
   color: black;
 }
-
-
-/*----foooter----*/
-
-.footer{
-  background: black;
-  color: white;
-  position: absolute;
-  padding-top: 15px;
-  margin-top: 10px;
 }
+}
+
+.link{
+  color: var(--orange);
+  margin-top: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  &:hover{
+  color: var(--green);
+}
+}
+
 }

@@ -1,0 +1,51 @@
+.commitmentContainer{
+  h1{
+    color: var(--orange);
+     font-size: 27px;
+   font-weight: bolder;
+   line-height: 1.5rem;
+      @media only screen and (min-width: 320px) and (max-width: 768px){
+   font-size: 20px;
+  line-height: 2rem;
+} 
+  }
+  
+.thLead{
+  font-size: 1.3rem;
+   @media only screen and (min-width: 320px) and (max-width: 480px){
+  font-size: 0.7rem;
+}
+@media only screen and (min-width: 480px) and (max-width: 768px){
+  font-size: 0.9rem;
+}
+}
+
+.link{
+  color: var(--orange);
+  margin-top: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  &:hover{
+  color: var(--green);
+}
+}
+
+.link1{
+  border: 1.5px solid rgba(0,0,0,1);
+  text-align: center;
+  border-radius: 10px;
+  padding: 7px 13px;
+  color: var(--orange);
+  margin-top: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-align: center;
+  width: 220px;
+  &:hover{
+  color: white;
+  background: var(--green);
+  border: none;
+}
+}
+}

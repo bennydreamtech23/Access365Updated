@@ -6,6 +6,7 @@ import SmartHomeSection from './smarthome/SmartHome';
 import IntegratedSecuritySection from './intergratedServices/IntegratedServices';
 import QuoteSectionPage from './quotesection/QuoteSecton';
 import Testimonies from './testimonies/Testimonies';
+import Contact from "./contact/Contact"
 
 const LandingPage = () =>{
   return(
@@ -17,6 +18,7 @@ const LandingPage = () =>{
    <IntegratedSecuritySection/>
    <QuoteSectionPage/>
     <Testimonies/>
+    <Contact/>
     </>
     )
 }

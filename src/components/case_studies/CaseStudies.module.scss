@@ -7,7 +7,6 @@
   padding: 64px 32px;
 }
 
-
 .Title{
    font-size: 27px;
    font-weight: bolder;
@@ -45,8 +44,6 @@ margin-top: 3rem;
   flex-direction: column;
   margin: 0 auto;
 }
-
-
 
 .bg_1{
    background-image: url("https://res.cloudinary.com/dlst0ec4h/image/upload/v1676908535/man-is-reaching-his-hand-push-fire-alarm-hand-station_idvmko.webp");
@@ -153,7 +150,8 @@ border-bottom-right-radius: 5px;
 .mediumtext{
   font-size: 18px;
   line-height: 1.7rem;
-  width: 400px;
+  width: 800px;
+  margin: 0px;
    @media only screen and (min-width: 320px) and (max-width: 768px){
 width: 100%;
 }
@@ -161,20 +159,17 @@ width: 100%;
 
 .rollerBox{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   margin-top: 2rem;
   justify-content: space-between;
-     @media only screen and (min-width: 320px) and (max-width: 768px){
-  flex-direction: column;
-}
-}
-/*scrolling-section*/
-.companyLogo{
- width: 30%;
-  object-fit: cover;
 }
 
+/*scrolling-section*/
+.companyLogo{
+ width: 15%;
+  object-fit: cover;
+}
 
 .scrolling_col_cplus{
    display: inline;
