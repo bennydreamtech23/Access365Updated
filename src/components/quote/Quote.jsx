@@ -20,7 +20,7 @@ const Quote = () => {
 //form input
 const initialValues = {first_name: '', first_name: "", email: "", phone_number:""}
 const [formValues, setFormValues] = useState(initialValues)
-const [isSubmit, setIsSubmit] = useState(false)
+//const [isSubmit, setIsSubmit] = useState(false)
 
 //const[first_name, setFirst_name] = useState("")
 //const[last_name, setLast_name] = useState("")
@@ -76,15 +76,16 @@ const selectedCategories = Array.from(event.target.options)
   }
   
   useEffect(() =>{
-    console.log(formError)
-    if(Object.keys(formError).length === 0 && isSubmit){
+    //console.log(formError)
+    if(Object.keys(formError).length === 0){
       console.log(formValues)
     }
   }, [formError])
+  
   const handlesubmit = (e) => {
   e.preventDefault()
   setFormError(validate(formValues))
-  setIsSubmit(true)
+  //(true)
 fetch("https://formsubmit.co/ajax/uwabunkeonyeijeoma@gmail.com", {
     method: "POST",
     headers: { 
@@ -111,14 +112,14 @@ _template: "box"
     .then(response => response.json())
     .then(data => {
       if(data.success === "true"){
-        setIsSubmit(true)
-        //alert('success')
+       // setIsSubmit(true)
+        alert('success')
       setErrorType("success")
       setMessageType("Mail sent success")
         setShowToast(true)
       }else{
       //alert('failure')
-       setIsSubmit(true)
+      // setIsSubmit(true)
        setErrorType("danger")
       setMessageType(data.message)
        setShowToast(true)
@@ -132,7 +133,7 @@ _template: "box"
   return(
     <>
     <section>
-    {Object.keys(formError).length === 0 && isSubmit ? (<div className='text-success'>Form Submitted suessfully </div> ) : ''}
+    {Object.keys(formError).length === 0  ? (<div className='text-success'>Form Submitted suessfully </div> ) : ''}
     <Form onSubmit={handlesubmit}>
  <Form.Group className={styles.box}>
   <Form.Label 

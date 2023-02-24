@@ -1,0 +1,107 @@
+.BlogContainer{
+  font-family: var(--font);
+  
+ h1{
+  font-size: 30px;
+  font-weight: bolder;
+  color:black;
+  line-height: 2rem;
+  @media only screen and (min-width: 320px) and (max-width: 768px){
+   font-size: 24px;
+  line-height: 2rem;
+} 
+}
+
+h2{
+ margin-top: 10px;
+  font-size: 21px;
+  font-weight: normal;
+  padding-top:5px;
+  color: var(--orange);
+  @media only screen and (min-width: 320px) and (max-width: 768px){
+   font-size: 19px;
+  line-height: 2rem;
+} 
+}
+
+.BlogCard{
+ //margin-bottom: 10px;
+ width: 20rem;
+ display: flex;
+ flex-direction: column;
+ 
+img{
+ border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+width: 100%;
+//height: 50%;
+object-fit: cover;
+}
+ .content{
+  background: black;
+  padding: 16px;
+  //height: 400px;
+  color: white;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+} 
+
+h3{
+  padding-top: 10px;
+  font-size: 19px;
+  font-weight: bold;
+  padding-top: 5px;
+  line-height: 1.5rem;
+}
+ p{
+  line-height: 30px;
+  padding-top: 5px;
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+}
+
+
+ 
+
+
+
+
+ 
+  
+
+
+.container10 img{
+ 
+}
+
+ 
+
+#overlay-btn5{
+  border:2px solid #808888;
+  color: black;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-top: 15px;
+  font-weight: bold;
+  text-decoration:none;
+}
+
+#overlay-btn5:hover{
+ background: black;
+  background: transparent;
+  color: black;
+}
+
+
+/*----foooter----*/
+
+.footer{
+  background: black;
+  color: white;
+  position: absolute;
+  padding-top: 15px;
+  margin-top: 10px;
+}
+}
