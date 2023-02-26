@@ -1,12 +1,13 @@
 //react
-import {Link, useNavigate, useParams} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import { useEffect, useState} from "react";
 import "./Navbar.scss";
 //container from bootstrap
 import {Container,
 Nav, 
 NavDropdown} from 'react-bootstrap';
-import servicesData from '../../components/data/servicesData'
+import servicesData from '../data/servicesData'
+import industriesData from '../data/industriesData'
 //icons
 import {FaBars} from "react-icons/fa";
 import { BiPhoneCall } from "react-icons/bi";
@@ -17,16 +18,7 @@ function NavbarTool() {
 const navigate = useNavigate()
  const [stickyClass, setStickyClass] = useState('');
  
-  //const [serviceData, setServiceData] = useState(servicesData)
-  
-  const { id } = useParams();
-   const service = servicesData.find((service) => {
-return service.id === Number(id)
- });
-  
-  //const {id} = service.id
-  
-  
+
    useEffect(() => {
     window.addEventListener('scroll', stickNavbar);
     return () => window.removeEventListener('scroll', stickNavbar);
@@ -112,7 +104,7 @@ return service.id === Number(id)
 
               <NavDropdown.Item 
               as={Link} 
-              to="/customersreview">
+              to="/review">
               Customer's Review
               </NavDropdown.Item>
              
@@ -125,10 +117,9 @@ return service.id === Number(id)
               <NavDropdown.Item 
               as={Link} 
               to="/faq">
-              Help FAQs
+             FAQs
               </NavDropdown.Item>
 
- 
               <NavDropdown.Item 
               as={Link} 
               to="/gallery">
@@ -150,71 +141,42 @@ return service.id === Number(id)
      <div 
      className="service-box">
      <div>
-        <NavDropdown.Item 
-        as={Link} 
-        to='/services'
-        className="services_title">
+       <NavDropdown.Item as={Link} to="/services" className="services_title">
               Services
               </NavDropdown.Item>
-              
-              <NavDropdown.Item
-              as={Link}
-             to={`/services/${id}`}> 
-              Business Security
+     {
+       servicesData.map(item =>(
+      <div 
+      key={item.id}>
+       <NavDropdown.Item 
+        as={Link} 
+        to={`/services/${item.title}`}>
+              {item.title}
               </NavDropdown.Item>
-              
-               <NavDropdown.Item>
-            Fire Detection
-              </NavDropdown.Item>
-             
-              <NavDropdown.Item>
-              Access Control
-              </NavDropdown.Item>
-             
-              <NavDropdown.Item>
-              Alarm Systems
-              </NavDropdown.Item>
-             
-         <NavDropdown.Item>
-          CCtv & Video
-              </NavDropdown.Item>
-           
-            <NavDropdown.Item>
-            Smart Home
-              </NavDropdown.Item>
-     </div>
-     
+      </div>
+      ))
+    }
+    </div>
+    
    <div>
-            <NavDropdown.Item as={Link} to="/Industries" className="services_title">
-              Industries
+       <NavDropdown.Item as={Link} to="/industries" className="services_title">
+             Industries
               </NavDropdown.Item>
-      
-              <NavDropdown.Item>
-              Pharmaceutic & Biotech
+     {
+       industriesData.map(item =>(
+      <div 
+      key={item.id}>
+       <NavDropdown.Item 
+        as={Link} 
+        to={`/industries/${item.title}`}>
+              {item.title}
               </NavDropdown.Item>
-             
-             <NavDropdown.Item>
-              Manufacturing & Logistics
-              </NavDropdown.Item>
-              
-               <NavDropdown.Item>
-              Healthcare Buildings
-              </NavDropdown.Item>
-
-              <NavDropdown.Item>
-          Commercial Buildings
-              </NavDropdown.Item>
-
-              <NavDropdown.Item>
-              Finance & Banking
-              </NavDropdown.Item>
-              
-                <NavDropdown.Item>
-              Office Buildings
-              </NavDropdown.Item>
-              </div>
-          </div>
-        </NavDropdown>
+      </div>
+      ))
+    }
+    </div>
+</div>
+</NavDropdown>
 
 
 <NavDropdown title="News & Media" id="navbarScrollingDropdown" className="nav-link">
@@ -311,7 +273,7 @@ aria-labelledby="offcanvasExampleLabel">
               </NavDropdown.Item>
 
               <NavDropdown.Item 
-              as={Link} to="/customersreview">
+              as={Link} to="/review">
               Customer's Review
               </NavDropdown.Item>
              
@@ -322,7 +284,7 @@ aria-labelledby="offcanvasExampleLabel">
  
               <NavDropdown.Item 
               as={Link} to="/faq">
-              Help FAQs
+              FAQs
               </NavDropdown.Item>
 
  
@@ -336,73 +298,52 @@ aria-labelledby="offcanvasExampleLabel">
                Contact Us
               </NavDropdown.Item>
       </NavDropdown>
-    
-     <NavDropdown  title="Services & Industries" id="navbarScrollingDropdown" className="nav-link">
+
+ <NavDropdown  
+     title="Services & Industries" 
+     id="navbarScrollingDropdown"
+     className="nav-link">
      
-     <div className="service-box">
+     <div 
+     className="service-box">
      <div>
-              <NavDropdown.Item as={Link} to="/services" className="services_title">
+       <NavDropdown.Item as={Link} to="/services" className="services_title">
               Services
               </NavDropdown.Item>
-              
-              <NavDropdown.Item>
-              Business Security
+     {
+       servicesData.map(item =>(
+      <div 
+      key={item.id}>
+       <NavDropdown.Item 
+        as={Link} 
+        to={`/services/${item.title}`}>
+              {item.title}
               </NavDropdown.Item>
-              
-               <NavDropdown.Item>
-            Fire Detection
-              </NavDropdown.Item>
-             
-              <NavDropdown.Item>
-              Access Control
-              </NavDropdown.Item>
-             
-              <NavDropdown.Item>
-              Alarm Systems
-              </NavDropdown.Item>
-             
-         <NavDropdown.Item>
-          CCtv & Video
-              </NavDropdown.Item>
-           
-            <NavDropdown.Item>
-            Smart Home
-              </NavDropdown.Item>
-     </div>
-     
+      </div>
+      ))
+    }
+    </div>
+    
    <div>
-            <NavDropdown.Item as={Link} to="/Industries" className="services_title">
-              Industries
+       <NavDropdown.Item as={Link} to="/industries" className="services_title">
+             Industries
               </NavDropdown.Item>
-      
-              <NavDropdown.Item>
-              Pharmaceutic & Biotech
+     {
+       industriesData.map(item =>(
+      <div 
+      key={item.id}>
+       <NavDropdown.Item 
+        as={Link} 
+        to={`/industries/${item.title}`}>
+              {item.title}
               </NavDropdown.Item>
-             
-             <NavDropdown.Item>
-              Manufacturing & Logistics
-              </NavDropdown.Item>
-              
-               <NavDropdown.Item>
-              Healthcare Buildings
-              </NavDropdown.Item>
-
-              <NavDropdown.Item>
-          Commercial Buildings
-              </NavDropdown.Item>
-
-              <NavDropdown.Item>
-              Finance & Banking
-              </NavDropdown.Item>
-              
-                <NavDropdown.Item>
-              Office Buildings
-              </NavDropdown.Item>
-              </div>
-          </div>
-        </NavDropdown>
-
-
+      </div>
+      ))
+    }
+    </div>
+</div>
+</NavDropdown>
+    
 <NavDropdown title="News & Media" id="navbarScrollingDropdown" className="nav-link">
      
               <NavDropdown.Item as={Link} to="/blog">
