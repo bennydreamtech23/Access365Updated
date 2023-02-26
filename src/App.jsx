@@ -7,6 +7,9 @@ import Footer from "./components/footer/Footer";
 
 //pages
 import LandingPage from "./pages/landing-page/Landingpage";
+import ServiceDetails from "./pages/serviceDetails/ServiceDetail"
+import ServicePage from "./pages/services/service/Service"
+
 
 function App() {
   return (
@@ -15,6 +18,8 @@ function App() {
       <Routes>
         {/* pages */}
         <Route path="/" element={<LandingPage />} />
+      <Route path="/services" element={<ServicePage />} />
+    <Route path="/services/:id" element={<ServiceDetails />} />
 </Routes>
     <Footer/>
     </div>

@@ -1,20 +1,31 @@
-import {Container, Nav, Badge, NavDropdown} from 'react-bootstrap';
-
+//react
+import {Link, useNavigate, useParams} from "react-router-dom";
+import { useEffect, useState} from "react";
+import "./Navbar.scss";
+//container from bootstrap
+import {Container,
+Nav, 
+NavDropdown} from 'react-bootstrap';
+import servicesData from '../../components/data/servicesData'
 //icons
 import {FaBars} from "react-icons/fa";
 import { BiPhoneCall } from "react-icons/bi";
 import logo from "../../assets/logo.png"
 
-//react
-import {Link, useNavigate} from "react-router-dom";
-import { useEffect, useState} from "react";
-import "./Navbar.scss";
-
 
 function NavbarTool() {
 const navigate = useNavigate()
-
  const [stickyClass, setStickyClass] = useState('');
+ 
+  //const [serviceData, setServiceData] = useState(servicesData)
+  
+  const { id } = useParams();
+   const service = servicesData.find((service) => {
+return service.id === Number(id)
+ });
+  
+  //const {id} = service.id
+  
   
    useEffect(() => {
     window.addEventListener('scroll', stickNavbar);
@@ -28,22 +39,24 @@ const navigate = useNavigate()
       windowHeight > 150 ? setStickyClass('sticky-nav') : setStickyClass('');
     }
   };
-   
+  
+  
   return (
     <div 
     className={`${stickyClass} "navbar"`} >
     
-   <Nav className="navbar navbar-expand-xl navbar-light" variant="light">
+   <Nav 
+   className="navbar navbar-expand-xl navbar-light" variant="light">
    
   <Container fluid>
-  
     <Link to="/">
    <img src={logo} 
    className="navbar-brand" 
    alt="logo"/>
     </Link>
     
-    <button className="navbar-toggler"
+    <button 
+    className="navbar-toggler"
     type="button" 
     data-bs-toggle="offcanvas"
     data-bs-target="#offcanvasExample" 
@@ -53,74 +66,100 @@ const navigate = useNavigate()
 <FaBars/>
     </button>
     
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+    <div 
+    className="collapse navbar-collapse" 
+    id="navbarSupportedContent">
     
-      <ul className="navbar-nav">
+      <ul
+      className="navbar-nav">
    
-       <li className="nav-item"> 
-     <Link to="/" className="nav-link mt-2">
+       <li 
+       className="nav-item"> 
+     <Link 
+     to="/" 
+     className="nav-link mt-2">
      Home
      </Link>
   </li>
   
- <NavDropdown as={Link} to="/company" title="Company" id="navbarScrollingDropdown" className="nav-link">
-     
-              <NavDropdown.Item 
-              as={Link} to="/about">
-              About Us
-              </NavDropdown.Item>
+ <NavDropdown 
+ title="Company"
+ id="navbarScrollingDropdown" 
+ className="nav-link">
+        <NavDropdown.Item 
+         as={Link} 
+         to="/about">
+          About Us
+         </NavDropdown.Item>
+              
+         <NavDropdown.Item 
+          as={Link}
+          to="/howitworks">
+            How It Works
+            </NavDropdown.Item>
+              
+          <NavDropdown.Item 
+          as={Link} 
+          to="/team">
+          Leadership Team
+        </NavDropdown.Item>
               
               <NavDropdown.Item 
-              as={Link} to="/howitworks">
-              How It Works
-              </NavDropdown.Item>
-              
-              <NavDropdown.Item 
-              as={Link} to="/team">
-              Leadership Team
-              </NavDropdown.Item>
-              
-              <NavDropdown.Item 
-              as={Link} to="/award">
+              as={Link} 
+              to="/award">
              Award & Recognition
               </NavDropdown.Item>
 
               <NavDropdown.Item 
-              as={Link} to="/customersreview">
+              as={Link} 
+              to="/customersreview">
               Customer's Review
               </NavDropdown.Item>
              
               <NavDropdown.Item 
-              as={Link} to="/pricing">
+              as={Link} 
+              to="/pricing">
                Packaging & Pricing
               </NavDropdown.Item>
  
               <NavDropdown.Item 
-              as={Link} to="/faq">
+              as={Link} 
+              to="/faq">
               Help FAQs
               </NavDropdown.Item>
 
  
               <NavDropdown.Item 
-              as={Link} to="/gallery">
+              as={Link} 
+              to="/gallery">
               Our Gallery
               </NavDropdown.Item>
 
               <NavDropdown.Item 
-              as={Link} to="/contact">
+              as={Link} 
+              to="/contact">
                Contact Us
               </NavDropdown.Item>
       </NavDropdown>
     
-     <NavDropdown  title="Services & Industries" id="navbarScrollingDropdown" className="nav-link">
+     <NavDropdown  
+     title="Services & Industries" 
+     id="navbarScrollingDropdown"
+     className="nav-link">
      
-     <div className="service-box">
+     <div 
+     className="service-box">
      <div>
-              <NavDropdown.Item as={Link} to="/services" className="services_title">
+        <NavDropdown.Item 
+        as={Link} 
+        to='/services'
+        className="services_title">
               Services
               </NavDropdown.Item>
               
-              <NavDropdown.Item>
+              <NavDropdown.Item
+              as={Link}
+             to={`/services/${id}`}> 
               Business Security
               </NavDropdown.Item>
               

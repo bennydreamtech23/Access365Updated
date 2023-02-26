@@ -14,24 +14,19 @@
     number: '03',
     title: "Commercial Buildings",
     },
- {
+     {
      id:4,
     number: '04',
-    title: "Educational Buildings",
+    title: "Healthcare Buildings",
     },
      {
      id:5,
     number: '05',
-    title: "Healthcare Buildings",
+    title: "Finance & Banking",
     },
      {
      id:6,
     number: '06',
-    title: "Finance & Banking",
-    },
-     {
-     id:7,
-    number: '07',
     title: "Office Buildings",
     },
     ]

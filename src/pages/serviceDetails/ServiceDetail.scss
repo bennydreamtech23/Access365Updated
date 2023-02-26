@@ -1,0 +1,8 @@
+.Container{
+  padding: 80px 64px;
+  margin-top: 1rem;
+   font-family: var(--font);
+     @media only screen and (min-width: 320px) and (max-width: 768px){
+  padding: 64px 32px;
+}
+}
