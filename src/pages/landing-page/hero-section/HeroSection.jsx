@@ -4,20 +4,24 @@ import HeroStyles from "./HeroSection.module.scss";
 import { Link } from "react-router-dom";
 
 const HeroSection = () =>{
-
+  
  const door = "https://res.cloudinary.com/dlst0ec4h/image/upload/v1676478401/close-up-fingerprint-reader_edwvqm.webp"   
     
   return(
-    <>
-    <div
+  <section
     className={HeroStyles.Container}>
     
-<div className={HeroStyles.bg_overlay}>
-  <h2>Home Security Products that is Guarantee! Everyone can Install, Afford, Use!</h2>
+<div 
+className={HeroStyles.bg_overlay}>
+  <h2>
+  Home Security Products that is Guarantee! Everyone can Install, Afford, Use!
+  </h2>
   
-  <div className="row d-flex align-items-end">
+  <div 
+  className="row d-flex align-items-end">
   
-    <div className="col-md">
+    <div 
+    className="col-md">
       <h1>
       Smart Security Systems to Protect Home & Business
       </h1>
@@ -26,8 +30,10 @@ const HeroSection = () =>{
       We provide security requirements of residential, commercial and other clients, with the largest assortment of security cameras and alarm systems installation
       </p>
       
-      <div className={HeroStyles.groupBtn}>
-<Link className={HeroStyles.overlay_btn} 
+      <div 
+      className={HeroStyles.groupBtn}>
+<Link 
+className={HeroStyles.overlay_btn} 
 to="/services">
 Explore Our services &rarr;
 </Link>
@@ -39,17 +45,26 @@ Explore Our services &rarr;
       </div>
     </div>
     
-    <div className="col-md mt-5">
-      <div className={HeroStyles.hidden}>
+    <div 
+    className="col-md mt-5">
+      <div 
+      className={HeroStyles.hidden}>
         <h1>
         Custom Alerts for friends and Family
         </h1>
-      <img src={door} alt="door"/>
-        <p>Door, Window and Glass Break, designed to monitor and protect home and family</p>
+      <img 
+      src={door} 
+      alt="door"/>
+        <p>
+        Door, Window and Glass Break, designed to monitor and protect home and family
+        </p>
         </div>
         
-        <div className={HeroStyles.hidden2}>
-        <button className={HeroStyles.overlay_btn3}>&rarr; 
+        <div 
+        className={HeroStyles.hidden2}>
+        <button 
+        className={HeroStyles.overlay_btn3}>
+        &rarr; 
         </button> 
         <p>
         protect Our Home
@@ -58,8 +73,7 @@ Explore Our services &rarr;
       </div>
   </div>
 </div>
-    </div>
-    </>
+    </section>
     )
 }
 

@@ -32,7 +32,6 @@ const {title } = useParams();
     );
   }
   
-  
   return(
     <section>
    <HeaderSection title={title}/>

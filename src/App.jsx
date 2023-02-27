@@ -19,14 +19,14 @@ import PricingPage from "./pages/company/pricing/Pricing";
 import FAQPage from "./pages/company/faq/Faq";
 import GalleryPage from "./pages/company/gallery/Gallery";
 import ContactPage from "./pages/company/contact_us/Contact";
-
-
-
+//blog
+import BlogPage from "./pages/news/blog/Blog";
+import CaseStudiesPage from "./pages/news/case_studies/CaseStudies";
+//quote
+import QuotePage from "./pages/quote/Quote";
 //detail page
 import ServiceDetails from "./pages/serviceDetails/ServiceDetail";
 import IndustriesDetail  from "./pages/industriesDetails/IndustriesDetails";
-
-
 
 function App() {
   return (
@@ -48,8 +48,11 @@ function App() {
 <Route path="/faq" element={<FAQPage/>} />
 <Route path="/gallery" element={<GalleryPage/>} />
 <Route path="/contact" element={<ContactPage/>} />
-
-
+    {/*pages under blog*/}
+<Route path="/blog" element={<BlogPage/>} />
+<Route path="/casestudies" element={<CaseStudiesPage/>} />
+  {/*quote page*/}
+    <Route path="/quote" element={<QuotePage/>} />
     <Route path="/services/:title" element={<ServiceDetails />} />
     <Route path="/industries/:title" element={<IndustriesDetail/>} />
 </Routes>

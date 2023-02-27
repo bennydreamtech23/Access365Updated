@@ -32,6 +32,10 @@ const navigate = useNavigate()
     }
   };
   
+const quote = (e) =>{
+  e.preventDefault()
+ navigate('/quote', { replace: true })
+}
   
   return (
     <div 
@@ -141,7 +145,10 @@ const navigate = useNavigate()
      <div 
      className="service-box">
      <div>
-       <NavDropdown.Item as={Link} to="/services" className="services_title">
+       <NavDropdown.Item 
+       as={Link} 
+       to="/services"
+       className="services_title">
               Services
               </NavDropdown.Item>
      {
@@ -159,7 +166,10 @@ const navigate = useNavigate()
     </div>
     
    <div>
-       <NavDropdown.Item as={Link} to="/industries" className="services_title">
+       <NavDropdown.Item 
+       as={Link}
+       to="/industries"
+       className="services_title">
              Industries
               </NavDropdown.Item>
      {
@@ -179,9 +189,14 @@ const navigate = useNavigate()
 </NavDropdown>
 
 
-<NavDropdown title="News & Media" id="navbarScrollingDropdown" className="nav-link">
+<NavDropdown 
+title="News & Media" 
+id="navbarScrollingDropdown" 
+className="nav-link">
      
-              <NavDropdown.Item as={Link} to="/blog">
+              <NavDropdown.Item 
+              as={Link} 
+              to="/blog">
              Blog 
               </NavDropdown.Item>
               
@@ -193,108 +208,148 @@ const navigate = useNavigate()
         </NavDropdown>
     </ul>
     
-      <form className="d-flex">
-         <button className="quotebtn">
+      <form 
+      className="d-flex">
+         <button 
+         className="quotebtn"
+         onClick={(e)=> quote(e)}>
             Get a quote
         </button>
       </form>
 
-  <form className="d-flex mt-4">
-<div class="phone">
-  <a class="nav-link" href="tel:+23407032226012">
- <BiPhoneCall className="bi-telephone"/>
+  <form 
+  className="d-flex mt-4">
+<div className="phone">
+  <a className="nav-link"
+  href="tel:+23407032226012">
+ <BiPhoneCall 
+ className="bi-telephone"/>
   </a>
-          </div>
+</div>
     
-    <div className="d-flex flex-column justify-content-between align-items-start"> 
+    <div 
+    className="d-flex flex-column justify-content-between align-items-start"> 
     
     <div>
-  <a id="icons" class="nav-link" href="tel:+23407032226012">+23407032226012</a>
-       </div>
+  <a 
+  id="icons" 
+  className="nav-link" 
+  href="tel:+23407032226012">
+  +23407032226012
+  </a>
+ </div>
        
        <div>
-       <a href="mailto:benedict.access365@gmail.com" id="icons" class="nav-link"> benedict.access365@gmail.com</a>
+       <a 
+       href="mailto:benedict.access365@gmail.com" id="icons" 
+       className="nav-link"> 
+       benedict.access365@gmail.com
+       </a>
          </div>
 </div>
       </form>
-      
-
-
-    </div>
+   </div>
   </Container>
-  
 </Nav>
 
 {/*offcanvas section*/}
 
-<div className="offcanvas offcanvas-start" 
+<div 
+className="offcanvas offcanvas-start" 
 tabIndex="-1"
 id="offcanvasExample" 
 aria-labelledby="offcanvasExampleLabel">
 
-  <div className="offcanvas-header">
-    <h5 className="offcanvas-title" id="offcanvasExampleLabel">
+  <div 
+  className="offcanvas-header">
+    <h5 
+    className="offcanvas-title" 
+    id="offcanvasExampleLabel">
     <Link to="/">
-   <img src={logo} className="navbar-brand" 
+   <img src={logo} 
+   className="navbar-brand" 
    alt="logo"/>
     </Link>
     </h5>
     
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button 
+    type="button" 
+    className="btn-close text-reset"
+    data-bs-dismiss="offcanvas" 
+    aria-label="Close">
+    </button>
   </div>
   
-  <div className="offcanvas-body">
-    <ul className="navbar-nav m-auto mb-2 mb-lg-0">
+  <div
+  className="offcanvas-body">
+    <ul 
+    className="navbar-nav m-auto mb-2 mb-lg-0">
      
-     <Link to="/" className="nav-link">
+     <Link 
+     to="/" 
+     className="nav-link">
      Home
      </Link>
     
- <NavDropdown as={Link} to="/company" title="Company" id="navbarScrollingDropdown" className="nav-link">
+ <NavDropdown
+ as={Link} 
+ to="/company" 
+ title="Company"
+ id="navbarScrollingDropdown"
+ className="nav-link">
      
               <NavDropdown.Item 
-              as={Link} to="/about">
+              as={Link} 
+              to="/about">
               About Us
               </NavDropdown.Item>
               
               <NavDropdown.Item 
-              as={Link} to="/howitworks">
+              as={Link} 
+              to="/howitworks">
               How It Works
               </NavDropdown.Item>
               
               <NavDropdown.Item 
-              as={Link} to="/team">
+              as={Link} 
+              to="/team">
               Leadership Team
               </NavDropdown.Item>
               
               <NavDropdown.Item 
-              as={Link} to="/award">
+              as={Link} 
+              to="/award">
              Award & Recognition
               </NavDropdown.Item>
 
               <NavDropdown.Item 
-              as={Link} to="/review">
+              as={Link} 
+              to="/review">
               Customer's Review
               </NavDropdown.Item>
              
               <NavDropdown.Item 
-              as={Link} to="/pricing">
+              as={Link}
+              to="/pricing">
                Packaging & Pricing
               </NavDropdown.Item>
  
               <NavDropdown.Item 
-              as={Link} to="/faq">
+              as={Link}
+              to="/faq">
               FAQs
               </NavDropdown.Item>
 
  
               <NavDropdown.Item 
-              as={Link} to="/gallery">
+              as={Link} 
+              to="/gallery">
               Our Gallery
               </NavDropdown.Item>
 
               <NavDropdown.Item 
-              as={Link} to="/contact">
+              as={Link} 
+              to="/contact">
                Contact Us
               </NavDropdown.Item>
       </NavDropdown>
@@ -307,7 +362,10 @@ aria-labelledby="offcanvasExampleLabel">
      <div 
      className="service-box">
      <div>
-       <NavDropdown.Item as={Link} to="/services" className="services_title">
+       <NavDropdown.Item
+       as={Link} 
+       to="/services" 
+       className="services_title">
               Services
               </NavDropdown.Item>
      {
@@ -325,7 +383,10 @@ aria-labelledby="offcanvasExampleLabel">
     </div>
     
    <div>
-       <NavDropdown.Item as={Link} to="/industries" className="services_title">
+       <NavDropdown.Item 
+       as={Link} 
+       to="/industries" 
+       className="services_title">
              Industries
               </NavDropdown.Item>
      {
@@ -344,18 +405,24 @@ aria-labelledby="offcanvasExampleLabel">
 </div>
 </NavDropdown>
     
-<NavDropdown title="News & Media" id="navbarScrollingDropdown" className="nav-link">
+<NavDropdown
+title="News & Media" 
+id="navbarScrollingDropdown" 
+className="nav-link">
      
-              <NavDropdown.Item as={Link} to="/blog">
+              <NavDropdown.Item 
+              as={Link} 
+              to="/blog">
              Blog 
               </NavDropdown.Item>
               
-                <NavDropdown.Item as={Link} to="/casestudies">
+                <NavDropdown.Item 
+                as={Link} 
+                to="/casestudies">
                Case studies
               </NavDropdown.Item>
         </NavDropdown>
       </ul>
-    
   </div>
 </div>
     </div>
