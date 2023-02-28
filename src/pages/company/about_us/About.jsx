@@ -1,9 +1,13 @@
-import HeaderSection from "../../../components/headerSection/HeaderSection";
+import HeroSection from './hero-section/HeroSection';
+import AboutSection from '../../landing-page/about-section/AboutSection';
 
 const AboutPage = () =>{
   return(
     <section>
-    <HeaderSection title='About Us'/>
+    <HeroSection/>
+    <section className='pt-5'>
+    <AboutSection/>
+    </section>
     </section>
     )
 }

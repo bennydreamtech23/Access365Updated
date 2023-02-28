@@ -7,6 +7,7 @@ import IntegratedSecuritySection from './intergratedServices/IntegratedServices'
 import QuoteSectionPage from './quotesection/QuoteSecton';
 import Testimonies from './testimonies/Testimonies';
 import Contact from "./contact/Contact"
+import CommitmentSection from '../../components/commitment/Commitment';
 
 const LandingPage = () =>{
   return(
@@ -18,6 +19,7 @@ const LandingPage = () =>{
    <IntegratedSecuritySection/>
    <QuoteSectionPage/>
     <Testimonies/>
+    <CommitmentSection/>
     <Contact/>
     </>
     )

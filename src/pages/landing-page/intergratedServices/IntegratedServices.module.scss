@@ -66,12 +66,14 @@
 
 .ul{
    list-style: none;
+   margin-bottom: 2rem;
 }
 
 .ul li{
    font-size: 17px;
    color: white;
 margin-top: 0.5rem;
+line-height: 1.8rem;
 }
 
 .icontool{
@@ -227,15 +229,15 @@ margin-top: 0.5rem;
 }
 
 .groupBtn{
-   margin-top: 3rem; 
+margin-top: 1rem; 
    max-width: 1200px;
  display: grid; 
  grid-gap: 1rem; 
- /* Screen larger than 600px? 2 column */ @media (min-width: 320px) {  
+ /* Screen larger than 600px? 2 column */ @media (min-width: 480px) {  
    grid-template-columns: repeat(2, 1fr);
    } 
-   /* Screen larger than 900px? 4 columns */ @media (min-width: 900px) {
-     grid-template-columns: repeat(4, 1fr);
+   /* Screen larger than 900px? 4 columns */ @media (min-width: 1200px) {
+     grid-template-columns: repeat(3, 1fr);
 }
     }
     
@@ -248,11 +250,13 @@ margin-top: 0.5rem;
    border-radius: 25px;
    font-weight: bold;
    font-size: 15px;
-   width: 170px;
+   width: 180px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
     margin: auto;
+    text-decoration: none;
 }
 
 .small_btn:hover{
@@ -261,7 +265,7 @@ margin-top: 0.5rem;
 }
 
 .rowEnd{
-  margin-top: 5rem;
+margin-top: 2rem;
   margin-bottom: -9rem;
 }
  .img{
@@ -280,7 +284,7 @@ margin-top: 0.5rem;
    float: none;
    margin: 0 auto;
    margin-top: 1rem;
-} 
+}
 }
 
 .bottomText{

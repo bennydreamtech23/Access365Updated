@@ -24,23 +24,62 @@ h2{
 } 
 }
 
+.blogGrid{
+margin-top: 3rem; 
+   max-width: 1200px;
+ display: grid; 
+ grid-gap: 1rem; 
+ /* Screen larger than 600px? 2 column */ @media (min-width: 768px) {  
+   grid-template-columns: repeat(2, 1fr);
+   } 
+   /* Screen larger than 900px? 4 columns */ @media (min-width: 1200px) {
+     grid-template-columns: repeat(3, 1fr);
+}
+    }
+
+.casestudiesBox{
+  width: 22rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  
+    @media only screen and (max-width: 320px){
+width: 17rem;
+  margin: auto;
+//align-items: center;
+//justify-content: center;
+}
+    @media only screen and (min-width: 360px) and (max-width: 768px){
+width: 19rem;
+  margin: auto;
+//align-items: center;
+//justify-content: center;
+}
+}
+
+
 .BlogCard{
- //margin-bottom: 10px;
- width: 19rem;
- height: 36rem;
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- margin: 0 auto;
- margin-bottom: 1.5rem;
- 
+  width: 22rem;
+//height: 35rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+    @media only screen and (max-width: 320px){
+width: 17rem;
+margin: auto;
+}
+    @media only screen and (min-width: 360px) and (max-width: 768px){
+width: 19rem;
+  margin: auto;
+//align-items: center;
+//justify-content: center;
+}
+
 img{
- border-top-left-radius: 5px;
-border-top-right-radius: 5px;
-width: 100%;
-//height: 50%;
-object-fit: cover;
+ background-size: cover;
+background-position: cover cover;
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
 }
  .content{
   background: black;

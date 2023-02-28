@@ -1,4 +1,3 @@
-
 import {Container, Row, Col, Card} from 'react-bootstrap';
 import HeroStyles from "./HeroSection.module.scss";
 import { Link } from "react-router-dom";

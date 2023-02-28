@@ -1,5 +1,5 @@
 import ProductCardStyle from "./ProductCad.module.scss"
-
+import {Link} from 'react-router-dom'
 const ProductCard = (props) => {
   const {
     id,
@@ -12,13 +12,16 @@ const ProductCard = (props) => {
       className={ProductCardStyle.product_container}>
             <div
         className={ProductCardStyle.product_inn}>
-        <h1 className={ProductCardStyle.number}>
+        <h1 
+        className={ProductCardStyle.number}>
         {number}
         </h1>
         
-        <h3 className={ProductCardStyle.title}>
+        <Link 
+       to={`/industries/${title}`}
+        className={ProductCardStyle.title}>
         {title} 
-        </h3>
+        </Link>
         
       </div>
     </div>

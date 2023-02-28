@@ -1,5 +1,5 @@
 
-import {Container, Row, Col, } from 'react-bootstrap';
+import {Row, Col} from 'react-bootstrap';
 import HeroStyles from "./Project.module.scss";
 import { Link } from "react-router-dom";
  import Slider from "react-slick";
@@ -28,7 +28,9 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", borderRadius:"50%", outline: "none" }}
+      style={{ ...style, display: "block", 
+      borderRadius:"50%",
+      outline: "none" }}
       onClick={onClick}
     />
   );
@@ -83,10 +85,10 @@ const IndustriesSection = () =>{
     };
  
   return(
-    <>
-    <div
+    <section
     className={HeroStyles.Container}>
-<div className={HeroStyles.bg_overlay}>
+<div 
+className={HeroStyles.bg_overlay}>
 <div>
       <h1>
 What Matters Most
@@ -107,21 +109,23 @@ Not only will these reduce the probability of crime happening on your property, 
     }
       </Slider>
       
-      <Row className="d-flex justify-content-between align-items-center mt-5">
+      <Row 
+      className="d-flex justify-content-between align-items-center mt-5">
       
-      <Col className={HeroStyles.bottomCard}>
+      <Col 
+      className={HeroStyles.bottomCard}>
       <h5>Just Everything you need</h5>
       <h3>Download our Brochure</h3>
       </Col>
       
-            <Col className={HeroStyles.smallbox}>
-      <BsFillArrowDownCircleFill className={HeroStyles.iconbox}/>
+            <Col 
+            className={HeroStyles.smallbox}>
+      <BsFillArrowDownCircleFill 
+      className={HeroStyles.iconbox}/>
       </Col>
-      
-      </Row>
+  </Row>
     </div>
-    </div>
-    </>
+    </section>
     )
 }
 

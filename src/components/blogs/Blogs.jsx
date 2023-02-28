@@ -1,5 +1,5 @@
 import BlogStyles from './Blogs.module.scss'
-import {Row, Col} from "react-bootstrap"
+import {Container, Row, Col} from "react-bootstrap"
 import {Link} from 'react-router-dom'
 
 
@@ -12,7 +12,8 @@ const BlogPost3 = "https://res.cloudinary.com/dlst0ec4h/image/upload/v1676821694
 
 
 return(
-<section className={BlogStyles.BlogContainer}>
+<Container 
+className={BlogStyles.BlogContainer}>
     <h2 className="text-center">
     Security Tips & Resources
     </h2>
@@ -21,9 +22,10 @@ return(
     Recent Articles
     </h1>
     
-    <Row>
-      <Col className={BlogStyles.BlogCard}>
-        <img src={BlogPost} alt="cctv footage" className="img-fluid"/>
+    <Row className={BlogStyles.blogGrid}>
+      <Col 
+      className={BlogStyles.BlogCard}>
+        <img src={BlogPost} alt="cctv footage" className="img-rounded"/>
         
       <div className={BlogStyles.content}>
     <h3>Three Important Things You Must Look For While Choosing Home Security System</h3>
@@ -41,7 +43,7 @@ return(
  
     <div className={BlogStyles.BlogCard}>
     <img src={BlogPost2} alt="cctv footage"
-    class="img-fluid" />
+    class="img-rounded" />
         
 <div className={BlogStyles.content}>
     <h3>Why Security Is Important</h3>
@@ -58,7 +60,7 @@ Read More  &rarr;
     </div>
     
       <div className={BlogStyles.BlogCard}>
-    <img src={BlogPost3} alt="cctv footage" class="img-fluid"/>
+    <img src={BlogPost3} alt="cctv footage" class="img-rounded"/>
         
         <div className={BlogStyles.content}>
     <h3>How Non IT Roles Can Use Security Solutions To Solve All Imerged Business Problems!</h3>
@@ -76,12 +78,12 @@ Read More  &rarr;
     </div>
  </Row>
  
- <div className='my-5'>
+ <div className='mt-5 text-end'>
 <Link to='/blog' className={BlogStyles.link}>
 Check All Blog Posts &rarr;
 </Link>
 </div>
-</section>
+</Container>
   )
 }
 export default Blog

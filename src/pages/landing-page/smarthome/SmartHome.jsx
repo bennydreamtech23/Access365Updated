@@ -1,6 +1,6 @@
 import Styles from "./SmartHome.module.scss";
 import { Link } from "react-router-dom";
-import {Row, Col} from 'react-bootstrap';
+import {Container, Row, Col} from 'react-bootstrap';
 
 import security from "../../../assets/icons/network (1).png";
 import firealarm from "../../../assets/icons/fire-button.png";
@@ -13,8 +13,8 @@ import {BsFillPeopleFill} from "react-icons/bs";
 
 const SmartHome = () =>{
   return(
-    <>
-  <div className={Styles.Container}>
+  <Container fluid
+  className={Styles.Container}>
   
     <h2 className={Styles.subTitle}>
     Be At Peace With 24/7 Monitoring
@@ -24,7 +24,8 @@ const SmartHome = () =>{
     Smart Security Systems That Fits Your Busines!
     </h1>
     
-  <p className={Styles.subtext}>
+  <p 
+  className={Styles.subtext}>
   Because a commercial security camera system has to produce results, we offer what most surveillance security tech companies can't. For CCTV installation companies, It's Important to treat cctv camera installation with modern approach using AI technology.
   </p>
   
@@ -94,9 +95,7 @@ Check Our Services
    Get A Free Quote &rarr;
    </Link>
  </div>
- </div>
- 
-    </>
+ </Container>
     )
 }
 export default SmartHome

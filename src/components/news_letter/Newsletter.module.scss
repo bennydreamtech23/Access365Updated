@@ -31,86 +31,8 @@
       opacity: 0.9;
     }
     
-    
-    
-    
-    
-      #overlay-btn2:hover{
-      background: #68b038;
-      transform: translateX(3px);
-      color: white;
+    .formInput{
+      height: 60px;
     }
     
-      #overlay-btn2{
-      border:none;
-      background: black;
-      padding: 10px 15px;
-      border-radius: 2px;
-      color: white;
-      font-weight: bold;
-      transition: 0.5s;
-      text-decoration: none;
-    }
-    
-.container4 h1{
-   margin-top: 10px;
-   font-size: 27px;
-   font-weight: bold;
-   font-family:'Noto Sans';
-   padding-top:5px;
-}
-
-.container4 .img{
-   border-radius: 7px;
-   width: 350px;
-   margin-top: 25px;
-   margin-left: 70px;
-}
-
-#container4-text{
-   border-left: 5px solid #c0c0c0;
-   padding-left: 10px;
-}
-
-.container4 p{
-   padding-top: 5px;
-   font-family: 'Noto Sans';
-   font-size: 15px;
-   line-height: 30px;
-   margin-bottom: 10px;
-}
-
-.container4 a{
-   text-decoration: none;
-   color: black;
-}
-
-.container4 h2{
-   margin-top: 10px;
-   font-size: 21px;
-   font-weight: bold;
-   font-family:'Noto Sans';
-   padding-top:5px;
-}
-
-.container4 ul{
-   list-style: none;
-}
-
-.container4 li div{
-   width: 10px;
-   height: 10px;
-   background-color: #f88000;
-   display: inline-block;
-   margin-right: 10px;
-   border-radius: 50%;
-}
-
-.container4 li{
-   padding: 10px 15px;
-   border-bottom: 1px solid #c0c0c0;
-   font-size: 15px;
-   font-family: 'Noto Sans';
-}
-
 }

@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom"
 import CaseStudiesStyles from "./CaseStudies.module.scss"
-import {Row, Col} from "react-bootstrap"
+import {Container,Row, Col} from "react-bootstrap"
 
 //IMAGES
 import hikivison from "../../assets/company_logo/Hikvision Logo.png";
@@ -25,16 +25,22 @@ const CaseStudies = () =>{
   const panasonic = "https://download.logo.wine/logo/Panasonic/Panasonic-Logo.wine.png";
   
   return(
-    <>
- <section className={CaseStudiesStyles.Container}>
-    <Row className='d-flex justify-content-between align-items-center'>
-      <Col className="col-md">
-    <h1 className={CaseStudiesStyles.Title}>
+ <Container fluid
+ className={CaseStudiesStyles.Container}>
+ 
+    <Row 
+    className='d-flex justify-content-between align-items-center'>
+    
+      <Col 
+      className="col-md">
+    <h1 
+    className={CaseStudiesStyles.Title}>
     Explore Our Case Studies & Latest Success Stories.
     </h1>
    </Col>
    
-   <div className="col-md">
+   <div 
+   className="col-md">
   <p 
   className={CaseStudiesStyles.subtext}>
   For the Security and IT directors ensuring our places of work and leisure are safe. For the Chief Technology Officers shaping the smart businesses lf tomorrow. We delivers powerful and insight ful security solutions that enable protectors to drive forward.
@@ -45,7 +51,8 @@ const CaseStudies = () =>{
  <Row 
  className={CaseStudiesStyles.casestudiesContainer}>
  
-      <Col className={CaseStudiesStyles.casestudiesBox}>
+      <Col 
+      className={CaseStudiesStyles.casestudiesBox}>
      <div className={CaseStudiesStyles.bg_1}>
        <button
        className={CaseStudiesStyles.bg_1_button}>Detection, Fire Alarm</button>
@@ -376,9 +383,7 @@ const CaseStudies = () =>{
     </div>
   </Col>
 </Row>
-</section>
-    
-   </>
+</Container>
     )
 }
 

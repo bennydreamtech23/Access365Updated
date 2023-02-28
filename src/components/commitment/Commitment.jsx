@@ -1,15 +1,18 @@
 import { BsCheck,  BsX} from "react-icons/bs";
-import Table from 'react-bootstrap/Table';
+import {Container, Table} from 'react-bootstrap';
 import styles from "./Commitment.module.scss"
  import {Link} from "react-router-dom"
  
 const CommitmentSection = () =>{
   return(
-    <section className={styles.commitmentContainer}>
+    <Container fluid 
+    className={styles.commitmentContainer}>
   <h1 className="text-center mb-5">0ur Commitment!!</h1>
   
     <Table 
-    responsive='md' striped bordered hover 
+    size="sm"
+    responsive 
+    striped bordered hover 
     variant="light">
     
 <thead>
@@ -96,7 +99,7 @@ const CommitmentSection = () =>{
  See What It Costs  &rarr;
  </Link>
 </div>
-    </section>
+    </Container>
     )
 }
 

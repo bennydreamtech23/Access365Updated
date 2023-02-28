@@ -22,7 +22,9 @@ const Newsletter = () =>{
   <Form.Control
 placeholder="Enter your email"
 type="email" 
-name="Email" required/>
+name="Email" 
+className={NewsletterStyles.formInput}
+required/>
 </InputGroup>
 </Form.Group>
 

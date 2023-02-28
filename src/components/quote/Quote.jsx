@@ -18,7 +18,7 @@ import {
 const Quote = () => {
   
 //form input
-const initialValues = {first_name: '', first_name: "", email: "", phone_number:""}
+const initialValues = {first_name: '', last_name: "", email: "", phone_number:""}
 const [formValues, setFormValues] = useState(initialValues)
 //const [isSubmit, setIsSubmit] = useState(false)
 
