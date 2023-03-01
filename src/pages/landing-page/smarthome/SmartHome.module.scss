@@ -86,14 +86,6 @@ padding: 32px 64px;
       width: 180px;
     }
    
-
-.container6 strong{
-   padding-top: 20px;
-   font-weight: normal;
-   font-size: 16px;
-   font-family: 'Noto Sans';
-}
-
 .roller1{
  margin-top: 3rem; 
    max-width: 1200px;
@@ -116,7 +108,7 @@ padding: 32px 64px;
    height: 370px;
    padding: 30px 20px;
    background: white;
-   border: 2px solid #c0c0c0;
+   border: 2px solid #181818;
    border-radius: 10px;
    width: 16rem;
     flex-direction: column;
@@ -131,6 +123,7 @@ padding: 32px 64px;
    color: white;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   margin-top: 1rem;
+  border: none;
 }
 
 .roller1 .col h1{

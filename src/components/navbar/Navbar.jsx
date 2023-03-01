@@ -229,23 +229,18 @@ className="nav-link">
     
     <div 
     className="d-flex flex-column justify-content-between align-items-start"> 
-    
-    <div>
   <a 
   id="icons" 
   className="nav-link" 
   href="tel:+23407032226012">
   +23407032226012
   </a>
- </div>
-       
-       <div>
        <a 
-       href="mailto:benedict.access365@gmail.com" id="icons" 
+       href="mailto:benedict.access365@gmail.com" 
+       id="icons" 
        className="nav-link"> 
        benedict.access365@gmail.com
        </a>
-         </div>
 </div>
       </form>
    </div>

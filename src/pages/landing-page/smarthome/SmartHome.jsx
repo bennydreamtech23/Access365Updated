@@ -16,11 +16,13 @@ const SmartHome = () =>{
   <Container fluid
   className={Styles.Container}>
   
-    <h2 className={Styles.subTitle}>
+    <h2 
+    className={Styles.subTitle}>
     Be At Peace With 24/7 Monitoring
     </h2>
     
-    <h1 className={Styles.title}>
+    <h1 
+    className={Styles.title}>
     Smart Security Systems That Fits Your Busines!
     </h1>
     
@@ -29,22 +31,28 @@ const SmartHome = () =>{
   Because a commercial security camera system has to produce results, we offer what most surveillance security tech companies can't. For CCTV installation companies, It's Important to treat cctv camera installation with modern approach using AI technology.
   </p>
   
-  <div className={Styles.groupBtn}>
-  <Link to="/howitworks" 
+  <div 
+  className={Styles.groupBtn}>
+  <Link 
+  to="/howitworks" 
   className={Styles.overlay_btn2}>
   How Does It Work
   </Link>
   
-    <Link to="/services"
+    <Link 
+    to="/services"
     className={Styles.overlay_btn}>
 Check Our Services
   </Link>
   </div>
 
-  <Row className={Styles.roller1}>
+  <Row 
+  className={Styles.roller1}>
   
-    <Col className={`${Styles.col} "col-md"`}>
-         <img src={security} 
+    <Col 
+    className={`${Styles.col} "col-md"`}>
+         <img 
+         src={security} 
          alt="security" 
          className="img-thumbnail"/>
          
@@ -53,7 +61,8 @@ Check Our Services
       
     </Col>
     
-     <Col className={`${Styles.col} "col-md"`}>
+     <Col
+     className={`${Styles.col} "col-md"`}>
           <img 
           src= {firealarm} 
           alt="firealarm" 
@@ -63,16 +72,20 @@ Check Our Services
       <p>We're industry leaders in the design, installation of fire alarm and provide systems enhance security.</p>
     </Col>
     
-     <Col className={`${Styles.col} "col-md"`}>
-          <img src={smarthome} 
+     <Col 
+     className={`${Styles.col} "col-md"`}>
+          <img 
+          src={smarthome} 
           alt="smart home" 
           className="img-thumbnail"/>
       <h1>Smart Home System</h1>
       <p>We make sure that no matter we you are, your home is always safe and secure.</p>
     </Col>
     
-     <Col className={`${Styles.col} "col-md"`}>
-       <img src={accesscontrol} 
+     <Col 
+     className={`${Styles.col} "col-md"`}>
+       <img 
+       src={accesscontrol} 
        alt="access-control" 
        className="img-thumbnail"/>
       <h1>Access Control Installation</h1>
@@ -80,7 +93,8 @@ Check Our Services
     </Col>
 </Row>
  
-    <div className={Styles.info}>
+    <div
+    className={Styles.info}>
       <p> 
       <BsFillPeopleFill 
       className={Styles.peopleicon}/> As experts in home security, we want to assists in customizing a home security to meet your safety taste. <Link to="/contact"

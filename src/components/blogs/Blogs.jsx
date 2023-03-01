@@ -14,62 +14,85 @@ const BlogPost3 = "https://res.cloudinary.com/dlst0ec4h/image/upload/v1676821694
 return(
 <Container 
 className={BlogStyles.BlogContainer}>
-    <h2 className="text-center">
+    <h2
+    className="text-center">
     Security Tips & Resources
     </h2>
     
-    <h1 className="text-center mb-5">
+    <h1 
+    
+    className="text-center mb-5">
     Recent Articles
     </h1>
     
-    <Row className={BlogStyles.blogGrid}>
+    <Row 
+    className={BlogStyles.blogGrid}>
       <Col 
       className={BlogStyles.BlogCard}>
-        <img src={BlogPost} alt="cctv footage" className="img-rounded"/>
+        <img src={BlogPost} 
+        alt="cctv footage" 
+        className="img-rounded"/>
         
-      <div className={BlogStyles.content}>
+      <div 
+      className={BlogStyles.content}>
     <h3>Three Important Things You Must Look For While Choosing Home Security System</h3>
     <small>Jan 30, 2022<strong> John Benedict</strong></small>
     
   <p>It is natural if you feel the need for improvising on your home's security system. Mostly, homes are unguarded or have security guards. Now, in the age of technology advancement.....</p>
   
-  <div className='my-5'>
-  <Link to='/blog' className={BlogStyles.overlay_btn5}>
+  <div 
+  className='my-5'>
+  <Link
+  to='/blog' 
+  className={BlogStyles.overlay_btn5}>
  Read More  &rarr;
   </Link>
   </div>
   </div>
 </Col>
  
-    <div className={BlogStyles.BlogCard}>
-    <img src={BlogPost2} alt="cctv footage"
-    class="img-rounded" />
+    <div 
+    className={BlogStyles.BlogCard}>
+    <img 
+    src={BlogPost2} 
+    alt="cctv footage"
+    className="img-rounded" />
         
-<div className={BlogStyles.content}>
+<div 
+className={BlogStyles.content}>
     <h3>Why Security Is Important</h3>
     <small>Jan 30, 2022<strong> John Benedict</strong></small>
     
   <p>It is natural if you feel the need for improvising on your home's security system. Mostly, homes are unguarded or have security guards. Now, in the age of technology advancement.....</p>
 
-<div className='my-5'>
-  <Link to='/blog' className={BlogStyles.overlay_btn5}>
+<div 
+className='my-5'>
+  <Link to='/blog' 
+  className={BlogStyles.overlay_btn5}>
 Read More  &rarr;
   </Link>
   </div>
  </div>
     </div>
     
-      <div className={BlogStyles.BlogCard}>
-    <img src={BlogPost3} alt="cctv footage" class="img-rounded"/>
+      <div 
+      className={BlogStyles.BlogCard}>
+    <img 
+    src={BlogPost3}
+    alt="cctv footage" 
+    className="img-rounded"/>
         
-        <div className={BlogStyles.content}>
+        <div 
+        className={BlogStyles.content}>
     <h3>How Non IT Roles Can Use Security Solutions To Solve All Imerged Business Problems!</h3>
     <small>Jan 28, 2022<strong> Uche John</strong></small>
     
   <p>It is natural if you feel the need for improvising on your home's security system. Mostly, homes are unguarded or have security guards. Now, in the age of technology advancement.....</p>
 
-<div className='my-5'>
-  <Link to='/blog' 
+<div 
+className='my-5'>
+  <Link 
+  to='/blog' 
   className={BlogStyles.overlay_btn5}>
 Read More  &rarr;
   </Link>
@@ -78,8 +101,10 @@ Read More  &rarr;
     </div>
  </Row>
  
- <div className='mt-5 text-end'>
-<Link to='/blog' className={BlogStyles.link}>
+ <div 
+ className='mt-5 text-end'>
+<Link to='/blog' 
+className={BlogStyles.link}>
 Check All Blog Posts &rarr;
 </Link>
 </div>

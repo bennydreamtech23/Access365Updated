@@ -1,11 +1,11 @@
-import Styles from "./IntegratedServices.module.scss";
-import {Row, Col} from 'react-bootstrap';
 import { Link } from "react-router-dom";
-import { BsFillCheckCircleFill, BsFillStarFill } from "react-icons/bs";
+import Styles from "./IntegratedServices.module.scss";
 import CaseStudies from "../../../components/case_studies/CaseStudies"
-
 import servicesData from "../../../components/data/servicesData";
-
+//container 
+import {Row, Col} from 'react-bootstrap';
+//icon
+import { BsFillCheckCircleFill, BsFillStarFill } from "react-icons/bs";
 
 
 const IntegratedSecurity = () =>{
@@ -43,7 +43,8 @@ className={Styles.Container}>
   We can partner with you to design and implement a scalable integrated security solution that addresses your thoughtest security challenges, while gaining efficiencies across your systems and teams by standardizung platforms and implementing event-driving system automation and powerful solutions help.
   </p>
   
-  <ul className={Styles.ul}>
+  <ul 
+  className={Styles.ul}>
     <li>
     <BsFillCheckCircleFill 
     className={Styles.icontool}/> Access Control systems 
@@ -103,7 +104,8 @@ className={Styles.Container}>
     </Col>
  </Row>
  
- <Row className='mt-5'>
+ <Row 
+ className='mt-5'>
       <Col 
       className="col-md">
      <div 
@@ -172,9 +174,11 @@ className="col-md">
   </Col>
    </Row>
    
-    <Row className={Styles.rowEnd}>
-      <Col className="col-md">
- <div className="small-3">
+    <Row 
+    className={Styles.rowEnd}>
+      <Col 
+      className="col-md">
+ <div>
  
    <h2 
    className={Styles.subtitle}>
