@@ -164,7 +164,57 @@ first_name: formValues.first_name,
 </div>
   </Form.Group>
     
-    
+  <Form.Group className={styles.box}>
+  <Form.Label 
+  className={styles.labelfield}>
+ Industry:
+  </Form.Label>
+  <select name="industry">
+    <option selected disabled value="">default</option>
+    <option value='commercial Building'>
+    Commercial Buildings
+    </option>
+    <option value='office Building'>Office Buildings</option>
+  </select>
+  </Form.Group>
+  
+   <Form.Group className={styles.box}>
+  <Form.Label 
+  className={styles.labelfield}>
+Own Or Rent:
+  </Form.Label>
+  <select name="ownership">
+    <option selected disabled value="">default</option>
+    <option value='commercial Building'>
+    Commercial Buildings
+    </option>
+    <option value='office Building'>
+    Office Buildings
+    </option>
+  </select>
+  </Form.Group>
+  
+<Form.Group className={styles.box}>
+  <Form.Label 
+  className={styles.labelfield}>
+Size Of Apartment:
+  </Form.Label>
+  <select name="ownership">
+    <option selected disabled value="">default</option>
+    <option value='storey Apartment'>
+   Storey Apartment
+    </option>
+    <option value='mini flat'>
+    Mini Flat
+    </option>
+       <option value='Duplex'>
+    Duplex
+    </option>
+  <option value='Bungalow'>
+   Bungalow
+    </option>
+  </select>
+  </Form.Group>  
     
   <Form.Group className={styles.box}>
   <Form.Label 
@@ -243,6 +293,93 @@ id="inputGroupPrepend">
 </div>
 </div>
   </Form.Group>
+  
+ <Form.Group className={styles.box}>
+  <Form.Label 
+  className={styles.labelfield}>
+System Of Interest:
+  </Form.Label>
+ <select name="ownership" 
+   multiple size="14">
+    <option 
+    value="Intrusion Detection">
+    Intrusion Detection System
+    </option> 
+   <option 
+   value="Video Surveillance">
+   Video Surveillance System
+   </option> 
+   <option 
+   value="Network System Integratiom">
+   Network System Integration
+   </option> 
+   
+   <option value="Computer Managment System">
+   Computer Management System
+   </option> 
+   
+   <option 
+   value='fire alarm system'>
+   Fire Alarm System
+   </option> 
+   
+   <option 
+   value="Access Control System">
+   Access Control System
+   </option> 
+   
+   <option 
+   value="PABX System-Intercom">
+   PABX System-Intercom
+   </option>
+   
+   <option 
+   value="Hotel Lock Management System">
+   Hotel Lock Management System
+   </option>
+   
+   <option 
+   value="Eco-friendly Power Solution">
+   Eco-friendly Power Solution
+   </option>
+   
+   <option 
+   value="Smart Home Device Management">
+   Smart Home Device Management
+   </option>
+   
+   <option 
+   value="Cable Management">
+   Cable Management
+   </option>
+   
+   <option 
+   value="Maintenance Of Services">
+   Maintenance Of Services
+   </option>
+   <option 
+   value="Other services">
+   Other Services
+   </option>
+  </select>
+  </Form.Group>
+  
+  <Form.Group className={styles.box}>
+  <Form.Label 
+  className={styles.labelfield}>
+Quantity
+  </Form.Label>
+  
+  <InputGroup 
+  className='mb-4'>
+<Form.Control 
+ name="quantity" 
+ type='number'
+ value=''
+ placeholder= "Please Enter the Number of Quantity"/>
+</InputGroup>
+</Form.Group> 
+  
   
 <button type='submit' className='btn'> Submit</button>
 </Form>
