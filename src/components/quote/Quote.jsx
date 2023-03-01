@@ -10,14 +10,9 @@ import {
 } from 'react-bootstrap'
 
 //icon
-import {
-  MdEmail,
-  MdOutlinePhoneLocked,
-  MdPersonOutline,
-} from 'react-icons/md'
+import { MdEmail, MdOutlinePhoneLocked, MdPersonOutline } from 'react-icons/md'
 
 const Quote = () => {
-  
   //form input
   const initialValues = {
     first_name: '',
@@ -32,9 +27,11 @@ const Quote = () => {
     system_of_interest: '',
   }
 
-  const [formValues, setFormValues] = useState(initialValues)
-  
- const [systemofinterest, setSystemofinterest] = useState([])
+  const [formValues, setFormValues] = useState({})
+
+  const [touched, setTouched] = useState({})
+
+  const [systemofinterest, setSystemofinterest] = useState([])
 
   //error
   const [formError, setFormError] = useState({})
@@ -51,13 +48,31 @@ const Quote = () => {
       .map((option) => option.value)
     setSystemofinterest(selectedCategories)
     setFormValues({ ...formValues, [name]: selectedCategories })
+
+    setTouched((prevState) => ({
+      ...prevState,
+      [event.target.name]: true,
+    }))
     //console.log(selectedCategories)
   }
 
   const handleChange = (e) => {
     const { name, value } = e.target
     setFormValues({ ...formValues, [name]: value })
+
+    setTouched((prevState) => ({
+      ...prevState,
+      [e.target.name]: true,
+    }))
   }
+
+  // const handleBlur = (e) => {
+  //   setTouched((prevState) => ({
+  //     ...prevState,
+  //     [e.target.name]: true,
+  //   }))
+  //   console.log(e.target.name)
+  // }
 
   const validate = (values) => {
     const errors = {}
@@ -81,22 +96,22 @@ const Quote = () => {
     if (!values.home_business) {
       errors.home_business = 'Please select an option'
     }
-  if (!values.industry) {
+    if (!values.industry) {
       errors.industry = 'Please select an option'
     }
-     if (!values.ownership) {
+    if (!values.ownership) {
       errors.ownership = 'Please select an option'
     }
     if (!values.size_of_apartment) {
       errors.size_of_apartment = 'Please select an option'
     }
-        if (!values.quantity) {
+    if (!values.quantity) {
       errors.quantity = 'Please enter the number of Material required'
     }
     if (systemofinterest.length === 0) {
       errors.system_of_interest = 'Please select at least one option'
     }
-   
+
     //setFormError(errors)
     // console.log(Object.keys(formError).length)
     return errors
@@ -106,16 +121,43 @@ const Quote = () => {
     validate(formValues)
     //console.log(formError)
     setFormError(validate(formValues))
-    if (Object.keys(formError).length === 0) {
-      console.log(formValues)
-    }
-  }, [formValues])
+    // if (Object.keys(formError).length === 0) {
+    // }
+  }, [formValues, touched])
 
   const handlesubmit = (e) => {
     e.preventDefault()
     console.log(formValues)
 
+    if (Object.keys(formError).length > 0) {
+      setTouched({
+        home_business: true,
+        industry: true,
+        ownership: true,
+        size_of_apartment: true,
+        last_name: true,
+        first_name: true,
+        email: true,
+        phone_number: true,
+        quantity: true,
+        system_of_interest: true,
+      })
+    }
+
     if (Object.keys(formError).length === 0) {
+      setTouched({
+        home_business: false,
+        industry: false,
+        ownership: false,
+        size_of_apartment: false,
+        last_name: false,
+        first_name: false,
+        email: false,
+        phone_number: false,
+        quantity: false,
+        system_of_interest: false,
+      })
+
       fetch('https://formsubmit.co/ajax/uwabunkeonyeijeoma@gmail.com', {
         method: 'POST',
         headers: {
@@ -123,20 +165,20 @@ const Quote = () => {
           Accept: 'application/json',
         },
         body: JSON.stringify({
-        Home_or_Business: formValues.home_business,
-        Industry: formValues.industry,
-        Ownership: formValues.ownership,
-        Size_Of_Apartment: formValues.size_of_apartment,
-        Last_name: formValues.last_name,
-        First_name: formValues.first_name,
-        Email: formValues.email,
-        Phone_number: formValues.phone_number,
-        Quantity: formValues.quantity,
+          Home_or_Business: formValues.home_business,
+          Industry: formValues.industry,
+          Ownership: formValues.ownership,
+          Size_Of_Apartment: formValues.size_of_apartment,
+          Last_name: formValues.last_name,
+          First_name: formValues.first_name,
+          Email: formValues.email,
+          Phone_number: formValues.phone_number,
+          Quantity: formValues.quantity,
           system_of_interest: formValues.system_of_interest,
           _subject: `New Order Submmitted By ${formValues.first_name} ${formValues.last_name}`,
           _captcha: true,
-          _blacklist: "spammy pattern, banned term, phrase",
-          _template: "box"
+          _blacklist: 'spammy pattern, banned term, phrase',
+          _template: 'box',
         }),
       })
         .then((response) => response.json())
@@ -146,8 +188,10 @@ const Quote = () => {
             setErrorType('success')
             setMessageType('Mail sent success')
             setShowToast(true)
-            setFormValues("")
-            
+            setFormValues({})
+            setFormError({})
+            setSystemofinterest({})
+
             e.target.reset()
           } else {
             //alert('failure')
@@ -164,90 +208,61 @@ const Quote = () => {
     <>
       <section>
         <Form onSubmit={handlesubmit}>
-        
           <Form.Group className={styles.box}>
             <Form.Label className={styles.labelfield}>
               Home or Business?
             </Form.Label>
             <select name='home_business' onChange={handleChange}>
-              <option selected value=''>
-                Select an option
-              </option>
-              <option value='Home'>
-              For Home
-              </option>
-              <option value='Business'>
-              For Business
-              </option>
+              <option value=''>Select an option</option>
+              <option value='Home'>For Home</option>
+              <option value='Business'>For Business</option>
             </select>
-            <div className={styles.errorMsg}>{formError.home_business}</div>
+            <div className={styles.errorMsg}>
+              {touched.home_business && formError.home_business}
+            </div>
           </Form.Group>
 
           <Form.Group className={styles.box}>
             <Form.Label className={styles.labelfield}>Industry:</Form.Label>
-            
-            <select name='industry'
-           onChange={handleChange}>
-              <option selected  value=''>
-                Select an industry
-              </option>
+
+            <select name='industry' onChange={handleChange}>
+              <option value=''>Select an industry</option>
               <option value='Commercial Building'>Commercial Buildings</option>
               <option value='Office Building'>Office Buildings</option>
             </select>
-               <div 
-               className={styles.errorMsg}>{formError.industry}</div>
+            <div className={styles.errorMsg}>
+              {touched.industry && formError.industry}
+            </div>
           </Form.Group>
 
-          <Form.Group 
-          className={styles.box}>
-            <Form.Label 
-            className={styles.labelfield}>
-            Own Or Rent:
-            </Form.Label>
-            <select name='ownership'
-           onChange={handleChange}>
-              <option selected value=''>
-                Select an option
-              </option>
-              <option value='Occupant'>
-              Occupant
-              </option>
-              <option value='Representative'>
-              Representing the Occupant
-              </option>
-              
-              <option value='Representative'>
-                   Other
-              </option>
+          <Form.Group className={styles.box}>
+            <Form.Label className={styles.labelfield}>Own Or Rent:</Form.Label>
+            <select name='ownership' onChange={handleChange}>
+              <option value=''>Select an option</option>
+              <option value='Occupant'>Occupant</option>
+              <option value='Representative'>Representing the Occupant</option>
+
+              <option value='Representative'>Other</option>
             </select>
-               <div 
-               className={styles.errorMsg}>{formError.ownership}</div>
+            <div className={styles.errorMsg}>
+              {touched.ownership && formError.ownership}
+            </div>
           </Form.Group>
 
           <Form.Group className={styles.box}>
             <Form.Label className={styles.labelfield}>
               Size Of Apartment:
             </Form.Label>
-            <select name='size_of_apartment'
-           onChange={handleChange}>
-              <option selected value=''>
-               Select an option
-              </option>
-              <option value='Storey Building'>
-              Storey Building
-              </option>
-              <option value='Mini Flat'>
-              Mini Flat
-              </option>
-              <option value='Duplex'>
-              Duplex
-              </option>
-              <option value='Bungalow'>
-              Bungalow
-              </option>
+            <select name='size_of_apartment' onChange={handleChange}>
+              <option value=''>Select an option</option>
+              <option value='Storey Building'>Storey Building</option>
+              <option value='Mini Flat'>Mini Flat</option>
+              <option value='Duplex'>Duplex</option>
+              <option value='Bungalow'>Bungalow</option>
             </select>
-             <div 
-               className={styles.errorMsg}>{formError.size_of_apartment}</div>
+            <div className={styles.errorMsg}>
+              {touched.size_of_apartment && formError.size_of_apartment}
+            </div>
           </Form.Group>
 
           <Form.Group className={styles.box}>
@@ -268,7 +283,9 @@ const Quote = () => {
                   onChange={handleChange}
                 />
               </InputGroup>
-              <div className={styles.errorMsg}>{formError.first_name}</div>
+              <div className={styles.errorMsg}>
+                {touched.first_name && formError.first_name}
+              </div>
             </div>
 
             <div className='mb-4'>
@@ -284,7 +301,9 @@ const Quote = () => {
                   onChange={handleChange}
                 />
               </InputGroup>
-              <div className={styles.errorMsg}>{formError.last_name}</div>
+              <div className={styles.errorMsg}>
+                {touched.last_name && formError.last_name}
+              </div>
             </div>
 
             <div className='mb-3'>
@@ -300,7 +319,9 @@ const Quote = () => {
                   onChange={handleChange}
                 />
               </InputGroup>
-              <div className={styles.errorMsg}>{formError.email}</div>
+              <div className={styles.errorMsg}>
+                {touched.email && formError.email}
+              </div>
             </div>
 
             <div className='mb-3'>
@@ -316,7 +337,9 @@ const Quote = () => {
                   onChange={handleChange}
                 />
               </InputGroup>
-              <div className={styles.errorMsg}>{formError.phone_number}</div>
+              <div className={styles.errorMsg}>
+                {touched.phone_number && formError.phone_number}
+              </div>
             </div>
           </Form.Group>
 
@@ -372,7 +395,7 @@ const Quote = () => {
               <option value='Other services'>Other Services</option>
             </select>
             <div className={styles.errorMsg}>
-              {formError.system_of_interest}
+              {touched.system_of_interest && formError.system_of_interest}
             </div>
           </Form.Group>
 
@@ -388,16 +411,16 @@ const Quote = () => {
                 placeholder='Please Enter the Number of Quantity'
               />
             </InputGroup>
-            
-      <div className={styles.errorMsg}>
-      {formError.quantity}
-      </div>
+
+            <div className={styles.errorMsg}>
+              {touched.quantity && formError.quantity}
+            </div>
           </Form.Group>
-          
-<input type="hidden"/>
-  <input type="hidden"/>
-  <input type="hidden" />
-  <input type="hidden"/>
+
+          <input type='hidden' />
+          <input type='hidden' />
+          <input type='hidden' />
+          <input type='hidden' />
           <button type='submit' className='btn'>
             {' '}
             Submit
