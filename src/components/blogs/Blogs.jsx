@@ -25,7 +25,7 @@ className={BlogStyles.BlogContainer}>
     Recent Articles
     </h1>
     
-    <Row>
+    <Row className="gap-5">
   
       <Col 
       lg="6" md="6"

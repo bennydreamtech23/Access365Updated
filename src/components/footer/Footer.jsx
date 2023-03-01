@@ -97,7 +97,8 @@ className="flex-column gap-3">
  {
      servicesData.map(item =>(
       <div 
-      key={item.id}>
+      key={item.id}
+      className={footerStyles.link}>
        <Link
        className={footerStyles.link}
         to={`/services/${item.title}`}>

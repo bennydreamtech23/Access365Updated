@@ -13,7 +13,6 @@ import {
 import {
   MdEmail,
   MdOutlinePhoneLocked,
-  MdErrorOutline,
   MdPersonOutline,
 } from 'react-icons/md'
 
@@ -97,6 +96,7 @@ const Quote = () => {
     if (systemofinterest.length === 0) {
       errors.system_of_interest = 'Please select at least one option'
     }
+   
     //setFormError(errors)
     // console.log(Object.keys(formError).length)
     return errors
@@ -146,7 +146,8 @@ const Quote = () => {
             setErrorType('success')
             setMessageType('Mail sent success')
             setShowToast(true)
-            setFormValues(initialValues).reset()
+            setFormValues("")
+            
             e.target.reset()
           } else {
             //alert('failure')
