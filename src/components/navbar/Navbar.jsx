@@ -66,41 +66,35 @@ function NavbarTool() {
                 id='navbarScrollingDropdown'
                 className='nav-link'
               >
-                <NavDropdown.Item as={Link} to='/about'>
-                  About Us
-                </NavDropdown.Item>
+                <NavDropdown.Item href='#/about'>About Us</NavDropdown.Item>
 
-                <NavDropdown.Item as={Link} to='/howitworks'>
+                <NavDropdown.Item href='#/howitworks'>
                   How It Works
                 </NavDropdown.Item>
 
-                <NavDropdown.Item as={Link} to='/team'>
+                <NavDropdown.Item href='#/team'>
                   Leadership Team
                 </NavDropdown.Item>
 
-                <NavDropdown.Item as={Link} to='/award'>
+                <NavDropdown.Item href='#/award'>
                   Award & Recognition
                 </NavDropdown.Item>
 
-                <NavDropdown.Item as={Link} to='/review'>
+                <NavDropdown.Item href='#/review'>
                   Customer's Review
                 </NavDropdown.Item>
 
-                <NavDropdown.Item as={Link} to='/pricing'>
+                <NavDropdown.Item href='#/pricing'>
                   Packaging & Pricing
                 </NavDropdown.Item>
 
-                <NavDropdown.Item as={Link} to='/faq'>
-                  FAQs
-                </NavDropdown.Item>
+                <NavDropdown.Item href='#/faq'>FAQs</NavDropdown.Item>
 
-                <NavDropdown.Item as={Link} to='/gallery'>
+                <NavDropdown.Item href='#/gallery'>
                   Our Gallery
                 </NavDropdown.Item>
 
-                <NavDropdown.Item as={Link} to='/contact'>
-                  Contact Us
-                </NavDropdown.Item>
+                <NavDropdown.Item href='#/contact'>Contact Us</NavDropdown.Item>
               </NavDropdown>
 
               <NavDropdown
@@ -111,18 +105,14 @@ function NavbarTool() {
                 <div className='service-box'>
                   <div>
                     <NavDropdown.Item
-                      as={Link}
-                      to='/services'
+                      href='#/services'
                       className='services_title'
                     >
                       Services
                     </NavDropdown.Item>
                     {servicesData.map((item) => (
                       <div key={item.id}>
-                        <NavDropdown.Item
-                          as={Link}
-                          to={`/services/${item.title}`}
-                        >
+                        <NavDropdown.Item href={`#/services/${item.title}`}>
                           {item.title}
                         </NavDropdown.Item>
                       </div>
@@ -131,18 +121,14 @@ function NavbarTool() {
 
                   <div>
                     <NavDropdown.Item
-                      as={Link}
-                      to='/industries'
+                      href='#/industries'
                       className='services_title'
                     >
                       Industries
                     </NavDropdown.Item>
                     {industriesData.map((item) => (
                       <div key={item.id}>
-                        <NavDropdown.Item
-                          as={Link}
-                          to={`/industries/${item.title}`}
-                        >
+                        <NavDropdown.Item href={`#/industries/${item.title}`}>
                           {item.title}
                         </NavDropdown.Item>
                       </div>
@@ -156,11 +142,9 @@ function NavbarTool() {
                 id='navbarScrollingDropdown'
                 className='nav-link'
               >
-                <NavDropdown.Item as={Link} to='/blog'>
-                  Blog
-                </NavDropdown.Item>
+                <NavDropdown.Item href='#/blog'>Blog</NavDropdown.Item>
 
-                <NavDropdown.Item as={Link} to='/casestudies'>
+                <NavDropdown.Item href='#/casestudies'>
                   Case studies
                 </NavDropdown.Item>
               </NavDropdown>
@@ -226,47 +210,36 @@ function NavbarTool() {
             </Link>
 
             <NavDropdown
-              as={Link}
-              to='/company'
+              href='/company'
               title='Company'
               id='navbarScrollingDropdown'
               className='nav-link'
             >
-              <NavDropdown.Item as={Link} to='/about'>
-                About Us
-              </NavDropdown.Item>
+              <NavDropdown.Item href='#/about'>About Us</NavDropdown.Item>
 
-              <NavDropdown.Item as={Link} to='/howitworks'>
+              <NavDropdown.Item href='#/howitworks'>
                 How It Works
               </NavDropdown.Item>
 
-              <NavDropdown.Item as={Link} to='/team'>
-                Leadership Team
-              </NavDropdown.Item>
+              <NavDropdown.Item href='#/team'>Leadership Team</NavDropdown.Item>
 
-              <NavDropdown.Item as={Link} to='/award'>
+              <NavDropdown.Item href='#/award'>
                 Award & Recognition
               </NavDropdown.Item>
 
-              <NavDropdown.Item as={Link} to='/review'>
+              <NavDropdown.Item href='#/review'>
                 Customer's Review
               </NavDropdown.Item>
 
-              <NavDropdown.Item as={Link} to='/pricing'>
+              <NavDropdown.Item href='#/pricing'>
                 Packaging & Pricing
               </NavDropdown.Item>
 
-              <NavDropdown.Item as={Link} to='/faq'>
-                FAQs
-              </NavDropdown.Item>
+              <NavDropdown.Item href='#/faq'>FAQs</NavDropdown.Item>
 
-              <NavDropdown.Item as={Link} to='/gallery'>
-                Our Gallery
-              </NavDropdown.Item>
+              <NavDropdown.Item href='#/gallery'>Our Gallery</NavDropdown.Item>
 
-              <NavDropdown.Item as={Link} to='/contact'>
-                Contact Us
-              </NavDropdown.Item>
+              <NavDropdown.Item href='#/contact'>Contact Us</NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown
@@ -276,19 +249,12 @@ function NavbarTool() {
             >
               <div className='service-box'>
                 <div>
-                  <NavDropdown.Item
-                    as={Link}
-                    to='/services'
-                    className='services_title'
-                  >
+                  <NavDropdown.Item href='/services' className='services_title'>
                     Services
                   </NavDropdown.Item>
                   {servicesData.map((item) => (
                     <div key={item.id}>
-                      <NavDropdown.Item
-                        as={Link}
-                        to={`/services/${item.title}`}
-                      >
+                      <NavDropdown.Item href={`/services/${item.title}`}>
                         {item.title}
                       </NavDropdown.Item>
                     </div>
@@ -297,18 +263,14 @@ function NavbarTool() {
 
                 <div>
                   <NavDropdown.Item
-                    as={Link}
-                    to='/industries'
+                    href='/industries'
                     className='services_title'
                   >
                     Industries
                   </NavDropdown.Item>
                   {industriesData.map((item) => (
                     <div key={item.id}>
-                      <NavDropdown.Item
-                        as={Link}
-                        to={`/industries/${item.title}`}
-                      >
+                      <NavDropdown.Item href={`/industries/${item.title}`}>
                         {item.title}
                       </NavDropdown.Item>
                     </div>
@@ -322,11 +284,9 @@ function NavbarTool() {
               id='navbarScrollingDropdown'
               className='nav-link'
             >
-              <NavDropdown.Item as={Link} to='/blog'>
-                Blog
-              </NavDropdown.Item>
+              <NavDropdown.Item href='#/blog'>Blog</NavDropdown.Item>
 
-              <NavDropdown.Item as={Link} to='/casestudies'>
+              <NavDropdown.Item href='#/casestudies'>
                 Case studies
               </NavDropdown.Item>
             </NavDropdown>
