@@ -24,7 +24,7 @@ font-family: var(--font);
     }
     
     .bg_overlay h1{
-      color: white;
+      color: var(--white);
       font-size: 35px;
       font-weight: bolder;
     }
@@ -46,7 +46,7 @@ font-family: var(--font);
     
     .overlay_btn{
       border:none;
-      background: #f88000;
+      background: var(--darkorange);
       padding: 10px 15px;
       border-radius: 5px;
       color: white;
@@ -58,17 +58,17 @@ font-family: var(--font);
     }
     
    .overlay_btn:hover{
-      background: #68b038;
+      background: var(--darkblue);
       transform: translateX(3px);
     }
     
       .overlay_btn1:hover{
-      background: #68b038;
+      background: var(--black);
       transform: translateX(3px);
       color: white;
     }
      .overlay_btn3:hover{
-      background: #68b038;
+      background: var(--darkblue);
       transform: translateX(3px);
       color: white;
     }
@@ -100,7 +100,7 @@ font-family: var(--font);
     }
     
     .bg_overlay .hidden{
-      background: white;
+      background: var(--white);
       width: 200px;
       height: 200px;
       padding: 10px 15px;
