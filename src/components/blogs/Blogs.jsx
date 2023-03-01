@@ -25,9 +25,10 @@ className={BlogStyles.BlogContainer}>
     Recent Articles
     </h1>
     
-    <Row 
-    className={BlogStyles.blogGrid}>
+    <Row>
+  
       <Col 
+      lg="6" md="6"
       className={BlogStyles.BlogCard}>
         <img src={BlogPost} 
         alt="cctv footage" 
@@ -51,7 +52,8 @@ className={BlogStyles.BlogContainer}>
   </div>
 </Col>
  
-    <div 
+    <Col
+    lg="6" md="6"
     className={BlogStyles.BlogCard}>
     <img 
     src={BlogPost2} 
@@ -73,9 +75,10 @@ Read More  &rarr;
   </Link>
   </div>
  </div>
-    </div>
+    </Col>
     
-      <div 
+      <Col
+      lg="6" md="6"
       className={BlogStyles.BlogCard}>
     <img 
     src={BlogPost3}
@@ -98,7 +101,7 @@ Read More  &rarr;
   </Link>
   </div>
  </div>
-    </div>
+    </Col>
  </Row>
  
  <div 

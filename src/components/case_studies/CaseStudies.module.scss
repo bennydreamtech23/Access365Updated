@@ -25,19 +25,6 @@
    color: black;
 }
 
-.casestudiesContainer{
-margin-top: 3rem; 
-   max-width: 1200px;
- display: grid; 
- grid-gap: 1rem; 
- /* Screen larger than 600px? 2 column */ @media (min-width: 768px) {  
-   grid-template-columns: repeat(2, 1fr);
-   } 
-   /* Screen larger than 900px? 4 columns */ @media (min-width: 1200px) {
-     grid-template-columns: repeat(3, 1fr);
-}
-    }
-
 .casestudiesBox{
   width: 22rem;
   display: flex;

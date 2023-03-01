@@ -27,7 +27,6 @@ const CaseStudies = () =>{
   return(
  <Container fluid
  className={CaseStudiesStyles.Container}>
- 
     <Row 
     className='d-flex justify-content-between align-items-center'>
     
@@ -49,9 +48,8 @@ const CaseStudies = () =>{
 </Row>
   
  <Row 
- className={CaseStudiesStyles.casestudiesContainer}>
- 
-      <Col 
+ className='gap-5'>
+      <Col lg="6" md="6"
       className={CaseStudiesStyles.casestudiesBox}>
      <div className={CaseStudiesStyles.bg_1}>
        <button
@@ -72,7 +70,8 @@ const CaseStudies = () =>{
        </div>
      </Col>
   
-        <Col 
+        <Col
+        lg="6" md="6"
         className={CaseStudiesStyles.casestudiesBox}>
      <div className={CaseStudiesStyles.bg_2}>
        <button
@@ -97,7 +96,7 @@ const CaseStudies = () =>{
        </div>
      </Col>
      
-        <Col 
+        <Col lg="6" md="6"
         className={CaseStudiesStyles.casestudiesBox}>
      <div className={CaseStudiesStyles.bg_3}>
        <button 
@@ -124,7 +123,7 @@ const CaseStudies = () =>{
    </div>
  </Col>
      
-        <Col
+        <Col lg="6" md="6"
         className={CaseStudiesStyles.casestudiesBox}>
      <div className={CaseStudiesStyles.bg_4}>
        <button 
@@ -151,6 +150,7 @@ const CaseStudies = () =>{
      </Col>
      
         <Col 
+        lg="6" md="6"
         className={CaseStudiesStyles.casestudiesBox}>
      <div className={CaseStudiesStyles.bg_5}>
        <button 
