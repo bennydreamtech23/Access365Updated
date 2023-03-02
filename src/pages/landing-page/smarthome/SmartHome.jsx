@@ -46,8 +46,8 @@ Check Our Services
   </Link>
   </div>
 
-  <Row 
-  className='mt-5 gap-5'>
+  <div
+  className='row mt-5 gap-5'>
   
     <Col 
     className="col-md">
@@ -91,7 +91,7 @@ Check Our Services
       <h1>Access Control Installation</h1>
       <p>Effective and Simple-to-use door access control, we offer a decade of experience in planning, customizing & delivering.</p>
     </Col>
-</Row>
+</div>
  
     <div
     className='info'>

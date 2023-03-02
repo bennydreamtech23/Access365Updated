@@ -25,7 +25,7 @@ className={Styles.Container}>
     Intergrated Security Solutions & Remote Monitoring 24/7 
     </h1>
     
-    <Row className='py-5'>
+    <Row className='py-3'>
       <Col 
       className="col-md">
     <h3 
@@ -73,7 +73,7 @@ className={Styles.Container}>
  </Col>
  
     <Col 
-    className="col-md">
+    className="col-md mt-5">
      <div 
      className={Styles.bg_2}>
        <div 
@@ -138,7 +138,7 @@ className={Styles.Container}>
   </Col>
 
 <Col 
-className="col-md">
+className="col-md mt-5">
       <h2 
       className={Styles.subtitle}>
       Convenient System Access By Phone or Tablet

@@ -105,9 +105,35 @@ line-height: 1.8rem;
    background-size: cover;
    background-position: cover cover;
    padding: 40px 20px;
-   @media only screen and (min-width: 320px) and (max-width: 768px){
-   margin-top: 2rem;
+   width: 100%;
+  @media only screen and (min-width: 360px) and
+  (max-width: 480px){
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+ align-items: center;
+   justify-content: center;
+   float: none;
+   margin: auto;
 } 
+@media only screen and (min-width: 480px) and
+  (max-width: 700px){
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+ align-items: center;
+   justify-content: center;
+   float: none;
+   margin: auto;
+} 
+
+@media only screen and (max-width: 320px){
+  width: 250px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 }
 
  .bg_2 .small{
@@ -152,9 +178,35 @@ line-height: 1.8rem;
    background-size: cover;
    background-position: cover cover;
    padding: 40px 20px;
-   @media only screen and (min-width: 320px) and (max-width: 768px){
-   margin-top: 2rem;
+  width: 100%;
+  @media only screen and (min-width: 360px) and
+  (max-width: 480px){
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+ align-items: center;
+   justify-content: center;
+   float: none;
+   margin: auto;
 } 
+@media only screen and (min-width: 480px) and
+  (max-width: 700px){
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+ align-items: center;
+   justify-content: center;
+   float: none;
+   margin: auto;
+} 
+
+@media only screen and (max-width: 320px){
+  width: 250px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 }
 
 .bg_3 .small_1{
