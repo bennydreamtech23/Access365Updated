@@ -13,7 +13,7 @@ const IntegratedSecurity = () =>{
   
   return(
   <section>
-<div 
+<section
 className={Styles.Container}>
     <h2 
     className={Styles.subTitle}>
@@ -25,7 +25,7 @@ className={Styles.Container}>
     Intergrated Security Solutions & Remote Monitoring 24/7 
     </h1>
     
-    <Row>
+    <Row className='py-5'>
       <Col 
       className="col-md">
     <h3 
@@ -84,7 +84,6 @@ className={Styles.Container}>
          <p>
          All The Essentials To Help Give You Peace Of Mind.
         </p>
-        
         <ul>
           <li>
           <BsFillCheckCircleFill
@@ -105,7 +104,7 @@ className={Styles.Container}>
  </Row>
  
  <Row 
- className='mt-5'>
+ className='py-5'>
       <Col 
       className="col-md">
      <div 
@@ -173,13 +172,10 @@ className="col-md">
   <BsFillStarFill className={Styles.smallstar}/> Williams George</h6>
   </Col>
    </Row>
-   
-    <Row 
-    className={Styles.rowEnd}>
+  
+   <Row className='pt-5'>
       <Col 
       className="col-md">
- <div>
- 
    <h2 
    className={Styles.subtitle}>
    Tailored solutions for Your security Priorities
@@ -195,22 +191,21 @@ className="col-md">
      We will design, install, maintain and upgrade solutions to meet businesses' specific needs and budgets, from largr enterprises to local businesses security platforms, from simple ca!era solution for small offices to complex enterprise-class video surveillance systems for large campuses.
    </p>
    
-   <div 
-   className={Styles.groupBtn}>
+   <Row
+   className='gap-4'>
     {
        servicesData.map(item =>(
-    <div 
-    className={Styles.groupBtn}
+    <Col
+    className='col-md'
       key={item.id}>
-   <Link 
-   className={Styles.small_btn}
+   <Link className='btn'
         to={`/services/${item.title}`}>
          {item.title}
             </Link>
-      </div>
+      </Col>
       ))
     }
-  </div>
+  </Row>
 
   <h3 
   className={Styles.bottomText}>
@@ -219,17 +214,11 @@ className="col-md">
   Contact Us Now!
   </Link>
   </h3>
-  </div>
   </Col>
+</Row> 
+   
   
-  <div
-  className="col-md">
-  <img src={DoorSecurity} 
-  alt="door" 
-  className={Styles.img}/>
- </div>
-</Row>
- </div>
+ </section>
 <CaseStudies/>
   </section>
   )

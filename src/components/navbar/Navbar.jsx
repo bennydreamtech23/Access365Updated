@@ -56,7 +56,9 @@ function NavbarTool() {
           <div className='collapse navbar-collapse' id='navbarSupportedContent'>
             <ul className='navbar-nav'>
               <li className='nav-item'>
-                <Link to='/' className='nav-link mt-2'>
+                <Link to='/' 
+                className='nav-link mt-2'
+                id='navbarScrollingDropdown'>
                   Home
                 </Link>
               </li>
@@ -66,35 +68,59 @@ function NavbarTool() {
                 id='navbarScrollingDropdown'
                 className='nav-link'
               >
-                <NavDropdown.Item href='#/about'>About Us</NavDropdown.Item>
+                <Link
+                className='dropdown-item'
+                to='/about'>
+                About Us
+                </Link>
 
-                <NavDropdown.Item href='#/howitworks'>
+                <Link
+                className='dropdown-item'
+                to='/howitworks'>
                   How It Works
-                </NavDropdown.Item>
+                </Link>
 
-                <NavDropdown.Item href='#/team'>
+                <Link
+                className='dropdown-item'
+                to='/team'>
                   Leadership Team
-                </NavDropdown.Item>
+                </Link>
 
-                <NavDropdown.Item href='#/award'>
+                <Link
+                className='dropdown-item'
+                to='/award'>
                   Award & Recognition
-                </NavDropdown.Item>
+                </Link>
 
-                <NavDropdown.Item href='#/review'>
+                <Link
+                className='dropdown-item'
+                to='/review'>
                   Customer's Review
-                </NavDropdown.Item>
+                </Link>
 
-                <NavDropdown.Item href='#/pricing'>
+                <Link
+                className='dropdown-item'
+                to='/pricing'>
                   Packaging & Pricing
-                </NavDropdown.Item>
+                </Link>
 
-                <NavDropdown.Item href='#/faq'>FAQs</NavDropdown.Item>
+                <Link
+                className='dropdown-item'
+                to='/faq'>
+                FAQs
+                </Link>
 
-                <NavDropdown.Item href='#/gallery'>
+                <Link
+                className='dropdown-item'
+                to='/gallery'>
                   Our Gallery
-                </NavDropdown.Item>
+                </Link>
 
-                <NavDropdown.Item href='#/contact'>Contact Us</NavDropdown.Item>
+                <Link
+                className='dropdown-item'
+                to='/contact'>
+                Contact Us
+                </Link>
               </NavDropdown>
 
               <NavDropdown
@@ -104,33 +130,41 @@ function NavbarTool() {
               >
                 <div className='service-box'>
                   <div>
-                    <NavDropdown.Item
-                      href='#/services'
-                      className='services_title'
+                    <Link
+                    className='dropdown-item'
+                      to='/services'
+                      id='services_title'
                     >
                       Services
-                    </NavDropdown.Item>
+                    </Link>
+                    
                     {servicesData.map((item) => (
                       <div key={item.id}>
-                        <NavDropdown.Item href={`#/services/${item.title}`}>
+                        <Link
+                        className='dropdown-item'
+                        to={`/services/${item.title}`}>
                           {item.title}
-                        </NavDropdown.Item>
+                        </Link>
                       </div>
                     ))}
                   </div>
 
                   <div>
-                    <NavDropdown.Item
-                      href='#/industries'
-                      className='services_title'
+                    <Link
+                      className='dropdown-item'
+                      to='/industries'
+                     id='services_title'
                     >
                       Industries
-                    </NavDropdown.Item>
+                    </Link>
+                    
                     {industriesData.map((item) => (
                       <div key={item.id}>
-                        <NavDropdown.Item href={`#/industries/${item.title}`}>
+                        <Link
+                      className='dropdown-item'
+                      to={`/industries/${item.title}`}>
                           {item.title}
-                        </NavDropdown.Item>
+                        </Link>
                       </div>
                     ))}
                   </div>
@@ -142,29 +176,45 @@ function NavbarTool() {
                 id='navbarScrollingDropdown'
                 className='nav-link'
               >
-                <NavDropdown.Item href='#/blog'>Blog</NavDropdown.Item>
+                <Link
+                className='dropdown-item'
+                to='/blog'>
+                Blog
+                </Link>
 
-                <NavDropdown.Item href='#/casestudies'>
+                <Link
+                className='dropdown-item'
+                to='/casestudies'>
                   Case studies
-                </NavDropdown.Item>
+                </Link>
               </NavDropdown>
             </ul>
 
-            <form className='d-flex'>
-              <button className='quotebtn' onClick={(e) => quote(e)}>
+            <form 
+            className='d-flex'>
+              <button 
+              className='quotebtn' 
+              onClick={(e) => quote(e)}>
                 Get a quote
               </button>
             </form>
 
-            <form className='d-flex mt-4'>
-              <div className='phone'>
-                <a className='nav-link' href='tel:+23407032226012'>
-                  <BiPhoneCall className='bi-telephone' />
+        <form 
+            className='d-flex mt-4'>
+              <div 
+              className='phone'>
+              <a 
+                className='nav-link' 
+                href='tel:+23407032226012'>
+                  <BiPhoneCall 
+                  className='bi-telephone' />
                 </a>
               </div>
 
               <div className='d-flex flex-column justify-content-between align-items-start'>
-                <a id='icons' className='nav-link' href='tel:+23407032226012'>
+                <a id='icon' 
+                className='nav-link' 
+                href='tel:+23407032226012'>
                   +23407032226012
                 </a>
                 <a
@@ -205,41 +255,69 @@ function NavbarTool() {
 
         <div className='offcanvas-body'>
           <ul className='navbar-nav m-auto mb-2 mb-lg-0'>
-            <Link to='/' className='nav-link'>
+            <Link to='/'
+            className='nav-link'
+                id='navbarScrollingDropdown'>
               Home
             </Link>
 
             <NavDropdown
-              href='/company'
               title='Company'
               id='navbarScrollingDropdown'
               className='nav-link'
             >
-              <NavDropdown.Item href='#/about'>About Us</NavDropdown.Item>
+              <Link 
+            className='dropdown-item'
+              to='/about'>
+              About Us
+              </Link>
 
-              <NavDropdown.Item href='#/howitworks'>
+              <Link
+            className='dropdown-item'
+              to='/howitworks'>
                 How It Works
-              </NavDropdown.Item>
+              </Link>
 
-              <NavDropdown.Item href='#/team'>Leadership Team</NavDropdown.Item>
+              <Link
+            className='dropdown-item'
+              to='/team'>
+              Leadership Team
+              </Link>
 
-              <NavDropdown.Item href='#/award'>
-                Award & Recognition
-              </NavDropdown.Item>
+              <Link
+            className='dropdown-item'
+              to='/award'>
+             Award & Recognition
+              </Link>
 
-              <NavDropdown.Item href='#/review'>
+              <Link
+              className='dropdown-item'
+              to='/review'>
                 Customer's Review
-              </NavDropdown.Item>
+              </Link>
 
-              <NavDropdown.Item href='#/pricing'>
+              <Link
+              className='dropdown-item'
+              to='/pricing'>
                 Packaging & Pricing
-              </NavDropdown.Item>
+              </Link>
 
-              <NavDropdown.Item href='#/faq'>FAQs</NavDropdown.Item>
+              <Link
+              className='dropdown-item'
+              to='/faq'>
+              FAQs
+              </Link>
 
-              <NavDropdown.Item href='#/gallery'>Our Gallery</NavDropdown.Item>
+              <Link
+              className='dropdown-item'
+              to='/gallery'>
+              Our Gallery
+              </Link>
 
-              <NavDropdown.Item href='#/contact'>Contact Us</NavDropdown.Item>
+              <Link 
+              className='dropdown-item'
+              to='/contact'>Contact Us
+              </Link>
             </NavDropdown>
 
             <NavDropdown
@@ -249,30 +327,38 @@ function NavbarTool() {
             >
               <div className='service-box'>
                 <div>
-                  <NavDropdown.Item href='/services' className='services_title'>
+                  <Link
+                  to='/services'
+                  className='dropdown-item'
+                  id='services_title'>
                     Services
-                  </NavDropdown.Item>
+                  </Link>
                   {servicesData.map((item) => (
                     <div key={item.id}>
-                      <NavDropdown.Item href={`/services/${item.title}`}>
+                      <Link 
+                      className='dropdown-item'
+                      to={`/services/${item.title}`}>
                         {item.title}
-                      </NavDropdown.Item>
+                      </Link>
                     </div>
                   ))}
                 </div>
 
                 <div>
-                  <NavDropdown.Item
-                    href='/industries'
-                    className='services_title'
+                  <Link
+                    className='dropdown-item'
+                    to='/industries'
+                    id='services_title'
                   >
                     Industries
-                  </NavDropdown.Item>
+                  </Link>
                   {industriesData.map((item) => (
                     <div key={item.id}>
-                      <NavDropdown.Item href={`/industries/${item.title}`}>
+                      <Link
+                    className='dropdown-item'
+                    to={`/industries/${item.title}`}>
                         {item.title}
-                      </NavDropdown.Item>
+                      </Link>
                     </div>
                   ))}
                 </div>
@@ -284,11 +370,17 @@ function NavbarTool() {
               id='navbarScrollingDropdown'
               className='nav-link'
             >
-              <NavDropdown.Item href='#/blog'>Blog</NavDropdown.Item>
+              <Link
+              className='dropdown-item'
+              to='/blog'>
+              Blog
+              </Link>
 
-              <NavDropdown.Item href='#/casestudies'>
+              <Link
+               className='dropdown-item'
+              to='/casestudies'>
                 Case studies
-              </NavDropdown.Item>
+              </Link>
             </NavDropdown>
           </ul>
         </div>

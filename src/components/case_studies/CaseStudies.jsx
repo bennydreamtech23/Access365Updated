@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import CaseStudiesStyles from './CaseStudies.module.scss'
+import './CaseStudies.scss'
 import { Container, Row, Col } from 'react-bootstrap'
 
 //IMAGES
@@ -13,7 +13,7 @@ import ubiquiti from '../../assets/company_logo/Ubiquiti_Networks-Logo.wine.svg'
 import tplink from '../../assets/company_logo/TP-Link-Logo.wine.svg'
 import dlink from '../../assets/company_logo/D-Link-Logo.wine.svg'
 
-const CaseStudies = () => {
+const caseStudies = () => {
   const zkteco =
     'https://logos-download.com/wp-content/uploads/2020/06/ZKTeco_Logo.png'
 
@@ -27,33 +27,43 @@ const CaseStudies = () => {
     'https://download.logo.wine/logo/Panasonic/Panasonic-Logo.wine.png'
 
   return (
-    <Container fluid className={CaseStudiesStyles.Container}>
-      <Row className='d-flex justify-content-between align-items-center'>
-        <Col className='col-md'>
-          <h1 className={CaseStudiesStyles.Title}>
-            Explore Our Case Studies & Latest Success Stories.
+    <Container fluid 
+    className='CaseStudiesStylesContainer'>
+      <Row 
+      className='d-flex justify-content-between align-items-center pb-3'>
+      
+        <Col 
+        className='col-md'>
+          <h1 
+          className='Title'>
+            Explore Our Studies & Latest Success Stories.
           </h1>
         </Col>
 
-        <div className='col-md'>
-          <p className={CaseStudiesStyles.subtext}>
+        <Col
+        className='col-md'>
+          <p 
+          className='subtext'>
             For the Security and IT directors ensuring our places of work and
             leisure are safe. For the Chief Technology Officers shaping the
             smart businesses lf tomorrow. We delivers powerful and insight ful
             security solutions that enable protectors to drive forward.
           </p>
-        </div>
+        </Col>
       </Row>
 
-      <Row className='gap-5'>
-        <Col lg='6' md='6' className={CaseStudiesStyles.casestudiesBox}>
-          <div className={CaseStudiesStyles.bg_1}>
-            <button className={CaseStudiesStyles.bg_1_button}>
+      <Row 
+      className='Row mt-5 gap-4'>
+      
+        <Col 
+        className='col-md'>
+          <div className='bg_1'>
+            <button className='bg_1_button'>
               Detection, Fire Alarm
             </button>
           </div>
 
-          <div className={CaseStudiesStyles.small}>
+          <div className='small'>
             <h2>Getting The Right Fire Alarm Detection System Online</h2>
 
             <p>
@@ -62,21 +72,27 @@ const CaseStudies = () => {
               than hard wired standard versions.
             </p>
             <div className='my-5'>
-              <Link to='/casestudies' className={CaseStudiesStyles.overlay_btn}>
+              <Link 
+              to='/casestudies'
+              className='overlay_btn'>
                 Explore More &rarr;
               </Link>
             </div>
           </div>
         </Col>
 
-        <Col lg='6' md='6' className={CaseStudiesStyles.casestudiesBox}>
-          <div className={CaseStudiesStyles.bg_2}>
-            <button className={CaseStudiesStyles.bg_1_button}>
+        <Col 
+        className='col-md'>
+          <div 
+          className='bg_2'>
+            <button 
+            className='bg_1_button'>
               Security, Cctv
             </button>
           </div>
 
-          <div className={CaseStudiesStyles.small}>
+          <div 
+          className='small'>
             <h2>Helping Manufacturers With Workplace Essential Safety</h2>
             <p>
               The systems feature manual call and sounder devices wirelessly
@@ -84,21 +100,27 @@ const CaseStudies = () => {
               than hard wired standard versions.
             </p>
             <div className='my-5'>
-              <Link to='/casestudies' className={CaseStudiesStyles.overlay_btn}>
+              <Link 
+              to='/casestudies' 
+              className='overlay_btn'>
                 Explore More &rarr;
               </Link>
             </div>
           </div>
         </Col>
 
-        <Col lg='6' md='6' className={CaseStudiesStyles.casestudiesBox}>
-          <div className={CaseStudiesStyles.bg_3}>
-            <button className={CaseStudiesStyles.bg_1_button}>
+        <Col 
+        className= 'col-md'>
+          <div 
+          className= 'bg_3'>
+            <button 
+            className='bg_1_button'>
               Resources, Security
             </button>
           </div>
 
-          <div className={CaseStudiesStyles.small}>
+          <div 
+          className='small'>
             <h2>Vendors With Resources Safety & Security</h2>
             <p>
               The systems feature manual call and sounder devices wirelessly
@@ -107,21 +129,26 @@ const CaseStudies = () => {
             </p>
 
             <div className='my-5'>
-              <Link to='/casestudies' className={CaseStudiesStyles.overlay_btn}>
+              <Link to='/casestudies' 
+              className='overlay_btn'>
                 Explore More &rarr;
               </Link>
             </div>
           </div>
         </Col>
 
-        <Col lg='6' md='6' className={CaseStudiesStyles.casestudiesBox}>
-          <div className={CaseStudiesStyles.bg_4}>
-            <button className={CaseStudiesStyles.bg_1_button}>
+        <Col 
+        className='col-md'>
+          <div 
+          className='bg_4'>
+            <button 
+            className='bg_1_button'>
               Detection, Fire Alarm
             </button>
           </div>
 
-          <div className={CaseStudiesStyles.small}>
+          <div 
+          className='small'>
             <h2>Home Security For The Front And Back Of Your House</h2>
             <p>
               The systems feature manual call and sounder devices wirelessly
@@ -129,21 +156,26 @@ const CaseStudies = () => {
               than hard wired standard versions.
             </p>
             <div className='my-5'>
-              <Link to='/casestudies' className={CaseStudiesStyles.overlay_btn}>
+              <Link to='/casestudies' 
+              className='overlay_btn'>
                 Explore More &rarr;
               </Link>
             </div>
           </div>
         </Col>
 
-        <Col lg='6' md='6' className={CaseStudiesStyles.casestudiesBox}>
-          <div className={CaseStudiesStyles.bg_5}>
-            <button className={CaseStudiesStyles.bg_1_button}>
+        <Col 
+        className='col-md'>
+          <div 
+          className='bg_5'>
+            <button 
+            className='bg_1_button'>
               CCTV Security Camera
             </button>
           </div>
 
-          <div className={CaseStudiesStyles.small}>
+          <div 
+          className='small'>
             <h2>Expert's Guild To Security For Rental Properties</h2>
             <p>
               The systems feature manual call and sounder devices wirelessly
@@ -154,7 +186,7 @@ const CaseStudies = () => {
               <div className='my-5'>
                 <Link
                   to='/casestudies'
-                  className={CaseStudiesStyles.overlay_btn}
+                  className='overlay_btn'
                 >
                   Explore More &rarr;
                 </Link>
@@ -164,220 +196,238 @@ const CaseStudies = () => {
         </Col>
       </Row>
 
-      <Row className={CaseStudiesStyles.rollerBox}>
+      <Row 
+      className='rollerBox'>
         <Col>
-          <h3 className={CaseStudiesStyles.mediumtext}>
+          <h3 className='mediumtext'>
             Provide better security and control for residential and business
             customers using product from these company
           </h3>
 
-          <div className={CaseStudiesStyles.scrolling}>
-            <div id={CaseStudiesStyles.col} style={{ whiteSpace: 'nowrap' }}>
-              <div className={CaseStudiesStyles.scrolling_col_cplus}>
+          <div 
+          className='scrolling'>
+            <div id='col'
+            style={{ whiteSpace: 'nowrap' }}>
+              <div 
+              className='scrolling_col_cplus'>
                 <img
                   src={cplus}
                   alt='cplus'
-                  className={CaseStudiesStyles.companyLogo}
+                  className='companyLogo'
                 />
               </div>
 
-              <div className={CaseStudiesStyles.scrolling_col_hikivision}>
+              <div 
+              className='scrolling_col_hikivision'>
                 <img
                   src={hikivison}
                   alt='hikvision'
-                  className={CaseStudiesStyles.companyLogo}
+                  className='companyLogo'
                 />
               </div>
 
-              <div className={CaseStudiesStyles.scrolling_col_dahua}>
+              <div className='scrolling_col_dahua'>
                 <img
                   src={dahua}
                   alt='dahua'
-                  className={CaseStudiesStyles.companyLogo}
+                  className='companyLogo'
                 />
               </div>
 
-              <div className={CaseStudiesStyles.scrolling_col_anviz}>
+              <div className='scrolling_col_anviz'>
                 <img
                   src={anviz}
                   alt='anviz'
-                  className={CaseStudiesStyles.companyLogo}
+                  className="companyLogo"
                 />
               </div>
 
-              <div className={CaseStudiesStyles.scrolling_col_zkteco}>
+              <div 
+              className='scrolling_col_zkteco'>
                 <img
                   src={zkteco}
                   alt='zkteco'
-                  className={CaseStudiesStyles.companyLogo}
+                  className='companyLogo'
                 />
               </div>
 
-              <div className={CaseStudiesStyles.scrolling_col_honeywell}>
+              <div 
+              className='scrolling_col_honeywell'>
                 <img
                   src={honeywell}
                   alt='honeywell'
-                  className={CaseStudiesStyles.companyLogo}
+                  className="companyLogo"
                 />
               </div>
 
-              <div className={CaseStudiesStyles.scrolling_col_microsoft}>
+              <div 
+              className="scrolling_col_microsoft">
                 <img
                   src={microsoft}
                   alt='microsoft'
-                  className={CaseStudiesStyles.companyLogo}
+                  className='companyLogo'
                 />
               </div>
 
-              <div className={CaseStudiesStyles.scrolling_col_tuya}>
+              <div className='scrolling_col_tuya'>
                 <img
                   src={tuya}
                   alt='tuya'
-                  className={CaseStudiesStyles.companyLogo}
+                  className='companyLogo'
                 />
               </div>
 
-              <div className={CaseStudiesStyles.scrolling_col_panasonic}>
+              <div 
+              className = 'scrolling_col_panasonic'>
                 <img
                   src={panasonic}
                   alt='Panasonic'
-                  className={CaseStudiesStyles.companyLogo}
+                  className="companyLogo"
                 />
               </div>
 
-              <div className={CaseStudiesStyles.scrolling_col_ubiquiti}>
+              <div
+              className="scrolling_col_ubiquiti">
                 <img
                   src={ubiquiti}
                   alt='ubiquiti'
-                  className={CaseStudiesStyles.companyLogo}
+                  className="companyLogo"
                 />
               </div>
 
-              <div className={CaseStudiesStyles.scrolling_col_tplink}>
+              <div 
+              className="scrolling_col_tplink">
                 <img
                   src={tplink}
                   alt='tplink'
-                  className={CaseStudiesStyles.companyLogo}
+                  className="companyLogo"
                 />
               </div>
 
-              <div className={CaseStudiesStyles.scrolling_col_dlink}>
+              <div 
+              className="scrolling_col_dlink">
                 <img
                   src={dlink}
                   alt='dlink'
-                  className={CaseStudiesStyles.companyLogo}
+                  className="companyLogo"
                 />
               </div>
 
-              <div className={CaseStudiesStyles.scrolling_col_cisco}>
+              <div 
+              className="scrolling_col_cisco">
                 <img
                   src={cisco}
                   alt='cisco'
-                  className={CaseStudiesStyles.companyLogo}
+                  className="companyLogo"
                 />
               </div>
 
-              <div className={CaseStudiesStyles.scrolling_col_cplus}>
+              <div className="scrolling_col_cplus">
                 <img
                   src={cplus}
                   alt='cplus'
-                  className={CaseStudiesStyles.companyLogo}
+                  className="companyLogo"
                 />
               </div>
 
-              <div className={CaseStudiesStyles.scrolling_col_hikivision}>
+              <div
+              className="scrolling_col_hikivision">
                 <img
                   src={hikivison}
                   alt='hikvision'
-                  className={CaseStudiesStyles.companyLogo}
+                  className="companyLogo"
                 />
               </div>
 
-              <div className={CaseStudiesStyles.scrolling_col_dahua}>
+              <div 
+              className="scrolling_col_dahua">
                 <img
                   src={dahua}
                   alt='dahua'
-                  className={CaseStudiesStyles.companyLogo}
+                  className="companyLogo"
                 />
               </div>
 
-              <div className={CaseStudiesStyles.scrolling_col_anviz}>
+              <div className="scrolling_col_anviz">
                 <img
                   src={anviz}
                   alt='anviz'
-                  className={CaseStudiesStyles.companyLogo}
+                  className="companyLogo"
                 />
               </div>
 
-              <div className={CaseStudiesStyles.scrolling_col_zkteco}>
+              <div
+              className="scrolling_col_zkteco">
                 <img
                   src={zkteco}
                   alt='zkteco'
-                  className={CaseStudiesStyles.companyLogo}
+                  className="companyLogo"
                 />
               </div>
 
-              <div className={CaseStudiesStyles.scrolling_col_honeywell}>
+              <div
+              className="scrolling_col_honeywell">
                 <img
                   src={honeywell}
                   alt='honeywell'
-                  className={CaseStudiesStyles.companyLogo}
+                  className="companyLogo"
                 />
               </div>
 
-              <div className={CaseStudiesStyles.scrolling_col_microsoft}>
+              <div className="scrolling_col_microsoft">
                 <img
                   src={microsoft}
                   alt='microsoft'
-                  className={CaseStudiesStyles.companyLogo}
+                  className="companyLogo"
                 />
               </div>
 
-              <div className={CaseStudiesStyles.scrolling_col_tuya}>
+              <div className="scrolling_col_tuya">
                 <img
                   src={tuya}
                   alt='tuya'
-                  className={CaseStudiesStyles.companyLogo}
+                  className="companyLogo"
                 />
               </div>
 
-              <div className={CaseStudiesStyles.scrolling_col_panasonic}>
+              <div className="scrolling_col_panasonic">
                 <img
                   src={panasonic}
                   alt='Panasonic'
-                  className={CaseStudiesStyles.companyLogo}
+                  className="companyLogo"
                 />
               </div>
 
-              <div className={CaseStudiesStyles.scrolling_col_ubiquiti}>
+              <div 
+              className="scrolling_col_ubiquiti">
                 <img
                   src={ubiquiti}
                   alt='ubiquiti'
-                  className={CaseStudiesStyles.companyLogo}
+                  className="companyLogo"
                 />
               </div>
 
-              <div className={CaseStudiesStyles.scrolling_col_tplink}>
+              <div className="scrolling_col_tplink">
                 <img
                   src={tplink}
                   alt='tplink'
-                  className={CaseStudiesStyles.companyLogo}
+                  className='companyLogo'
                 />
               </div>
 
-              <div className={CaseStudiesStyles.scrolling_col_dlink}>
+              <div className='scrolling_col_dlink'>
                 <img
                   src={dlink}
                   alt='dlink'
-                  className={CaseStudiesStyles.companyLogo}
+                  className='companyLogo'
                 />
               </div>
 
-              <div className={CaseStudiesStyles.scrolling_col_cisco}>
+              <div className='scrolling_col_cisco'>
                 <img
                   src={cisco}
                   alt='cisco'
-                  className={CaseStudiesStyles.companyLogo}
+                  className='companyLogo'
                 />
               </div>
             </div>
@@ -388,4 +438,4 @@ const CaseStudies = () => {
   )
 }
 
-export default CaseStudies
+export default caseStudies 
