@@ -7,26 +7,15 @@ import {
   Col,
   Form,
   InputGroup,
+  Spinner, 
+  Button
 } from 'react-bootstrap'
 
 //icon
 import { MdEmail, MdOutlinePhoneLocked, MdPersonOutline } from 'react-icons/md'
 
 const Quote = () => {
-  //form input
-  const initialValues = {
-    first_name: '',
-    last_name: '',
-    email: '',
-    phone_number: '',
-    home_business: '',
-    industry: '',
-    ownership: '',
-    quantity: '',
-    size_of_apartment: '',
-    system_of_interest: '',
-  }
-
+  const[isLoading, setIsLoading] = useState(false)
   const [formValues, setFormValues] = useState({})
 
   const [touched, setTouched] = useState({})
@@ -128,7 +117,7 @@ const Quote = () => {
   const handlesubmit = (e) => {
     e.preventDefault()
     console.log(formValues)
-
+setIsLoading(true)
     if (Object.keys(formError).length > 0) {
       setTouched({
         home_business: true,
@@ -191,13 +180,14 @@ const Quote = () => {
             setFormValues({})
             setFormError({})
             setSystemofinterest({})
-
             e.target.reset()
+            setIsLoading(false)
           } else {
             //alert('failure')
             setErrorType('danger')
             setMessageType(data.message)
             setShowToast(true)
+            setIsLoading(false)
           }
         })
         .catch((error) => console.log(error))
@@ -241,8 +231,6 @@ const Quote = () => {
               <option value=''>Select an option</option>
               <option value='Occupant'>Occupant</option>
               <option value='Representative'>Representing the Occupant</option>
-
-              <option value='Representative'>Other</option>
             </select>
             <div className={styles.errorMsg}>
               {touched.ownership && formError.ownership}
@@ -421,10 +409,22 @@ const Quote = () => {
           <input type='hidden' />
           <input type='hidden' />
           <input type='hidden' />
-          <button type='submit' className='btn'>
-            {' '}
-            Submit
-          </button>
+          {isLoading ? (
+           <Button variant="primary" disabled>
+        <Spinner
+          as="span"
+          animation="grow"
+          size="sm"
+          role="status"
+          aria-hidden="true"
+        />
+        Loading...
+      </Button>     
+          ) : (
+     <Button variant="primary" type='submit'>
+       Submit
+      </Button>
+          )}
         </Form>
       </section>
 

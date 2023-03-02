@@ -68,7 +68,7 @@ font-size: 14px;
 line-height: 20px;
 text-align: center;
 letter-spacing: 0.1px;
-color: var(--green);
+color: var(--orange);
 padding: 10px 16px;
 background: transparent;
 width: 8.5rem;
@@ -76,10 +76,10 @@ text-decoration: none;
   }
   
   .quotebtn:hover{
-  border: 2px solid var(--purple);
+  border: none;
   cursor: pointer;
   color: white;
-  background: var(--green);
+  background: var(--orange);
 }  
 
 .sticky-nav {
@@ -87,7 +87,7 @@ position: fixed;
   top: 0;
   left: 0;
  padding: 30px 16px;
-     background: rgba(33,37,41, 0.8);
+background: rgba(33,37,41, 0.8);
 box-shadow: 5px 5px 15px -5px rgba(80,200,120, 0.5 );
 }
 }
@@ -105,7 +105,7 @@ box-shadow: 5px 5px 15px -5px rgba(80,200,120, 0.5 );
 #navbarScrollingDropdown{
   font-size: 18px;
   &:hover{
-   color: var(--green);
+   color: var(--orange);
   }
   &:active{
     color: #303030;
@@ -121,7 +121,8 @@ box-shadow: 5px 5px 15px -5px rgba(80,200,120, 0.5 );
    flex-direction: column;
 align-items: flex-start;
  }
- .services_title {
+ 
+ #services_title{
    font-size: 19px;
    font-weight: bold;
  }
@@ -130,10 +131,10 @@ align-items: flex-start;
  .phone{
    width: 50px;
    height: 50px;
-   background: #68b038;
+   background: var(--orange);
    display: grid;
    place-items: center;
-   border: 1px solid #68b038;
+   border: 1px solid var(--orange );
    margin-left: 12px;
    border-radius: 50%;
    position: relative;
@@ -146,7 +147,7 @@ align-items: flex-start;
    position: absolute;
    height: calc(100% + 20px);
    width: calc(100% + 20px);
-   border: 2px solid #68b038;
+   border: 2px solid var(--orange);
    border-radius: 50%;
    animation: pulse 1.5s linear infinite;
 }
@@ -156,7 +157,7 @@ align-items: flex-start;
    position: absolute;
    height: calc(100% + 20px);
    width: calc(100% + 20px);
-   border: 2px solid #68b038;
+   border: 2px solid var(--orange);
    border-radius: 50%;
    animation: pulse 1.5s linear infinite;
    animation-delay: 0.5s;
@@ -202,12 +203,18 @@ align-items: flex-start;
 }
 
 #icons{
-  font-size: 15.5px;
+  font-size: 15px;
   &:hover{
-    color: var(--green);
+    color: var(--orange);
   }
 }
 
+#icon{
+  font-size: 18px;
+  &:hover{
+    color: var(--orange);
+  }
+}
 
 
 

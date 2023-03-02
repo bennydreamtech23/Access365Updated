@@ -1,4 +1,4 @@
-import Styles from "./SmartHome.module.scss";
+import  "./Smarthome.scss";
 import { Link } from "react-router-dom";
 import {Container, Row, Col} from 'react-bootstrap';
 
@@ -14,43 +14,43 @@ import {BsFillPeopleFill} from "react-icons/bs";
 const SmartHome = () =>{
   return(
   <Container fluid
-  className={Styles.Container}>
+  className="SmarthomeContainer">
   
     <h2 
-    className={Styles.subTitle}>
+    className='subTitle'>
     Be At Peace With 24/7 Monitoring
     </h2>
     
     <h1 
-    className={Styles.title}>
+    className='title'>
     Smart Security Systems That Fits Your Busines!
     </h1>
     
   <p 
-  className={Styles.subtext}>
+  className='subtext'>
   Because a commercial security camera system has to produce results, we offer what most surveillance security tech companies can't. For CCTV installation companies, It's Important to treat cctv camera installation with modern approach using AI technology.
   </p>
   
   <div 
-  className={Styles.groupBtn}>
+  className='groupBtn'>
   <Link 
   to="/howitworks" 
-  className={Styles.overlay_btn2}>
+  className='overlay_btn2'>
   How Does It Work
   </Link>
   
     <Link 
     to="/services"
-    className={Styles.overlay_btn}>
+    className='overlay_btn'>
 Check Our Services
   </Link>
   </div>
 
   <Row 
-  className={Styles.roller1}>
+  className='mt-5 gap-5'>
   
     <Col 
-    className={`${Styles.col} "col-md"`}>
+    className="col-md">
          <img 
          src={security} 
          alt="security" 
@@ -62,7 +62,7 @@ Check Our Services
     </Col>
     
      <Col
-     className={`${Styles.col} "col-md"`}>
+     className="col-md">
           <img 
           src= {firealarm} 
           alt="firealarm" 
@@ -73,7 +73,7 @@ Check Our Services
     </Col>
     
      <Col 
-     className={`${Styles.col} "col-md"`}>
+     className="col-md">
           <img 
           src={smarthome} 
           alt="smart home" 
@@ -83,7 +83,7 @@ Check Our Services
     </Col>
     
      <Col 
-     className={`${Styles.col} "col-md"`}>
+     className="col-md">
        <img 
        src={accesscontrol} 
        alt="access-control" 
@@ -94,18 +94,18 @@ Check Our Services
 </Row>
  
     <div
-    className={Styles.info}>
+    className='info'>
       <p> 
       <BsFillPeopleFill 
-      className={Styles.peopleicon}/> As experts in home security, we want to assists in customizing a home security to meet your safety taste. <Link to="/contact"
-      className={Styles.link}>
+      className='peopleicon'/> As experts in home security, we want to assists in customizing a home security to meet your safety taste. <Link to="/contact"
+      className='link'>
       Don't Forget to Schedule A Visit
       </Link>
       </p>
     </div>
     
- <div className={Styles.quote}>
-   <Link to="/quote" className={Styles.roller_btn}>
+ <div className='quote'>
+   <Link to="/quote" className='roller_btn'>
    Get A Free Quote &rarr;
    </Link>
  </div>

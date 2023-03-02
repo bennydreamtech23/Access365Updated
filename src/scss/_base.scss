@@ -4,14 +4,13 @@
 :root{
   --font: 'Noto Sans', sans-serif;
   --bg: #49454f;
-  --border: 1px solid var(--green);
-    --black : #C2000000;
-    --green: #68b038;
+  --border: 1px solid var(--orange);
+    --black : #181818;
     --orange: #f88000;
     --darkorange: #EF6B1C;
     --blue: #2981D9;
     --darkblue: #2088E8;
-    --white: #fff;
+    --white: #eee;
   --color-primary: #7380ec;
   --color-danger: #ff7782;
   --color-success: #41f1b6;
@@ -61,7 +60,7 @@ html, body, .app{
 //btn styling 
     .btn{
   display: block;
-border: 1px solid var(--green);
+border: 1px solid var(--darkorange);
 border-radius: 5px;
 font-family: var(--font);
 font-style: normal;
@@ -72,8 +71,8 @@ text-align: center;
 letter-spacing: 0.1px;
 color: white;
 padding: 10px 24px;
-background: var(--green);
-width: 150px;
+background: var(--darkorange);
+width: 200px;
 box-shadow: 0px 2px 0px rgba(0,0,0, 0.016);
 text-decoration: none;
 transition: all .3s;
@@ -82,10 +81,10 @@ transition: all .3s;
 &:hover{
    transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  border: 2px solid var(--green);
+  border: 2px solid var(--darkblue);
   cursor: pointer;
-  color: var(--green);
-  background: transparent;
+  color: var(--white);
+  background: var(--blue);
 } 
   @media only screen and (min-width: 320px) and (max-width: 768px){
     display: flex;

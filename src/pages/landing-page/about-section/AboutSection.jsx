@@ -10,10 +10,8 @@ const AboutSection = () =>{
    <Container fluid 
    className={AboutStyles.Container}>
    
-  <Row 
-  className="row">
-  
-<div 
+  <Row>
+<Col
 className="col-md">
   <h1 
   className={AboutStyles.title}>
@@ -60,14 +58,14 @@ className="col-md">
   Contact Us
     </Link>
   </div>
-</div>
+</Col>
 
-<div 
+<Col
 className="col-md">
   <img src={security}
   alt="security"
   className={AboutStyles.img}/>
-</div>
+</Col>
   </Row>
     </Container>
     )

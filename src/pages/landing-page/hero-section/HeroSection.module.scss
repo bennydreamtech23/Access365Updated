@@ -45,7 +45,7 @@ font-family: var(--font);
     }
     
     .overlay_btn{
-      border:none;
+      border: none;
       background: var(--darkorange);
       padding: 10px 15px;
       border-radius: 5px;
@@ -63,7 +63,7 @@ font-family: var(--font);
     }
     
       .overlay_btn1:hover{
-      background: var(--black);
+      background: var(--darkorange);
       transform: translateX(3px);
       color: white;
     }
@@ -75,10 +75,10 @@ font-family: var(--font);
     
       .overlay_btn1{
       border:none;
-      background: white;
+      background: var(--darkblue);
       padding: 10px 15px;
       border-radius: 5px;
-      color: black;
+      color: var(--white);
       font-weight: bold;
       transition: 0.5s;
       text-decoration: none;
@@ -88,10 +88,10 @@ font-family: var(--font);
     
     .overlay_btn3{
       border:none;
-      background: white;
+      background: var(--darkorange);
       padding: 10px 15px;
       border-radius: 5px;
-      color: black;
+      color: var(--white);
       font-weight: bold;
       transition: 0.5s;
       text-decoration: none;

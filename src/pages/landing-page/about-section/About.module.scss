@@ -100,19 +100,19 @@ li{
     }
     
    .overlay_btn:hover{
-      background: #68b038;
+      background: var(--darkblue);
       transform: translateX(3px);
     }
     
       .overlay_btn2:hover{
-      background: #68b038;
+      background: var(--darkorange);
       transform: translateX(3px);
       color: white;
     }
     
       .overlay_btn2{
       border:none;
-      background: black;
+      background: var(--darkblue);
       padding: 10px 15px;
       border-radius: 5px;
       color: white;
@@ -120,6 +120,5 @@ li{
       transition: 0.5s;
       text-decoration: none;
       width: 120px;
-    }
-    
+}
 }
