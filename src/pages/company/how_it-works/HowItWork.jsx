@@ -1,11 +1,13 @@
-import HeaderSection from "../../../components/headerSection/HeaderSection";
+import HeroSection from './hero-section/HeroSection';
+import VideoSecuritySection from './video_security/VideoSecurity';
 
-const HowItWorkPage = () =>{
+const HowItWorksPage = () =>{
   return(
     <section>
-    <HeaderSection title='How It Works'/>
+    <HeroSection/>
+<VideoSecuritySection/>
     </section>
     )
 }
 
-export default HowItWorkPage
+export default HowItWorksPage
