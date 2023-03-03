@@ -28,12 +28,11 @@ const caseStudies = () => {
 
   return (
     <Container fluid 
-    className='CaseStudiesStylesContainer'>
+    className='CaseStudiesContainer'>
       <Row 
-      className='d-flex justify-content-between align-items-center pb-3'>
+      className='row'>
       
-        <Col 
-        className='col-md'>
+        <Col className= 'col-md'>
           <h1 
           className='Title'>
             Explore Our Studies & Latest Success Stories.
@@ -41,7 +40,7 @@ const caseStudies = () => {
         </Col>
 
         <Col
-        className='col-md'>
+      className='col-md'>
           <p 
           className='subtext'>
             For the Security and IT directors ensuring our places of work and
@@ -53,7 +52,7 @@ const caseStudies = () => {
       </Row>
 
       <Row 
-      className='Row mt-5 gap-4'>
+      className='Row mt-5 gap-5'>
       
         <Col 
         className='col-md'>

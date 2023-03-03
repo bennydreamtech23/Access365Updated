@@ -1,0 +1,164 @@
+.BlogContainer{
+  padding: 32px 64px;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+   font-family: var(--font);
+     @media only screen and (min-width: 320px) and (max-width: 768px){
+  padding: 16px 32px;
+}
+}
+  
+ h1{
+  font-size: 30px;
+  font-weight: bolder;
+  color:black;
+  line-height: 2rem;
+  @media only screen and (min-width: 320px) and (max-width: 768px){
+   font-size: 24px;
+  line-height: 2rem;
+} 
+}
+
+h2{
+ margin-top: 10px;
+  font-size: 21px;
+  font-weight: normal;
+  padding-top:5px;
+  color: var(--orange);
+  @media only screen and (min-width: 320px) and (max-width: 768px){
+   font-size: 19px;
+  line-height: 2rem;
+} 
+}
+
+.Row .col-md{
+  width: 18rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+justify-content: center;
+  margin: 0 auto;
+  height: 35rem;
+    @media only screen and (min-width: 320px) and (max-width: 768px){
+width: 17rem;
+}
+}
+
+//background-image code for the div
+
+.bg_1{
+   background-image: url("https://res.cloudinary.com/dlst0ec4h/image/upload/v1676457572/angry-hacker-woman-because-access-denied-while-trying-attack-government-firewall-programmer-wr_1_iz5gfb.webp");
+   background-size: cover;
+   background-position: cover cover;
+   width: 350px;
+   height: 350px;
+   padding: 10px;
+   margin-top: 10px;
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+   @media only screen and (min-width: 320px) and (max-width: 768px){
+width: 280px;
+height: 280px;
+}
+   @media only screen and (max-width: 320px){
+width: 250px;
+height: 250px;
+}
+}
+
+.bg_2{
+   background-image: url("https://res.cloudinary.com/dlst0ec4h/image/upload/v1676458735/stole-house-door-using-iron_vqtkpn.webp");
+   background-size: cover;
+   background-position: cover cover;
+   width: 350px;
+   height: 350px;
+   padding: 10px;
+   margin-top: 10px;
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+   @media only screen and (min-width: 320px) and (max-width: 768px){
+width: 280px;
+height: 280px;
+}
+   @media only screen and (max-width: 320px){
+width: 250px;
+height: 250px;
+}
+}
+
+.bg_3{
+   background-image: url("https://res.cloudinary.com/dlst0ec4h/image/upload/v1676458730/thieves-wear-black-hats-pry-windows-steal-things_auphbc.webp");
+   background-size: cover;
+   background-position: cover cover;
+   width: 350px;
+   height: 350px;
+   padding: 10px;
+   margin-top: 10px;
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+   @media only screen and (min-width: 320px) and (max-width: 768px){
+width: 280px;
+height: 500px;
+}
+   @media only screen and (max-width: 320px){
+width: 250px;
+height: 300px;
+}
+}
+
+ .content{
+   width: 350px;
+   padding: 10px;
+   background: var(--black);
+   color: var(--white);
+   padding-bottom: 20px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+@media only screen and (min-width: 320px) and (max-width: 768px){
+width: 280px;
+}
+ @media only screen and (max-width: 320px){
+width: 250px;
+height: 23rem;
+}
+}
+
+h3{
+  padding-top: 10px;
+  font-size: 19px;
+  font-weight: bold;
+  padding-top: 5px;
+  line-height: 1.5rem;
+}
+
+ p{
+  line-height: 30px;
+  padding-top: 5px;
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.overlay_btn5{
+  background: var(--darkblue);
+  color: white;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-top: 15px;
+  font-weight: bold;
+  text-decoration: none;
+ &:hover{
+ background: var(--darkorange);
+ color: var(--white);
+}
+}
+
+.bottom_link{
+  color: var(--orange);
+  margin-top: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  &:hover{
+  color: var(--darkblue);
+}
+}

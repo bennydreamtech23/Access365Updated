@@ -14,6 +14,10 @@
    line-height: 2.5rem;
    font-weight: bold;
    padding-bottom: 10px;
+    @media only screen and (min-width: 320px) and (max-width: 768px){
+font-size: 25px;
+   line-height: 2rem;
+} 
 }
 
  .img{
@@ -62,8 +66,7 @@
 
 .Container p{
    padding-top: 5px;
-   font-family: 'Noto Sans';
-   font-size: 15px;
+   font-size: 16px;
    line-height: 30px;
    margin-bottom: 10px;
 }
@@ -96,7 +99,7 @@
 li{
    padding: 10px 15px;
    border-bottom: 1px solid #c0c0c0;
-   font-size: 15px;
+   font-size: 16px;
 }
 
     .groupBtn{
@@ -112,7 +115,7 @@ li{
     
     .overlay_btn{
       border:none;
-      background: #f88000;
+      background: var(--darkorange);
       padding: 10px 15px;
       border-radius: 5px;
       color: white;

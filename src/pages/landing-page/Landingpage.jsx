@@ -5,7 +5,7 @@ import WorkSection from './project/Project';
 import SmartHomeSection from './smarthome/SmartHome';
 import IntegratedSecuritySection from './intergratedServices/IntegratedServices';
 import QuoteSectionPage from './quotesection/QuoteSecton';
-import Testimonies from './testimonies/Testimonies';
+import BlogSection from '../../components/blogs/Blogs';
 import Contact from "./contact/Contact"
 import CommitmentSection from '../../components/commitment/Commitment';
 
@@ -18,7 +18,7 @@ const LandingPage = () =>{
    <SmartHomeSection/>
    <IntegratedSecuritySection/>
    <QuoteSectionPage/>
-    <Testimonies/>
+    <BlogSection/>
     <CommitmentSection/>
     <Contact/>
     </>
