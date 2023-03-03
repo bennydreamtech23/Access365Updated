@@ -7,7 +7,6 @@ import {Row, Col} from 'react-bootstrap';
 //icon
 import { BsFillCheckCircleFill, BsFillStarFill } from "react-icons/bs";
 
-
 const IntegratedSecurity = () =>{
   const DoorSecurity = "https://res.cloudinary.com/dlst0ec4h/image/upload/v1676821694/IMG-20230216-WA0019_jlld8b.webp"
   
@@ -25,7 +24,7 @@ className={Styles.Container}>
     Intergrated Security Solutions & Remote Monitoring 24/7 
     </h1>
     
-    <Row className='py-3'>
+    <Row className='py-5'>
       <Col 
       className="col-md">
     <h3 
@@ -73,7 +72,7 @@ className={Styles.Container}>
  </Col>
  
     <Col 
-    className="col-md mt-5">
+    className="col-md">
      <div 
      className={Styles.bg_2}>
        <div 
@@ -103,8 +102,7 @@ className={Styles.Container}>
     </Col>
  </Row>
  
- <Row 
- className='py-5'>
+ <Row>
       <Col 
       className="col-md">
      <div 
@@ -138,7 +136,7 @@ className={Styles.Container}>
   </Col>
 
 <Col 
-className="col-md mt-5">
+className="col-md mt-3">
       <h2 
       className={Styles.subtitle}>
       Convenient System Access By Phone or Tablet
@@ -173,7 +171,7 @@ className="col-md mt-5">
   </Col>
    </Row>
   
-   <Row className='pt-5'>
+   <Row className='pt-3'>
       <Col 
       className="col-md">
    <h2 

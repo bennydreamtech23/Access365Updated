@@ -21,8 +21,7 @@ const SmartHome = () =>{
     Be At Peace With 24/7 Monitoring
     </h2>
     
-    <h1 
-    className='title'>
+    <h1 className='title'>
     Smart Security Systems That Fits Your Busines!
     </h1>
     
@@ -56,7 +55,7 @@ Check Our Services
          alt="security" 
          className="img-thumbnail"/>
          
-      <h1>Smarter Business Security</h1>
+      <h4>Smarter Business Security</h4>
       <p>Clever security system connects your security, CCTV,lights, locks and more, for true seamless automation and control.</p>
       
     </Col>
@@ -68,7 +67,7 @@ Check Our Services
           alt="firealarm" 
           className="img-thumbnail"/>
           
-      <h1>Fire Detecction & Life Safety</h1>
+      <h4>Fire Detecction & Life Safety</h4>
       <p>We're industry leaders in the design, installation of fire alarm and provide systems enhance security.</p>
     </Col>
     
@@ -78,7 +77,7 @@ Check Our Services
           src={smarthome} 
           alt="smart home" 
           className="img-thumbnail"/>
-      <h1>Smart Home System</h1>
+      <h4>Smart Home System</h4>
       <p>We make sure that no matter we you are, your home is always safe and secure.</p>
     </Col>
     
@@ -88,7 +87,7 @@ Check Our Services
        src={accesscontrol} 
        alt="access-control" 
        className="img-thumbnail"/>
-      <h1>Access Control Installation</h1>
+      <h4>Access Control Installation</h4>
       <p>Effective and Simple-to-use door access control, we offer a decade of experience in planning, customizing & delivering.</p>
     </Col>
 </div>

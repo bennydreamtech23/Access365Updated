@@ -16,7 +16,7 @@ const QuoteSection = () => {
 </Col>
 
 <Col className={Styles.col}>
-<PricingCardUI/>
+<PricingCardUI />
 </Col>
 </Row>
 </section>

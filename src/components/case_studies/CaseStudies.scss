@@ -1,5 +1,5 @@
 
-.CaseStudiesStylesContainer{
+.CaseStudiesContainer{
   padding: 80px 64px;
   margin-top: 1rem;
    font-family: var(--font);
@@ -25,24 +25,27 @@
    color: black;
 }
 
+.row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+    @media only screen and (min-width: 320px) and (max-width: 600px){
+flex-direction: column;
+} 
+}
+
 .Row .col-md{
-  width: 30rem;
+  width: 18rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
+justify-content: center;
   margin: 0 auto;
-  height: 35rem;
-  
-    @media only screen and (max-width: 320px){
+  height: 40rem;
+    @media only screen and (min-width: 320px) and (max-width: 768px){
 width: 17rem;
-  margin: auto;
-//align-items: center;
-//justify-content: center;
-}
-    @media only screen and (min-width: 360px) and (max-width: 768px){
-width: 19rem;
-  margin: auto;
-//align-items: center;
-//justify-content: center;
+height: 40rem;
 }
 }
 
@@ -57,13 +60,16 @@ width: 19rem;
    margin-top: 10px;
    border-top-left-radius: 5px;
    border-top-right-radius: 5px;
-   @media only screen and (min-width: 360px) and (max-width: 768px){
+   @media only screen and (min-width: 320px) and (max-width: 768px){
 width: 280px;
+}
+   @media only screen and (max-width: 320px){
+width: 250px;
 }
 }
 
 .bg_1_button{
-   margin-top: 150px;
+   margin-top: 190px;
    padding: 10px 15px;
    background: var(--blue);
    border: none;
@@ -85,7 +91,15 @@ border: none;
    padding-bottom: 20px;
 border-bottom-left-radius: 5px;
 border-bottom-right-radius: 5px;
-height: 20rem;
+height: 27rem;
+@media only screen and (min-width: 320px) and (max-width: 768px){
+width: 280px;
+height: 25rem;
+}
+ @media only screen and (max-width: 320px){
+width: 250px;
+height: 25rem;
+}
 }
 
 .small h2{
@@ -125,8 +139,11 @@ height: 20rem;
    border-top-left-radius: 5px;
    border-top-right-radius: 5px;
    width: 350px;
-    @media only screen and (min-width: 360px) and (max-width: 768px){
+    @media only screen and (min-width: 320px) and (max-width: 768px){
 width: 280px;
+}
+ @media only screen and (max-width: 320px){
+width: 250px;
 }
 }
 
@@ -139,8 +156,11 @@ width: 280px;
   border-top-left-radius: 5px;
    border-top-right-radius: 5px;
    width: 350px;
-    @media only screen and (min-width: 360px) and (max-width: 768px){
+    @media only screen and (min-width: 320px) and (max-width: 768px){
 width: 280px;
+}
+ @media only screen and (max-width: 320px){
+width: 250px;
 }
 }
 
@@ -153,8 +173,11 @@ width: 280px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   width: 350px;
-    @media only screen and (min-width: 360px) and (max-width: 768px){
+    @media only screen and (min-width: 320px) and (max-width: 768px){
 width: 280px;
+}
+@media only screen and (max-width: 320px){
+width: 250px;
 }
 }
 
@@ -165,8 +188,11 @@ width: 280px;
    padding: 10px 20px;
    margin-top: 10px;
    width: 350px;
-    @media only screen and (min-width: 360px) and (max-width: 768px){
+    @media only screen and (min-width: 320px) and (max-width: 768px){
 width: 280px;
+}
+@media only screen and (max-width: 320px){
+width: 250px;
 }
 }
 
