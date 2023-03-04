@@ -1,9 +1,13 @@
-import HeaderSection from "../../../components/headerSection/HeaderSection";
+import HeroSection from './hero-section/HeroSection';
+import AwardSection from './award_gallery/AwardGallery';
+import CommitmentSection from '../../../components/commitment/Commitment';
 
 const AwardPage = () =>{
   return(
     <section>
-    <HeaderSection title='Our Award and Recognition'/>
+<HeroSection/>
+<AwardSection/>
+<CommitmentSection/>
     </section>
     )
 }

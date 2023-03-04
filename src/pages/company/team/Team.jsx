@@ -1,9 +1,11 @@
-import HeaderSection from "../../../components/headerSection/HeaderSection";
+import HeroSection from './hero-section/HeroSection';
+import TeamGallerySection from './team-gallery/TeamGallery';
 
 const TeamPage = () =>{
   return(
     <section>
-    <HeaderSection title='Our Team'/>
+<HeroSection/>
+<TeamGallerySection/>
     </section>
     )
 }

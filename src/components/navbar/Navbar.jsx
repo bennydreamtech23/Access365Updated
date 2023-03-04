@@ -94,12 +94,6 @@ function NavbarTool() {
 
                 <Link
                 className='dropdown-item'
-                to='/review'>
-                  Customer's Review
-                </Link>
-
-                <Link
-                className='dropdown-item'
                 to='/pricing'>
                   Packaging & Pricing
                 </Link>
@@ -288,12 +282,6 @@ function NavbarTool() {
             className='dropdown-item'
               to='/award'>
              Award & Recognition
-              </Link>
-
-              <Link
-              className='dropdown-item'
-              to='/review'>
-                Customer's Review
               </Link>
 
               <Link

@@ -38,9 +38,9 @@
 }
 
 .link1{
-  border: 1.5px solid rgba(0,0,0,1);
+  border: 2px solid #ccc;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 7px 13px;
   color: var(--orange);
   margin-top: 15px;
@@ -51,7 +51,7 @@
   width: 220px;
   &:hover{
   color: white;
-  background: var(--green);
+  background: var(--darkorange);
   border: none;
 }
 }

@@ -14,7 +14,6 @@ import AboutPage from "./pages/company/about_us/About";
 import HowItWorkPage from "./pages/company/how_it-works/HowItWork";
 import TeamPage from "./pages/company/team/Team";
 import AwardPage from "./pages/company/award/Award";
-import ReviewPage from "./pages/company/review/Review";
 import PricingPage from "./pages/company/pricing/Pricing";
 import FAQPage from "./pages/company/faq/Faq";
 import GalleryPage from "./pages/company/gallery/Gallery";
@@ -43,7 +42,6 @@ function App() {
 <Route path="/howitworks" element={<HowItWorkPage/>} />
 <Route path="/team" element={<TeamPage/>} />
 <Route path ="/award" element={<AwardPage/>} />
-<Route path="/review" element={<ReviewPage/>} />
 <Route path="/pricing" element={<PricingPage/>} />
 <Route path="/faq" element={<FAQPage/>} />
 <Route path="/gallery" element={<GalleryPage/>} />
