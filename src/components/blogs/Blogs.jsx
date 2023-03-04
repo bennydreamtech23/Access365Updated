@@ -18,10 +18,10 @@ const Blog = () => {
     </h1>
 
       <Row 
-      className='Row gap-5'>
+      className='BoxContainer gap-5'>
       
         <Col 
-        className='col-md'>
+        className='col'>
           <div className='bg_1'/>
 
         <div 
@@ -43,7 +43,7 @@ const Blog = () => {
         </Col>
 
   <Col 
-        className='col-md'>
+        className='col'>
           <div className='bg_2'/>
 
         <div 
@@ -66,7 +66,7 @@ const Blog = () => {
   </Col>
 
   <Col 
-        className='col-md'>
+        className='col'>
           <div className='bg_3'/>
 
         <div 

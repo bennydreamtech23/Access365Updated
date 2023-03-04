@@ -131,6 +131,7 @@ setIsLoading(true)
         quantity: true,
         system_of_interest: true,
       })
+      setIsLoading(false)
     }
 
     if (Object.keys(formError).length === 0) {
@@ -410,7 +411,7 @@ setIsLoading(true)
           <input type='hidden' />
           <input type='hidden' />
           {isLoading ? (
-           <Button variant="primary" disabled>
+           <Button disabled>
         <Spinner
           as="span"
           animation="grow"
