@@ -30,17 +30,16 @@ const caseStudies = () => {
     <Container fluid 
     className='CaseStudiesContainer'>
       <Row 
-      className='row'>
+      className='rol'>
       
-        <Col className= 'col-md'>
+        <Col>
           <h1 
           className='Title'>
             Explore Our Studies & Latest Success Stories.
           </h1>
         </Col>
 
-        <Col
-      className='col-md'>
+        <Col>
           <p 
           className='subtext'>
             For the Security and IT directors ensuring our places of work and
@@ -52,10 +51,10 @@ const caseStudies = () => {
       </Row>
 
       <Row 
-      className='Row mt-5 gap-5'>
+      className='roller mt-5 gap-5'>
       
         <Col 
-        className='col-md'>
+        className='col'>
           <div className='bg_1'>
             <button className='bg_1_button'>
               Detection, Fire Alarm
@@ -81,7 +80,7 @@ const caseStudies = () => {
         </Col>
 
         <Col 
-        className='col-md'>
+        className='col'>
           <div 
           className='bg_2'>
             <button 
@@ -109,7 +108,7 @@ const caseStudies = () => {
         </Col>
 
         <Col 
-        className= 'col-md'>
+        className= 'col'>
           <div 
           className= 'bg_3'>
             <button 
@@ -137,7 +136,7 @@ const caseStudies = () => {
         </Col>
 
         <Col 
-        className='col-md'>
+        className='col'>
           <div 
           className='bg_4'>
             <button 
@@ -164,7 +163,7 @@ const caseStudies = () => {
         </Col>
 
         <Col 
-        className='col-md'>
+        className='col'>
           <div 
           className='bg_5'>
             <button 

@@ -86,7 +86,7 @@ padding: 32px 64px;
       width: 180px;
     }
    
-.row {
+.smarthomeBox {
   max-width: 1200px;
   align-items: center;
   margin: 0 auto;
@@ -101,7 +101,7 @@ grid-template-columns: repeat(4, 1fr);
 }
 }
 
- .col-md{
+ .smarthomeBox > .content{
    transition: 0.5s;
    height: 370px;
    padding: 30px 20px;
@@ -145,20 +145,20 @@ margin-bottom: auto;
 }
 }
 
-.col-md h4{
+.content h4{
    font-size: 20px;
    font-weight: bold;
    line-height: 2rem;
    margin-top: 2rem;
 }
 
-.col-md p{
+.content p{
    font-size: 16px;
    font-weight: normal;
    line-height: 1.8rem;
 }
 
-.col-md img{
+.content img{
    width: 50px;
    height: 50px;
    object-fit: cover;

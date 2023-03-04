@@ -46,10 +46,10 @@ Check Our Services
   </div>
 
   <div
-  className='row mt-5 gap-5'>
+  className='smarthomeBox mt-5 gap-5'>
   
     <Col 
-    className="col-md">
+    className="content">
          <img 
          src={security} 
          alt="security" 
@@ -61,7 +61,7 @@ Check Our Services
     </Col>
     
      <Col
-     className="col-md">
+     className="content">
           <img 
           src= {firealarm} 
           alt="firealarm" 
@@ -72,7 +72,7 @@ Check Our Services
     </Col>
     
      <Col 
-     className="col-md">
+     className="content">
           <img 
           src={smarthome} 
           alt="smart home" 
@@ -82,7 +82,7 @@ Check Our Services
     </Col>
     
      <Col 
-     className="col-md">
+     className="content">
        <img 
        src={accesscontrol} 
        alt="access-control" 

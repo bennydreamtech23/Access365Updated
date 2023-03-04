@@ -1,0 +1,59 @@
+.SystemContainer{
+ padding: 80px 64px;
+   font-family: var(--font);
+   margin: 0;
+     @media only screen and (min-width: 320px) and (max-width: 768px){
+  padding: 64px 32px;
+}
+
+.col{
+  padding: 13px 7px;
+  border: 4px solid #c0c0c0;
+ margin: 0 auto;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ border-radius: 15px;
+ cursor: pointer;
+ transition: 0.5s  ease-in-out all;
+}
+
+.col:hover{
+ background: var(--darkblue);
+ color: white;
+ border: none;
+ transform: translateX(-10px);
+}
+
+.col h4{
+  font-size: 30px;
+ border: 3px solid #ccc;
+ padding: 10px 20px;
+ border-radius: 50%;
+ margin-bottom: 10px;
+ height: 60px;
+ text-align: center;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+
+.col p{
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.subTitle{
+  font-size: 19px;
+  font-weight: bold;
+}
+
+
+.icon{
+  color: var(--danger);
+font-size: 2rem;
+cursor: pointer;
+}
+}
