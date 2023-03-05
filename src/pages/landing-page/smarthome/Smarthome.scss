@@ -50,28 +50,11 @@ padding: 32px 64px;
     }
     }
 
- .overlay_btn{
-      border:none;
-      background: var(--darkorange);
-      padding: 10px 15px;
-      border-radius: 5px;
-      color: white;
-      font-weight: bold;
-      transition: 0.5s;
-      height: 3rem;
-      text-decoration: none;
-      width: 190px;
-    }
-    
-   .overlay_btn:hover{
-      background: var(--darkblue);
-      transform: translateX(3px);
-    }
-    
       .overlay_btn2:hover{
-      background: var(--darkorange);
+        border: 2px solid var(--darkblue);
+      background: transparent;
       transform: translateX(3px);
-      color: white;
+      color: var(--darkblue);
     }
     
       .overlay_btn2{

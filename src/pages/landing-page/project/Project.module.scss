@@ -44,7 +44,6 @@ font-size: 25px;
     }
     }
    
-    
 .bottomCard{
   display: flex;
   flex-direction: column;
@@ -88,15 +87,15 @@ font-family: var(--font);
   align-items: flex-end;
   float: right;
   flex-direction: column;
+  
   .iconbox{
-    color: var(--darkorange);
-    border: 2px solid #fff;
+    color: var(--white);
     border-radius: 50%;
     font-size: 2.5rem;
     text-shadow: 2px 4px 8px var(--blue);
   }
   .iconbox:hover{
-    color: var(--darkblue);
+    color: var(--darkorange);
   }
 }
 }

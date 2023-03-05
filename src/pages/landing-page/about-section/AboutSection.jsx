@@ -64,6 +64,7 @@ className="col-md">
 className="col-md">
   <img src={security}
   alt="security"
+  loading='lazy'
   className={AboutStyles.img}/>
 </Col>
   </Row>

@@ -50,8 +50,8 @@ font-family: var(--font);
     }
     
     .overlay_btn{
-      border: none;
-      background: var(--darkorange);
+      border: 2px solid var(--darkorange);
+      background: transparent;
       padding: 10px 15px;
       border-radius: 5px;
       color: white;
@@ -60,27 +60,28 @@ font-family: var(--font);
       height: 3rem;
       text-decoration: none;
       width: 230px;
+      text-align: center;
     }
     
    .overlay_btn:hover{
-      background: var(--darkblue);
+      background: var(--darkorange);
       transform: translateX(3px);
     }
     
       .overlay_btn1:hover{
+      background: transparent;
+      transform: translateX(3px);
+      color: var(--darkblue);
+      border: 2px solid var(--darkblue)
+    }
+    
+     .overlay_btn3:hover{
       background: var(--darkorange);
       transform: translateX(3px);
       color: white;
     }
     
-     .overlay_btn3:hover{
-      background: var(--darkblue);
-      transform: translateX(3px);
-      color: white;
-    }
-    
       .overlay_btn1{
-      border:none;
       background: var(--darkblue);
       padding: 10px 15px;
       border-radius: 5px;
@@ -89,15 +90,16 @@ font-family: var(--font);
       transition: 0.5s;
       text-decoration: none;
       height: 3rem;
-      width: 170px;
+      width:  200px;
+      text-align: center;
     }
     
     .overlay_btn3{
-      border:none;
-      background: var(--darkorange);
+      border: 2px solid var(--darkorange);
+      background: transparent;
       padding: 10px 15px;
       border-radius: 5px;
-      color: var(--white);
+      color: var(--darkorange);
       font-weight: bold;
       transition: 0.5s;
       text-decoration: none;

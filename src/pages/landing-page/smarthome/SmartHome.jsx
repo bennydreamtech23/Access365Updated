@@ -40,7 +40,7 @@ const SmartHome = () =>{
   
     <Link 
     to="/services"
-    className='overlay_btn'>
+    className='btn'>
 Check Our Services
   </Link>
   </div>
@@ -53,6 +53,7 @@ Check Our Services
          <img 
          src={security} 
          alt="security" 
+        loading='lazy'
          className="img-thumbnail"/>
          
       <h4>Smarter Business Security</h4>
@@ -65,6 +66,7 @@ Check Our Services
           <img 
           src= {firealarm} 
           alt="firealarm" 
+          loading='lazy'
           className="img-thumbnail"/>
           
       <h4>Fire Detecction & Life Safety</h4>
@@ -75,6 +77,7 @@ Check Our Services
      className="content">
           <img 
           src={smarthome} 
+          loading='lazy'
           alt="smart home" 
           className="img-thumbnail"/>
       <h4>Smart Home System</h4>
@@ -85,6 +88,7 @@ Check Our Services
      className="content">
        <img 
        src={accesscontrol} 
+       loading='lazy'
        alt="access-control" 
        className="img-thumbnail"/>
       <h4>Access Control Installation</h4>

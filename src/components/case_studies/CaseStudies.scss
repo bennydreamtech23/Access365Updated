@@ -71,17 +71,12 @@ width: 250px;
 .bg_1_button{
    margin-top: 190px;
    padding: 10px 15px;
-   background: var(--blue);
    border: none;
-   color: white;
+   background: var(--darkblue);
+   color: var(--white);
    transition: all 0.5s;
    border-radius: 5px;
    font-weight: bold;
-   &:hover{
-     background: var(--darkorange);
-     transform: translateX(10px);
-border: none;
-   }
 }
 
 .small{
@@ -112,11 +107,11 @@ height: 25rem;
 }
 
 .overlay_btn{
-      border: none;
-      background: var(--darkblue);
+      border: 2px solid var(--darkblue);
+      background: none;
       padding: 10px 15px;
       border-radius: 5px;
-      color: var(--white);
+      color: var(--darkblue);
       font-weight: bold;
       transition: 0.5s;
       height: 3rem;
@@ -125,7 +120,7 @@ height: 25rem;
     }
     
    .overlay_btn:hover{
-      background: var(--black);
+      background: var(--darkblue);
       transform: translateX(3px);
       color: white;
     }

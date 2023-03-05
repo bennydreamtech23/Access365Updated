@@ -114,27 +114,29 @@ li{
     }
     
     .overlay_btn{
-      border:none;
-      background: var(--darkorange);
+      border: 2px solid var(--darkorange);
+      background: transparent;
       padding: 10px 15px;
       border-radius: 5px;
-      color: white;
+      color: var(--darkorange);
       font-weight: bold;
       transition: 0.5s;
       height: 3rem;
       text-decoration: none;
-      width: 230px;
+      width: 250px;
     }
     
    .overlay_btn:hover{
-      background: var(--darkblue);
+      background: var(--darkorange);
       transform: translateX(3px);
+      color: var(--white);
     }
     
       .overlay_btn2:hover{
-      background: var(--darkorange);
+      color: var(--darkblue);
       transform: translateX(3px);
-      color: white;
+      border: 2px solid var(--darkblue);
+      background: transparent;
     }
     
       .overlay_btn2{
@@ -146,6 +148,7 @@ li{
       font-weight: bold;
       transition: 0.5s;
       text-decoration: none;
-      width: 120px;
+      text-align: center;
+      width: 150px;
 }
 }

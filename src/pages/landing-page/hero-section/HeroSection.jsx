@@ -53,7 +53,8 @@ Explore Our services &rarr;
         </h1>
       <img 
       src={door} 
-      alt="door"/>
+      alt="door"
+      loading='lazy'/>
         <p>
         Door, Window and Glass Break, designed to monitor and protect home and family
         </p>

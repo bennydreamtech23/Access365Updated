@@ -3,7 +3,7 @@ import Styles from "./IntegratedServices.module.scss";
 import CaseStudies from "../../../components/case_studies/CaseStudies"
 import servicesData from "../../../components/data/servicesData";
 //container 
-import {Row, Col} from 'react-bootstrap';
+import {Container, Row, Col} from 'react-bootstrap';
 //icon
 import { BsFillCheckCircleFill, BsFillStarFill } from "react-icons/bs";
 
@@ -12,7 +12,7 @@ const IntegratedSecurity = () =>{
   
   return(
   <section>
-<section
+<Container fluid
 className={Styles.Container}>
     <h2 
     className={Styles.subTitle}>
@@ -66,7 +66,7 @@ className={Styles.Container}>
   
   <Link
   to="/team" 
-  className={Styles.overlay_btn}>
+  className='btn'>
   Meet Our Experts &rarr;
   </Link>
  </Col>
@@ -214,9 +214,7 @@ className="col-md mt-3">
   </h3>
   </Col>
 </Row> 
-   
-  
- </section>
+ </Container>
 <CaseStudies/>
   </section>
   )
